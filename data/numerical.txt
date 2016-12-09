@@ -1,0 +1,10 @@
+PatientKey
+PatientAge
+FeverNoDays
+FeverTemperature
+PatientFarAlong
+cycletime1
+cycletime2
+BMI
+cycletime
+WellnessScale

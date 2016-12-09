@@ -1,0 +1,12 @@
+cycletime 0.378024740019
+PatientAge 0.336219855888
+PatientAge' 3.46311665624
+FeverTemperature 0.817546481274
+FeverTemperature' 1.98879095174
+Headache 0.880079266498
+Bleeding 3.04085400906
+Diarrhoea 1.0854164085
+Jaundice 4.55522123848
+Vomit 0.821417148924
+AbdominalPain 0.948228378642
+AstheniaWeakness 1.18192125898

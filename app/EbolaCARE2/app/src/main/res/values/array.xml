@@ -1,0 +1,43 @@
+<resources>
+<string-array name="listArrayRisk">
+	<item>30%</item>
+    <item>40%</item>
+	<item>50%</item>
+	<item>60%</item>
+    <item>70%</item>
+</string-array>
+
+<string-array name="listValuesRisk">
+	<item>0.3</item>
+    <item>0.4</item>
+	<item>0.5</item>
+	<item>0.6</item>
+    <item>0.7</item>
+</string-array>
+
+<string-array name="listArrayContrib">
+	<item>0.1</item>
+    <item>0.2</item>
+	<item>0.3</item>
+	<item>0.4</item>
+    <item>0.5</item>
+</string-array>
+
+<string-array name="listValuesContrib">
+	<item>0.1</item>
+    <item>0.2</item>
+	<item>0.3</item>
+	<item>0.4</item>
+    <item>0.5</item>
+</string-array>
+
+<string-array name="listArrayViz">
+	<item>Show treatments based on risk</item>
+    <item>Show predictor contributions to risk</item>
+</string-array>
+
+<string-array name="listValuesViz">
+	<item>treat</item>
+    <item>contrib</item>
+</string-array>
+</resources>

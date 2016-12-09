@@ -1,0 +1,84 @@
+                                                                 est
+(Intercept)                                              14.05521849
+cycletime                                                -0.15384950
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge               -0.04583501
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'               0.09122172
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature  -0.26913389
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  0.77086008
+Headache                                                 -0.12612736
+Bleeding                                                  1.08487756
+Diarrhoea                                                 0.09416743
+Jaundice                                                  1.53017544
+Vomit                                                    -0.20487528
+AbdominalPain                                            -0.06593006
+AstheniaWeakness                                          0.18748845
+                                                                  se          t
+(Intercept)                                              15.01480768  0.9360905
+cycletime                                                 0.02788599 -5.5170902
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge                0.01741313 -2.6322101
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'               0.02252448  4.0498919
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature   0.40576291 -0.6632787
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  0.64301864  1.1988145
+Headache                                                  0.24121653 -0.5228802
+Bleeding                                                  0.54278435  1.9987267
+Diarrhoea                                                 0.26100702  0.3607850
+Jaundice                                                  0.66819725  2.2900056
+Vomit                                                     0.25642700 -0.7989614
+AbdominalPain                                             0.25642418 -0.2571133
+AstheniaWeakness                                          0.27446244  0.6831115
+                                                               df     Pr(>|t|)
+(Intercept)                                              104.9821 3.513750e-01
+cycletime                                                126.0074 1.874895e-07
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge               372.9051 8.835566e-03
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'              371.5134 6.240006e-05
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature  104.5205 5.086123e-01
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature' 121.6716 2.329297e-01
+Headache                                                 410.5041 6.013397e-01
+Bleeding                                                 388.9627 4.633343e-02
+Diarrhoea                                                329.6376 7.184912e-01
+Jaundice                                                 351.0544 2.261363e-02
+Vomit                                                    382.8554 4.248081e-01
+AbdominalPain                                            370.2082 7.972342e-01
+AstheniaWeakness                                         346.0274 4.949935e-01
+                                                                lo 95
+(Intercept)                                              -15.71643071
+cycletime                                                 -0.20903501
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge                -0.08007524
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'                0.04693026
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature   -1.07372981
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  -0.50209395
+Headache                                                  -0.60030110
+Bleeding                                                   0.01771921
+Diarrhoea                                                 -0.41928210
+Jaundice                                                   0.21600217
+Vomit                                                     -0.70905680
+AbdominalPain                                             -0.57016066
+AstheniaWeakness                                          -0.35233617
+                                                               hi 95 nmis
+(Intercept)                                              43.82686769   NA
+cycletime                                                -0.09866398  137
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge               -0.01159478   NA
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'               0.13551319   NA
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature   0.53546204   NA
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  2.04381412   NA
+Headache                                                  0.34804638    1
+Bleeding                                                  2.15203592    1
+Diarrhoea                                                 0.60761695   35
+Jaundice                                                  2.84434871    1
+Vomit                                                     0.29930624    1
+AbdominalPain                                             0.43830053    1
+AstheniaWeakness                                          0.72731306    1
+                                                                fmi     lambda
+(Intercept)                                              0.51019794 0.50095483
+cycletime                                                0.45105908 0.44241485
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge               0.10991359 0.10515257
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'              0.11134456 0.10657343
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature  0.51164531 0.50238920
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature' 0.46227381 0.45350689
+Headache                                                 0.06938385 0.06486085
+Bleeding                                                 0.09314698 0.08849601
+Diarrhoea                                                0.15390015 0.14878216
+Jaundice                                                 0.13217066 0.12724057
+Vomit                                                    0.09958887 0.09489746
+AbdominalPain                                            0.11268425 0.10790356
+AstheniaWeakness                                         0.13726035 0.13228818
