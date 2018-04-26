@@ -1,0 +1,48 @@
+                                                                 est
+(Intercept)                                              23.35692135
+cycletime                                                -0.16897257
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge               -0.08195048
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'               0.14287713
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature  -0.54338868
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  1.22889386
+WellnessScale                                             0.54931788
+                                                                  se         t
+(Intercept)                                              17.69520447  1.319958
+cycletime                                                 0.04537579 -3.723849
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge                0.02316569 -3.537580
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'               0.03389260  4.215584
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature   0.47338491 -1.147879
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  0.82958751  1.481331
+WellnessScale                                             0.19980085  2.749327
+                                                                df     Pr(>|t|)
+(Intercept)                                              112.79011 0.1895218168
+cycletime                                                 99.28944 0.0003258083
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge               222.73601 0.0004913076
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'              220.45016 0.0000363567
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature  114.99451 0.2534008285
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  97.93069 0.1417287977
+WellnessScale                                            142.01919 0.0067484154
+                                                                lo 95
+(Intercept)                                              -11.70117623
+cycletime                                                 -0.25900473
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge                -0.12760245
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'                0.07608215
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature   -1.48107355
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  -0.41741012
+WellnessScale                                              0.15434982
+                                                               hi 95 nmis
+(Intercept)                                              58.41501893   NA
+cycletime                                                -0.07894041   91
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge               -0.03629852   NA
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'               0.20967211   NA
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature   0.39429619   NA
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature'  2.87519784   NA
+WellnessScale                                             0.94428595   69
+                                                               fmi    lambda
+(Intercept)                                              0.3993601 0.3888031
+cycletime                                                0.4445536 0.4334767
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge               0.1458280 0.1381925
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'              0.1502947 0.1426207
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature  0.3925027 0.3820281
+rcs(FeverTemperature, 3, c(35, 37, 40))FeverTemperature' 0.4494429 0.4383127
+WellnessScale                                            0.3175121 0.3079681

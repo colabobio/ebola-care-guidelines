@@ -1,0 +1,20 @@
+                                                    est         se         t
+(Intercept)                                  4.72547794 0.68413101  6.907270
+cycletime                                   -0.16334882 0.02506778 -6.516287
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge  -0.05078858 0.01622116 -3.131007
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'  0.09572278 0.02171397  4.408350
+                                                  df     Pr(>|t|)       lo 95
+(Intercept)                                 223.9247 5.054246e-11  3.37731940
+cycletime                                   182.8138 6.791936e-10 -0.21280818
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge  350.2533 1.888614e-03 -0.08269172
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge' 333.6258 1.406375e-05  0.05300923
+                                                  hi 95 nmis       fmi
+(Intercept)                                  6.07363648   NA 0.2781278
+cycletime                                   -0.11388946  137 0.3388864
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge  -0.01888544   NA 0.1389083
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge'  0.13843632   NA 0.1553512
+                                               lambda
+(Intercept)                                 0.2717090
+cycletime                                   0.3316931
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge  0.1340054
+rcs(PatientAge, 3, c(5, 10, 30))PatientAge' 0.1503029
