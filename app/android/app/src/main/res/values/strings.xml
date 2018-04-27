@@ -7,14 +7,17 @@
     <string name="calc_risk">Calculate risk</string>
     <string name="info_title">Important information</string>
     <string name="info_paragraph1">
-        "Ebola RISK is a proof-of-concept app designed to illustrate how prognosis prediction "
-        "models could inform clinical care. It shows World Health Organization\'s treatment "
-        "guidelines for Ebola patients, based on predicted mortality risk."</string>
+        "Ebola RISK is a proof-of-concept app designed to illustrate how Machine Learning "
+        "models for clinical prognosis could inform patient care and management. It offers "
+        "treatment options compiled from WHO\'s guidelines for hemorrhagic fever patients, "
+        "prioritized by predicted mortality risk."</string>
     <string name="info_paragraph2">
         "Because it is a research prototype, this app should NOT be used to make treatment "
         "decisions on actual patients."</string>
     <string name="info_paragraph3">
         "For questions or comments contact the author (Andres Colubri) at:"</string>
+    <string name="info_paragraph4">
+        "Get the preprint of the article describing the derivation and validation of the models from:"</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
         "Material is the metaphor.\n\n"
 </resources>

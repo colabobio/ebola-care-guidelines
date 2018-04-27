@@ -21,10 +21,10 @@ class ViewControllerInfo: UIViewController {
     let warnPaddingY = CGFloat(10)
     
     let titleMsg = "Important information"
-    let infoMsg = "Ebola RISK is a proof-of-concept app designed to illustrate how prognosis prediction models could inform clinical care. It shows World Health Organization's treatment guidelines for Ebola patients, based on predicted mortality risk."
+    let infoMsg = "Ebola RISK is a proof-of-concept app designed to illustrate how Machine Learning models for clinical prognosis could inform patient care and management. It offers treatment options compiled from WHO\'s guidelines for hemorrhagic fever patients, prioritized by predicted mortality risk."
     let warnMsg = "Because it is a research prototype, this app should NOT be used to make treatment decisions on actual patients."
-    let contactMsg = "For questions or comments contact the author (Andres Colubri) at:"
-    let contactEmail = "andres@broadinstitute.org"
+    let preprintMsg = "Get the preprint of the article describing the derivation and validation of the models from:"
+    let preprintURL = "http://biorxiv.org/cgi/content/short/294587v3"
 
     
     override func viewDidLoad() {
@@ -48,8 +48,8 @@ class ViewControllerInfo: UIViewController {
         ypos += addTitle(title: titleMsg, left: xpos, top: ypos) + itemSpacing
         ypos += addInfoMsg(text: infoMsg, left: xpos, top: ypos) + itemSpacing
         ypos += addWarnMsg(text: warnMsg, left: xpos, top: ypos) + itemSpacing
-        ypos += addContactMsg(text: contactMsg, left: xpos, top: ypos) + itemSpacing
-        ypos += addEmail(email: contactEmail, left: xpos, top: ypos)
+        ypos += addPreprintMsg(text: preprintMsg, left: xpos, top: ypos) + itemSpacing
+        ypos += addPreprintURL(url: preprintURL, left: xpos, top: ypos)
     }
     
     func addTitle(title: String, left: CGFloat, top: CGFloat) -> CGFloat {
@@ -102,7 +102,7 @@ class ViewControllerInfo: UIViewController {
         return h
     }
     
-    func addContactMsg(text: String, left: CGFloat, top: CGFloat) -> CGFloat {
+    func addPreprintMsg(text: String, left: CGFloat, top: CGFloat) -> CGFloat {
         let color: UInt = 0xFF000000
         let w = ceil(view.frame.width - 2 * left)
         let h = ceil(Utils.textHeight(Text: text, usingFont: contactFont, constrainingWidth: w))
@@ -120,9 +120,9 @@ class ViewControllerInfo: UIViewController {
     }
     
     
-    func addEmail(email: String, left: CGFloat, top: CGFloat) -> CGFloat {
+    func addPreprintURL(url: String, left: CGFloat, top: CGFloat) -> CGFloat {
         let w = ceil(view.frame.width - 2 * left)
-        let h = ceil(Utils.textHeight(Text: email, usingFont: contactFont, constrainingWidth: w))
+        let h = ceil(Utils.textHeight(Text: url, usingFont: contactFont, constrainingWidth: w))
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: w, height: h))
         label.center = CGPoint(x: left + w/2, y: top + h/2)
         label.font = contactFont
@@ -131,8 +131,23 @@ class ViewControllerInfo: UIViewController {
         label.lineBreakMode = .byWordWrapping
         label.textColor = Utils.UIColorFromRGB(rgbValue: 0xFFDC27A8)
         label.backgroundColor = .white
-        label.text = email
+        label.text = url
+        label.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewControllerInfo.tapFunction(sender:)))
+        label.addGestureRecognizer(tap)
         view.addSubview(label)
         return h
+    }
+    
+    @objc func tapFunction(sender:UITapGestureRecognizer) {
+        guard let url = URL(string: preprintURL) else {
+            return //be safe
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
 }
