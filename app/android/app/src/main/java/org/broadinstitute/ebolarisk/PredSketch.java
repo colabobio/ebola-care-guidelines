@@ -8,6 +8,7 @@ import processing.core.PFont;
 
 import java.util.HashMap;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.util.Log;
 
 public class PredSketch extends PApplet {
@@ -21,6 +22,7 @@ public class PredSketch extends PApplet {
   PFont textFont;
 
   float translateY = 0;
+  float translateY0 = 0;
 //  float density;
 
   // Some UI elements
@@ -83,15 +85,9 @@ public class PredSketch extends PApplet {
 
       highRisk = riskThreshold <= risk;
       riskMsg = highRisk ?
-        "Based on presentation signs, symptoms, and PCR data, this patient has " +
-        "more than " + (int)(100 * riskThreshold) + "% chance of dying. Reassess for emergency " +
-        "clinical signs, monitor input and output by the bedside, and perform priority lab testing " +
-        "if possible."
+        String.format(getResString(R.string.hrisk_msg), (int)(100 * riskThreshold))
         :
-        "Based on presentation signs, symptoms, and PCR data, this patient has " +
-        "less than " + (int)(100 * riskThreshold) + "% chance of dying. Make sure the patient " +
-        "remains stable, by keeping him or her hydrated and taking care of any clinical signs " +
-        "with the appropriate procedure.";
+        String.format(getResString(R.string.lmrisk_msg), (int)(100 * riskThreshold));
 
       totHeight = getHeaderHeight() + getBodyHeight();
       marginRight = getMarginRight();
@@ -167,6 +163,10 @@ public class PredSketch extends PApplet {
 //    navHeight = 0;
     orientation(PORTRAIT);
 
+    varAlias = getResString(R.string.var_alias).split(":");
+    varSymptom = getResString(R.string.var_symptom).split(":");
+    binLabels = getResString(R.string.var_bin_labels).split(":");
+
 //    density = getActivity().getResources().getDisplayMetrics().density;
     scaleDimensions();
 
@@ -218,8 +218,10 @@ public class PredSketch extends PApplet {
   }
 
   private void drawNoData() {
-    String errorMsg1 = "Not enough information!";
-    String errorMsg2 = "You need to provide at least patient's age and RT-PCR Cycle Threshold (CT) value.";
+    Resources res = getActivity().getResources();
+
+    String errorMsg1 = getResString(R.string.no_data_err1);
+    String errorMsg2 = getResString(R.string.no_data_err2);
 
     noStroke();
     textAlign(CENTER, CENTER);
@@ -251,7 +253,7 @@ public class PredSketch extends PApplet {
     float hBox = 1.2f * (textAscent() + textDescent() + g.textLeading);
     rect(0, yTop, width, hBox);
     fill(240);
-    text("Mortality risk of patient", 0, yTop, width, hBox);
+    text(getResString(R.string.patient_risk), 0, yTop, width, hBox);
     yTop += hBox + 2 * padding;
 
     float barWidth = width - marginLeft - marginRight;
@@ -294,7 +296,7 @@ public class PredSketch extends PApplet {
     hBox = 1.2f * (textAscent() + textDescent() + g.textLeading);
     rect(0, yTop, width, hBox);
     fill(240);
-    text("Contribution from each predictor", 0, yTop, width, hBox);
+    text(getResString(R.string.predictor_contrib), 0, yTop, width, hBox);
     yTop += hBox + padding;
 
     stroke(0x606F6F6F);
@@ -356,8 +358,8 @@ public class PredSketch extends PApplet {
     float hBox = 1.2f * (textAscent() + textDescent() + g.textLeading);
     rect(0, 0, width, hBox);
     fill(255);
-    if (highRisk) text("HIGH RISK PATIENT", 0, 0, width, hBox);
-    else text("LOW/MEDIUM RISK PATIENT", 0, 0, width, hBox);
+    if (highRisk) text(getResString(R.string.hrisk_patient), 0, 0, width, hBox);
+    else text(getResString(R.string.lmrisk_patient), 0, 0, width, hBox);
     yTop += hBox + padding;
 
     textAlign(LEFT, CENTER);
@@ -377,8 +379,8 @@ public class PredSketch extends PApplet {
     hBox = 1.2f * (textAscent() + textDescent() + g.textLeading);
     rect(0, yTop, width, hBox);
     fill(255);
-    if (highRisk) text("This elevated risk is due to:", 0, yTop, width, hBox);
-    else text("This risk is due to:", 0, yTop, width, hBox);
+    if (highRisk) text(getResString(R.string.hrisk_reason), 0, yTop, width, hBox);
+    else text(getResString(R.string.lmrisk_reason), 0, yTop, width, hBox);
     yTop += hBox + padding;
 
     textFont(valueFont);
@@ -439,6 +441,7 @@ public class PredSketch extends PApplet {
   boolean stopDraggingTop;
 
   public void mousePressed() {
+    translateY0 = translateY;
     if (showTreatment) {
       pressSel = selectSymptom();
     }
@@ -484,16 +487,19 @@ public class PredSketch extends PApplet {
   }
 
   public void mouseReleased() {
-    if (showTreatment) {
+    if (showTreatment && !dragging || abs(translateY - translateY0) < displayDensity * 10) {
       relSel = selectSymptom();
       if (relSel != -1 && pressSel == relSel) {
         startTreatActivity(relSel);
       }
     }
-    scrollbar.close();
-    dragging = false;
-    stopDraggingTop = false;
-    stopDraggingBot = false;
+
+    if (dragging) {
+      scrollbar.close();
+      dragging = false;
+      stopDraggingTop = false;
+      stopDraggingBot = false;
+    }
   }
 
   private void startTreatActivity(int i) {
@@ -616,6 +622,8 @@ public class PredSketch extends PApplet {
   }
 
   private int selectSymptom() {
+    if (details == null) return - 1;
+
     float mx = mouseX;
     float my = mouseY - translateY;
     float yTop = getHeaderHeight();
@@ -714,6 +722,11 @@ public class PredSketch extends PApplet {
         }
       }
     }
+  }
+
+  private String getResString(int id) {
+    Resources res = getActivity().getResources();
+    return res.getString(id);
   }
 
 //  private int getNavBarHeight() {

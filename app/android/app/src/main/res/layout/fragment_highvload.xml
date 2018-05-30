@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="High viral load and severely ill patients"
+            android:text="@string/vload_title1"
             android:id="@+id/textView1"
             android:paddingBottom="5dp"/>
 
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="High viral load is the most direct indication of a severe case. It is important to regularly:"
+            android:text="@string/vload_intro"
             android:id="@+id/textView2"
             android:paddingBottom="5dp"/>
 
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ Reassess for emergency clinical signs and use the Ebola-simplified Quick Check or another triage/severity score and the ETAT for children."
+            android:text="@string/vload_list_item1"
             android:id="@+id/textView3"
             android:paddingBottom="5dp"/>
 
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ Monitor input and output (when possible) and record at the bedside. When impractical to document separately (in several buckets), the total volume of urine, vomit and stool collected in a bedside bucket may be qualitatively or quantitatively estimated based on volume measures marked on the outside of the bucket."
+            android:text="@string/vload_list_item2"
             android:id="@+id/textView4"
             android:paddingBottom="5dp"/>
 
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ Priority lab testing for ill patients:"
+            android:text="@string/vload_list_item3"
             android:id="@+id/textView5"
             android:paddingBottom="5dp"/>
 
@@ -65,42 +65,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ electrolytes- K, Na, HCO3"
+            android:text="@string/vload_list_item3a"
             android:id="@+id/textView5a"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ glucose"
+            android:text="@string/vload_list_item3b"
             android:id="@+id/textView5b"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ creatinine"
+            android:text="@string/vload_list_item3c"
             android:id="@+id/textView5c"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ lactate"
+            android:text="@string/vload_list_item3d"
             android:id="@+id/textView5d"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ for women of childbearing age: pregnancy test"
+            android:text="@string/vload_list_item3e"
             android:id="@+id/textView5e"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ Secondary priority:"
+            android:text="@string/vload_list_item4"
             android:id="@+id/textView6"
             android:paddingBottom="5dp"/>
 
@@ -108,28 +108,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ magnesium"
+            android:text="@string/vload_list_item4a"
             android:id="@+id/textView6a"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ haemoglobin or hematocrit"
+            android:text="@string/vload_list_item4b"
             android:id="@+id/textView6b"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ platelet count"
+            android:text="@string/vload_list_item4c"
             android:id="@+id/textView6c"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
-            android:text="   ○ INR and PTT"
+            android:text="@string/vload_list_item4d"
             android:id="@+id/textView6d"
             android:paddingBottom="20dp" />
 
@@ -137,7 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Shock"
+            android:text="@string/vload_shock_title"
             android:id="@+id/textView7"
             android:paddingBottom="5dp"/>
 
@@ -145,7 +145,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ General signs of shock (poor perfusion):"
+            android:text="@string/vload_shock_list_item1"
             android:id="@+id/textView8"
             android:paddingBottom="5dp"/>
 
@@ -153,63 +153,63 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ Fast, weak pulse"
+            android:text="@string/vload_shock_list_item1a"
             android:id="@+id/textView8a"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ Pallor or cold extremities"
+            android:text="@string/vload_shock_list_item1b"
             android:id="@+id/textView8b"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ Prolonged capillary refill (>3 seconds)"
+            android:text="@string/vload_shock_list_item1c"
             android:id="@+id/textView8c"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ Dizziness or inability to stand"
+            android:text="@string/vload_shock_list_item1d"
             android:id="@+id/textView8d"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ Decreased urine output (≤30 ml/hour)"
+            android:text="@string/vload_shock_list_item1e"
             android:id="@+id/textView8e"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ Difficulty breathing"
+            android:text="@string/vload_shock_list_item1f"
             android:id="@+id/textView8f"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ Impaired consciousness, lethargy, agitation, confusion"
+            android:text="@string/vload_shock_list_item1g"
             android:id="@+id/textView8g"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="   ○ Low BP (SBP≤90 in adults; check SBP by age/weight of child)"
+            android:text="@string/vload_shock_list_item1h"
             android:id="@+id/textView8h"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ Call for help from the most experienced clinician available when an Ebola patient develops shock."
+            android:text="@string/vload_shock_list_item2"
             android:id="@+id/textView9"
             android:paddingBottom="5dp"/>
 
@@ -217,7 +217,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ EVD patients can be in shock from hypovolaemic from GI loss (most common in the 2014- 2015 outbreak), septic shock or haemorrhagic shock (uncommon) or a combination of these."
+            android:text="@string/vload_shock_list_item3"
             android:id="@+id/textView10"
             android:paddingBottom="20dp"/>
 
@@ -225,7 +225,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Difficulty breathing/respiratory distress"
+            android:text="@string/vload_breath_title"
             android:id="@+id/textView11"
             android:paddingBottom="5dp"/>
 
@@ -233,7 +233,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Oxygen: titrate to Sp02≥90%.  If SpO2&lt;90%, start adult on 5 litres/minute (nasal prongs); start child at 1–2 litres/minute (nasal prongs). In the acute phase of shock (first 24 hours) in children, where there is impaired oxygen delivery, also give oxygen if SpO2&lt;94%. Evaluate for pneumonia, wheezing, fluid overload, congestive heart failure and manage accordingly. (Do not share nasal prongs–dispose of them once used by a patient.)"
+            android:text="@string/vload_breath_parag"
             android:id="@+id/textView12"
             android:paddingBottom="20dp"/>
 
@@ -241,7 +241,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Anxiety"
+            android:text="@string/vload_anxiety_title"
             android:id="@+id/textView13"
             android:paddingBottom="5dp"/>
 
@@ -249,7 +249,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Provide psychological support. Depression, associated with feelings of hopelessness and/or suicidal thoughts, may be present. See section 10.11 (Mental health problems) in the IMAI District Clinician Manual for their management. Diazepam – adults: 5–15 mg/day in 3 divided doses may be considered in severe cases."
+            android:text="@string/vload_anxiety_parag"
             android:id="@+id/textView14"
             android:paddingBottom="20dp"/>
 
@@ -257,7 +257,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Confusion in cooperative patient"
+            android:text="@string/vload_confusion_coop_title"
             android:id="@+id/textView15"
             android:paddingBottom="5dp"/>
 
@@ -265,7 +265,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Reason with the patient in a calm and non-aggressive fashion. Keep lights on at night. Consider diazepam 5 mg at night (adult)."
+            android:text="@string/vload_confusion_coop_parag"
             android:id="@+id/textView16"
             android:paddingBottom="20dp"/>
 
@@ -273,7 +273,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Agitation, confusion and aggression in non-cooperative adult patient"
+            android:text="@string/vload_agit_noncoop_title"
             android:id="@+id/textView17"
             android:paddingBottom="5dp"/>
 
@@ -281,7 +281,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Give sedation: haloperidol 2.5 to 5 mg IM (depending on size of adult). Approach patient with caution, call for assistance, and give treatment only if safe to do so."
+            android:text="@string/vload_agit_noncoop_parag"
             android:id="@+id/textView18"
             android:paddingBottom="20dp"/>
 
@@ -289,7 +289,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Unexplained neurological symptoms"
+            android:text="@string/vload_neuro_title"
             android:id="@+id/textView19"
             android:paddingBottom="5dp"/>
 
@@ -297,10 +297,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="This includes peripheral neuropathy, cranial nerve palsies, encephalopathy, aphonia, cardiac failure. Consider thiamine deficiency (beriberi) and give vitamin B1: 50 mg IM or IV daily for several days."
+            android:text="@string/vload_neuro_parag"
             android:id="@+id/textView20"
             android:paddingBottom="20dp"/>
-
     </LinearLayout>
   </ScrollView>
 </RelativeLayout>

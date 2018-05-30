@@ -1,0 +1,375 @@
+<resources>
+    <string name="app_name">"Ebola RISK"</string>
+    <string name="action_settings">"Paramètres"</string>
+    <string name="action_info">"Information"</string>
+
+    <string name="continue_button">"Continuer vers l'app"</string>
+    <string name="calc_risk">"Calculer le risque"</string>
+
+    <string name="risk_button">"RISK"</string>
+
+    <!--SPLASH SCREEN -->
+
+    <string name="info_title">"Une information important"</string>
+    <string name="info_paragraph1">
+        "Ebola RISK est une application par preuve de concept, conçue pour illustrer comment les modèles de Machine Learning pourraient orienter les soins et la gestion des patients selon leur pronostic clinique. Il offre des options de traitement (compilées à partir des protocoles de l'OMS pour la fièvre hémorragique) classées par ordre de priorité selon le risque de mortalité prédit."</string>
+    <string name="info_paragraph2">
+        "Comme il s’agit d’un prototype de recherche, cette application ne devrait pas être utilisée pour prendre des décisions de traitement pour les patients réels."</string>
+    <string name="info_paragraph4">
+        "Obtenez la pré-impression de l'article décrivant la dérivation et la validation des modèles ici: "</string>
+
+    <!--DEMO SCREEN-->
+
+    <string name="info_age_intro">"Entrer l'âge du patient soit en années soit en mois. En règle générale, l'âge en années est suffisant pour les patients adultes, mais pour les enfants &lt; 2 ans, l’âge devrait être donné en mois pour adapter au mieux la posologie du traitement."</string>
+
+    <string name="info_age_years">"Âge en années:"</string>
+    <string name="info_age_months">"Âge en mois:"</string>
+    <string name="info_weight_intro">"Entrer le poids du patient. Si l'âge précis en mois n'est pas disponible pour les jeunes enfants, le poids sera utilisé pour recommander le dosage de certains médicaments."</string>
+    <string name="info_weight_kg">"Poids en kg:"</string>
+
+    <!--VITALS SCREEN-->
+
+    <string name="vitals_intro">"Mesurer les signes vitaux du patient à son arrivée au centre de traitement et les noter ci-dessous."</string>
+    <string name="vitals_temp">"Température en °C:"</string>
+
+    <!--CLINICAL SCREEN-->
+
+    <string name="clinical_intro">"Noter les signes observés et les symptômes signalés à l'entrée du patient, en utilisant l'option «Inconnu» s'il n'est pas possible de déterminer si le signe / symptôme est présent ou non."</string>
+
+    <string name="clinical_diarr">"Diarrhée:"</string>
+    <string name="clinical_weak">"Asthénie/Faiblesse:"</string>
+    <string name="clinical_jaun">"Ictère/jaunisse:"</string>
+    <string name="clinical_bleed">"Saignement:"</string>
+    <string name="clinical_head">"Maux de tête:"</string>
+    <string name="clinical_vomit">"Vomissements:"</string>
+    <string name="clinical_pain">"Douleur abdominale:"</string>
+
+    <string name="clinical_yes">"Oui"</string>
+    <string name="clinical_no">"Non"</string>
+    <string name="clinical_dontknow">"Inconnu"</string>
+
+    <!--LAB SCREEN-->
+
+    <string name="lab_intro">"Utiliser cette section pour noter tous les résultats disponibles des analyses de laboratoire."</string>
+    <string name="lab_pcr">"Seuil de cycle RT-PCR:"</string>
+
+    <!--VISUALIZATION SCREEN-->
+
+    <string name="hrisk_msg">"Au vu de la présentation clinique et des données de PCR, ce patient/cette patiente a plus de %d%% de risque de mortalité. Il est recommandé de réévaluer l’état du patient/e régulièrement pour les drapeaux rouges, de surveiller les apports/pertes et d’effectuer des analyses de laboratoire prioritaires si possible."
+    </string>
+
+    <string name="lmrisk_msg">"Au vu de la présentation clinique et les données de PCR, ce patient/cette patiente a moins de %d%% de risque de mortalité. Il est recommandé de s’assurer que le patient reste stable en le maintenant hydraté et en gérant ses signes/symptômes selon le protocole standard."
+    </string>
+
+    <string name="no_data_err1">"Pas suffisamment d'informations!"</string>
+    <string name="no_data_err2">"Vous devez fournir au moins l'âge du patient et la valeur du seuil de cycle RT-PCR (CT)."</string>
+
+    <string name="patient_risk">"Risque de mortalité du patient"</string>
+    <string name="predictor_contrib">"Contribution de chaque prédicteur"</string>
+
+    <string name="hrisk_patient">"PATIENT À RISQUE ÉLEVÉ"</string>
+    <string name="lmrisk_patient">"PATIENT À RISQUE FAIBLE / MOYEN"</string>
+
+    <string name="hrisk_reason">"Ce risque élevé est dû à:"</string>
+    <string name="lmrisk_reason">"Ce risque est dû à:"</string>
+
+    <!--MODEL VARIABLES-->
+
+    <string name="var_alias">"PCR CT:Âge:Température:Jaunisse:Saignement:Maux de tête:Diarrhée:Vomissements:Douleur abdominale:Faiblesse:Wellness"</string>
+    <string name="var_symptom">"Charge virale:Âge:Fièvre:Jaunisse:Saignement:Maux de tête:Diarrhée:Vomissements:Douleur abdominale:Faiblesse:Wellness"</string>
+    <string name="var_bin_labels">"non:oui"</string>
+
+
+    <!--Age-->
+
+    <string name="age_title1">"Enfants et patients âgés"</string>
+    <string name="age_parag1">"Comme ces patients sont exposés à un risque accru de décès, une surveillance rapprochée est recommandée, en les réévaluant régulièrement pour les drapeaux rouges. Il est particulièrement important de maintenir la balance électrolytique et la pression artérielle ainsi que d’éviter la déshydratation. Il est également crucial de suivre rigoureusement tous les protocoles et d’adapter soigneusement les doses de traitement en fonction de l'âge du patient."</string>
+
+    <string name="age_title2">"Hypoglycémie"</string>
+    <string name="age_parag2">"Bien qu'elle ne soit pas fréquente chez les adultes, l'hypoglycémie peut accompagner la déshydratation et entraîner des convulsions, le coma et la mort. Les jeunes enfants, les adultes gravement malades et les personnes âgées ou sévèrement sous-alimentées sont particulièrement à risque."</string>
+
+    <string name="age_item1">"◘ En cas de suspicion d'hypoglycémie, vérifier la glycémie. Répéter au besoin."</string>
+    <string name="age_item2">"◘ Dans le but d’augmenter la glycémie du patient hypoglycémique, des ampoules de D50 peuvent être ajoutées à la solution de Ringer lactate ou de solution saline 0.9%."</string>
+    <string name="age_item3">"◘ Si la mesure de la glycémie n'est pas possible et que le/la patient/e développe une léthargie, une crise épileptique ou un coma, il est recommandé de donner du glucose de manière empirique."</string>
+
+    <!--Bleeding-->
+
+    <string name="bleed_title1">"Hémorragie"</string>
+
+    <string name="bleed_parag1">"La transfusion de sang total (frais) ou de concentrés de globules rouges (frais) doit être envisagée, guidée par des indicateurs cliniques et, idéalement, par des analyses de laboratoire:"</string>
+
+    <string name="bleed_clinical_title">"Indicateurs cliniques"</string>
+    <string name="bleed_clinical_item1">"  ◘ Pâleur sévère"</string>
+    <string name="bleed_clinical_item2">"  ◘ Pouls rapide (tachycardie >100bpm)"</string>
+    <string name="bleed_clinical_item3">"  ◘ Respiration difficile (dyspnée)"</string>
+    <string name="bleed_clinical_item4">"  ◘ Confusion"</string>
+    <string name="bleed_clinical_item5">"  ◘ Agitation"</string>
+
+    <string name="bleed_lab_title">"Indicateurs de laboratoire"</string>
+    <string name="bleed_lab_item1">"  ◘ Hgb ≤ 5 g/dl"</string>
+    <string name="bleed_lab_item2">"  ◘ HHématocrite ≤ 15"</string>
+    <string name="bleed_lab_item3">"  ◘ INR ≥ 1,2"</string>
+
+    <string name="bleed_vitk_title">"Carence en vitamine K"</string>
+    <string name="bleed_vitk_parag1">"Les patients malnutris et ceux traités avec des antibiotiques présentent souvent une carence légère en vitamine K qui peut entraîner une élévation du INR / PTT et donc prédisposer à des saignements."</string>
+    <string name="bleed_vitk_parag2">"L'administration de multivitamines et / ou de vitamine K est donc envisageable chez ces patients (par exemple 10 mg vitamine K 1x/j, PO pendant 3 jours à l'admission ou 10 mg IV pour ceux qui ne peuvent pas ingérer des comprimés per os et qui ont un accès IV). Le traitement de saignements significatifs avec du plasma frais congelé devrait idéalement être guidé par INR / PT."</string>
+
+    <string name="bleed_add_title">Traitement supplémentaire"</string>
+    <string name="bleed_add_parag">"D'autres médicaments pour prévenir ou traiter les saignements tels que les antifibrinolytiques (acide tranexamique IV) peuvent être envisagés sur la base de preuves provenant d'autres populations de patients. Les preuves directes chez les patients atteints d'Ebola sont limitées."</string>
+
+    <!--Diarrhea-->
+
+    <string name="diarr_title1">"Diarrhée et déshydratation "</string>
+    <string name="diarr_parag1">"Ces symptômes exposent les patients à un risque de déshydratation, la cause la plus fréquente et la plus importante de complications. La solution de réhydratation orale (SRO) de l'OMS est la mieux adaptée au traitement de la déshydratation."</string>
+
+    <string name="diarr_ors_table_title">"SRO quantité à donner dans les 4 premières heures"</string>
+
+    <string name="diarr_ors_table_col1_row0">"Âge du\npatient"</string>
+    <string name="diarr_ors_table_col1_row1">"Moins de\n4 mois"</string>
+    <string name="diarr_ors_table_col1_row2">"4 à 11 mois"</string>
+    <string name="diarr_ors_table_col1_row3">"12 à 23 mois"</string>
+    <string name="diarr_ors_table_col1_row4">"2 à 4 ans"</string>
+    <string name="diarr_ors_table_col1_row5">"5 à 14 ans"</string>
+    <string name="diarr_ors_table_col1_row6">"15 ans\nou plus"</string>
+
+    <string name="diarr_ors_table_col2_row0">"Quantité\nde SRO"</string>
+    <string name="diarr_ors_table_col2_row1">"200 à 400 ml"</string>
+    <string name="diarr_ors_table_col2_row2">"400 à 600 ml"</string>
+    <string name="diarr_ors_table_col2_row3">"600 à 800 ml"</string>
+    <string name="diarr_ors_table_col2_row4">"800 à 1200 ml"</string>
+    <string name="diarr_ors_table_col2_row5">"1200 à 2200 ml"</string>
+    <string name="diarr_ors_table_col2_row6">"2200 à 4000 ml\n"</string>
+
+    <string name="diarr_ors_table_col3_row0">"Poids\ndu patient"</string>
+    <string name="diarr_ors_table_col3_row1">"Moins de\n5 kg"</string>
+    <string name="diarr_ors_table_col3_row2">"5 à 7,9 kg"</string>
+    <string name="diarr_ors_table_col3_row3">"8 à 10,9 kg"</string>
+    <string name="diarr_ors_table_col3_row4">"11 à 15,9 kg"</string>
+    <string name="diarr_ors_table_col3_row5">"16 à 29,9 kg"</string>
+    <string name="diarr_ors_table_col3_row6">"30 kg\nou plus"</string>
+
+    <string name="diarr_note1">"◘ Réévaluer l’état du patient au bout de quatre heures et lui administrer davantage de SRO, en suivant les indications ci-dessus, si la déshydratation persiste.</string>
+    <string name="diarr_note2">"◘ Si un patient (enfant ou adulte) ne présente pas de diarrhée ni de déshydratation, et qu’il éprouve des difficultés pour boire la SRO, utiliser une SRO aromatisée.</string>
+    <string name="diarr_note3">"◘ Ne pas utiliser de boissons énergétiques (pour sportifs) car elles risquent d’aggraver la diarrhée.</string>
+
+    <string name="diarr_zinc_title">"Traitement de zinc"</string>
+
+    <string name="diarr_zinc_parag">"Administrer aux patients du sulfate de zinc, en particulier aux enfants:"</string>
+
+    <string name="diarr_zinc_table_col1_row0">"Âge du patient"</string>
+    <string name="diarr_zinc_table_col1_row1">"Moins de 6 mois"</string>
+    <string name="diarr_zinc_table_col1_row2">"Plus de 6 mois "</string>
+
+    <string name="diarr_zinc_table_col2_row0">"Dose de zinc"</string>
+    <string name="diarr_zinc_table_col2_row1">"10 mg par jour pendant 10 à 14 jours"</string>
+    <string name="diarr_zinc_table_col2_row2">"20 mg par jour pendant 10 à 14 jours"</string>
+
+    <!--Fever-->
+
+    <string name="fever_title1">"Fièvre/maux de tête"</string>
+    <string name="fever_parag1">"Traiter avec l'administration orale de paracétamol. La dose en fonction du poids est de 15 mg/kg:"</string>
+
+    <string name="fever_para_table_col1_row0">"Âge du patient"</string>
+    <string name="fever_para_table_col1_row1">"6 mois à\n2 ans"</string>
+    <string name="fever_para_table_col1_row2">"3 à 5 ans"</string>
+    <string name="fever_para_table_col1_row3">"Âge 6 à 9 ans"</string>
+    <string name="fever_para_table_col1_row4">"10 à 15 ans"</string>
+    <string name="fever_para_table_col1_row5">"Adulte"</string>
+
+    <string name="fever_para_table_col2_row0">"Dose de Paracetamol"</string>
+    <string name="fever_para_table_col2_row1">"100 mg toutes les 4 à 6 heures"</string>
+    <string name="fever_para_table_col2_row2">"200 mg toutes les 4 à 6 heures"</string>
+    <string name="fever_para_table_col2_row3">"300 mg toutes les 4 à 6 heures"</string>
+    <string name="fever_para_table_col2_row4">"500 mg toutes les 4 à 6 heures"</string>
+    <string name="fever_para_table_col2_row5">"1000 mg toutes les 4 à 6 heures"</string>
+
+    <string name="fever_antimalarial_title">"Traitement antipaludique"</string>
+    <string name="fever_antimalarial_parag">"Tous les patients qui se présentent à un CSC doivent recevoir un traitement antipaludique avec de l'artésunate et de l'amodiaquine (AS + AQ) OU de l'artéméther-luméfantrine (AL) OU de la dihydroartémisinine plus pipéraquine (DHP + PQP)."</string>
+
+    <string name="fever_antimalarial_ASAQ_title">"Association artésunate-amodiaquine (AS+AQ)"</string>
+    <string name="fever_antimalarial_ASAQ_dose">"Association à dose fixe (50 mg + 153 mg / comprimé)"</string>
+
+    <string name="fever_antimalarial_ASAQ_table_col1_row0">"Âge\ndu patient"</string>
+    <string name="fever_antimalarial_ASAQ_table_col1_row1">"2 à 11\nmois"</string>
+    <string name="fever_antimalarial_ASAQ_table_col1_row2">"1 à 5\nans"</string>
+    <string name="fever_antimalarial_ASAQ_table_col1_row3">"6 à 13\nans"</string>
+    <string name="fever_antimalarial_ASAQ_table_col1_row4">"≥14\nans"</string>
+
+    <string name="fever_antimalarial_ASAQ_table_col2_row0">"Dose\njournalière"</string>
+    <string name="fever_antimalarial_ASAQ_table_col2_row1">"1/2 comprimé par\njourpendant 3 jours"</string>
+    <string name="fever_antimalarial_ASAQ_table_col2_row2">"1 comprimé par\njour pendant 3 jours"</string>
+    <string name="fever_antimalarial_ASAQ_table_col2_row3">"2 comprimés par\njour pendant 3 jours"</string>
+    <string name="fever_antimalarial_ASAQ_table_col2_row4">"2 comprimés par\njour pendant 3 jours"</string>
+
+    <string name="fever_antimalarial_ASAQ_table_col3_row0">"Poids\ncorporel"</string>
+    <string name="fever_antimalarial_ASAQ_table_col3_row1">"5 à 9 kg\n"</string>
+    <string name="fever_antimalarial_ASAQ_table_col3_row2">"9 à 18 kg\n"</string>
+    <string name="fever_antimalarial_ASAQ_table_col3_row3">"19 à 35 kg\n"</string>
+    <string name="fever_antimalarial_ASAQ_table_col3_row4">"≥35 kg\n"</string>
+
+    <string name="fever_antimalarial_AL_title">"Association artéméther-luméfantrine (AL)"</string>
+    <string name="fever_antimalarial_AL_dose">"Association à dose fixe (20 mg + 120 mg/comprimé)"</string>
+
+    <string name="fever_antimalarial_AL_table_col1_row0">"Âge\ndu patient"</string>
+    <string name="fever_antimalarial_AL_table_col1_row1">"2 à 24\nmois"</string>
+    <string name="fever_antimalarial_AL_table_col1_row2">"25 mois à 7\nans"</string>
+    <string name="fever_antimalarial_AL_table_col1_row3">"8 à 13\nans"</string>
+    <string name="fever_antimalarial_AL_table_col1_row4">"≥14\nans"</string>
+
+    <string name="fever_antimalarial_AL_table_col2_row0">"Dose\njournalière"</string>
+    <string name="fever_antimalarial_AL_table_col2_row1">"1 comprimé deux fois par\njour pendant 3 jours"</string>
+    <string name="fever_antimalarial_AL_table_col2_row2">"2 comprimés deux fois par\njour pendant 3 jours"</string>
+    <string name="fever_antimalarial_AL_table_col2_row3">"3 comprimés deux fois par\njour pendant 3 jours"</string>
+    <string name="fever_antimalarial_AL_table_col2_row4">"4 comprimés deux fois par\njour pendant 3 jours"</string>
+
+    <string name="fever_antimalarial_AL_table_col3_row0">"Poids\ncorporel"</string>
+    <string name="fever_antimalarial_AL_table_col3_row1">"5 à 15 kg\n"</string>
+    <string name="fever_antimalarial_AL_table_col3_row2">"15 à 25 kg\n"</string>
+    <string name="fever_antimalarial_AL_table_col3_row3">"25 à 35 kg\n"</string>
+    <string name="fever_antimalarial_AL_table_col3_row4">"≥35 kg\n"</string>
+
+    <string name="fever_antimalarial_DHPPQP_title">"Association dihydroartémisinine-pipéraquine (DHP+PQP)"</string>
+    <string name="fever_antimalarial_DHPPQP_dose">"Association à dose fixe (40 mg + 320 mg/comprimé)"</string>
+
+    <string name="fever_antimalarial_DHPPQP_table_col1_row0">"Poids\ncorporel"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col1_row1">"11 à 16 kg\n"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col1_row2">"17 à 24 kg\n"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col1_row3">"25 à 35 kg\n"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col1_row4">"36 à 59 kg\n"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col1_row5">"60 à 79 kg\n"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col1_row6">"≥80 kg\n"</string>
+
+    <string name="fever_antimalarial_DHPPQP_table_col2_row0">"Dose\njournalière"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col2_row1">"1 comprimé par jour\npendant 3 jours"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col2_row2">"1,5 comprimé par jour\npendant 3 jours"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col2_row3">"2 comprimés par jour\npendant 3 jours"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col2_row4">"3 comprimés par jour\npendant 3 jours"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col2_row5">"4 comprimés par jour\npendant 3 jours"</string>
+    <string name="fever_antimalarial_DHPPQP_table_col2_row6">"5 comprimés par jour\npendant 3 jours"</string>
+
+    <!--Viral load-->
+
+    <string name="vload_title1">"Charge virale élevée et patients gravement malades"</string>
+
+    <string name="vload_intro">"Une charge virale élevée est le prédicteur le plus fiable pour une évolution défavorable. Il est important de veiller régulièrement à:"</string>
+    <string name="vload_list_item1">"◘ Réévaluer les signes cliniques d'urgence et utiliser le « Quick Check » simplifié pour l’Ebola ou un autre score de triage / gravité (l'ETAT pour les enfants)."</string>
+    <string name="vload_list_item2">"◘ Surveiller les apports/pertes si cela est possible. Lorsqu'il est difficile de répertorier les pertes séparément (dans plusieurs seaux, par exemple), il est possible d’estimer qualitativement ou quantitativement le volume total d'urine, de vomissures et de selles recueilli dans un seul seau en fonction des mesures de volume marquées sur celui-ci."</string>
+    <string name="vload_list_item3">"◘ Analyses prioritaires pour les patients malades:"</string>
+    <string name="vload_list_item3a">"   ○ électrolytes : K, Na, HCO3"</string>
+    <string name="vload_list_item3b">"   ○ glucose"</string>
+    <string name="vload_list_item3c">"   ○ créatinine"</string>
+    <string name="vload_list_item3d">"   ○ lactate"</string>
+    <string name="vload_list_item3e">"   ○ fpour les femmes en âge de procréer: test de grossesse"</string>
+    <string name="vload_list_item4">"◘ Priorité secondaire:"</string>
+    <string name="vload_list_item4a">"    ○ magnésium"</string>
+    <string name="vload_list_item4b">"    ○ hémoglobine ou hématocrite"</string>
+    <string name="vload_list_item4c">"    ○ numération plaquettaire"</string>
+    <string name="vload_list_item4d">"    ○ INR et PTT"</string>
+
+    <string name="vload_shock_title">"Choc"</string>
+
+    <string name="vload_shock_list_item1">"◘ Signes généraux de choc (mauvaise perfusion):"</string>
+    <string name="vload_shock_list_item1a">"   ○ Pouls rapide et faible"</string>
+    <string name="vload_shock_list_item1b">"   ○ Pâleur ou extrémités froides"</string>
+    <string name="vload_shock_list_item1c">"   ○ Temps de remplissage capillaire prolongé (> 3 secondes)"</string>
+    <string name="vload_shock_list_item1d">"   ○ Vertiges ou incapacité à rester debout"</string>
+    <string name="vload_shock_list_item1e">"   ○ Diminution de la production d'urine (≤ 30 ml / heure)"</string>
+    <string name="vload_shock_list_item1f">"   ○ Difficulté à respirer / Dyspnée"</string>
+    <string name="vload_shock_list_item1g">"   ○ Trouble de conscience, somnolence, léthargie, agitation, confusion"</string>
+    <string name="vload_shock_list_item1h">"   ○ Faible pression artérielle (TA systolique ≤90 mmHg chez les adultes, vérifiez la TA systolique par âge et poids de l'enfant)"</string>
+    <string name="vload_shock_list_item2">"◘ Appeler le clinicien le plus expérimenté lorsqu'un patient atteint d'Ebola développe un état de choc."</string>
+    <string name="vload_shock_list_item3">"◘ Les patients atteints d’Ebola peuvent subir un choc hypovolémique dû aux pertes gastro-intestinales (couramment au cours de l'épidémie de 2014-2015), un choc septique, un choc hémorragique (peu fréquent) ou une combinaison de ces facteurs."</string>
+
+    <string name="vload_breath_title">"Difficulté à respirer et détresse respiratoire "</string>
+
+    <string name="vload_breath_parag">"Oxygène : titrer la Sp02 jusqu’à ≥90 % Si SpO2 &lt; 90 %, donner à l’adulte 5 litres/minute (canule nasale) ; pour l’enfant, commencer à 1-2 litres/ minute (canule nasale). Évaluer s’il y a une pneumonie, une respiration sifflante, une surcharge hydrique, une insuffisance cardiaque œdémateuse et prendre en charge en conséquence. (Les canules nasales doivent être jetées après utilisation par un patient.)"</string>
+
+    <string name="vload_anxiety_title">"Anxiété"</string>
+
+    <string name="vload_anxiety_parag">"Soutien psychologique (voir section 6 de ce manuel) Diazépam – adultes : 5-15 mg/jour en trois doses."</string>
+
+    <string name="vload_confusion_coop_title">"État de confusion chez le patient coopératif"</string>
+
+    <string name="vload_confusion_coop_parag">"Raisonner le patient de manière calme et sans agressivité. Laisser la lumière allumée la nuit. Envisager de donner 5 mg de diazépam la nuit (adulte)."</string>
+
+    <string name="vload_agit_noncoop_title">"Confusion et agressivité chez un patient non coopératif"</string>
+
+    <string name="vload_agit_noncoop_parag">"Sédation avec 5 mg d’halopéridol en IM (adulte)."</string>
+
+    <string name="vload_neuro_title">"Symptômes neurologiques inexpliqués"</string>
+
+    <string name="vload_neuro_parag">"Cela inclut la neuropathie périphérique, les atteintes de nerfs crâniens, l'encéphalopathie, l'aphonie, et l'insuffisance cardiaque. Envisager une carence en thiamine (béribéri) et donner de la vitamine B1: 50 mg IM ou IV 1x/j pendant plusieurs jours."</string>
+
+    <!--Jaundice-->
+
+    <string name="jaundice_title1">"Jaunisse et dommages hépatiques"</string>
+
+    <string name="jaundice_parag1">"L’ictère n'est pas fréquent dans l’Ebola, mais lorsqu’il est présent, il indique une probable acutisation avec atteinte des cellules parenchymateuses du foie. Confirmer l’ictère hépatique / hépatocellulaire par des tests d'urine (urine foncée, présence de bilirubine conjuguée, urobilirubine > 2 unités). Suivre de près l’évolution et appliquer un traitement approprié pour les autres signes / symptômes."</string>
+
+    <string name="jaundice_title2">"Recommandations nutritionnelles"</string>
+
+    <string name="jaundice_parag2">"Faire preuve de prudence lorsqu’il s’agit de nourrir un patient qui souffre d’inappétence. Même chez les patients gravement malades sans déshydratation sévère, l'excès d'apport énergétique ou de protéines n'est pas nécessaire et une telle surcharge pourrait compromettre davantage la fonction hépatique et rénale."</string>
+
+    <!--Vomiting-->
+
+    <string name="vomit_title1">"Nausée et vomissements"</string>
+
+    <string name="vomit_parag1">"Les nausées et les vomissements peuvent être pris en charge par l'ondansétron:"</string>
+
+    <string name="vomit_ondansetron_table_col1_row0">"Âge du patient"</string>
+    <string name="vomit_ondansetron_table_col1_row1">"4 à 12 ans"</string>
+    <string name="vomit_ondansetron_table_col1_row2">"Adulte"</string>
+
+    <string name="vomit_ondansetron_table_col2_row0">"Dose journalière"</string>
+    <string name="vomit_ondansetron_table_col2_row1">"4 mg deux fois par jour"</string>
+    <string name="vomit_ondansetron_table_col2_row2">"8 mg deux fois par jour"</string>
+
+    <string name="vomit_dehydration_title">"Déshydratation"</string>
+    <string name="vomit_dehydration_parag">"Ces symptômes exposent les patients à un risque de déshydratation, en particulier si également présentant la diarrhée. Déshydratation est la cause la plus fréquente et la plus importante de complications."</string>
+
+    <!--Pain-->
+
+    <string name="pain_title1">"Douleur abdominale / épigastrique"</string>
+
+    <string name="pain_parag1">"Traiter avec l'administration orale d'Omeprazole, une fois par jour avant le repas:"</string>
+
+    <string name="vomit_omeprazole_table_col1_row0">"Âge du patient"</string>
+    <string name="vomit_omeprazole_table_col1_row1">"6 mois-2 ans"</string>
+    <string name="vomit_omeprazole_table_col1_row2">"2-12 ans"</string>
+    <string name="vomit_omeprazole_table_col1_row3">"Adulte"</string>
+
+    <string name="vomit_omeprazole_table_col2_row0">"Dose de Omeprazole"</string>
+    <string name="vomit_omeprazole_table_col2_row1">"10 mg"</string>
+    <string name="vomit_omeprazole_table_col2_row2">"10 mg"</string>
+    <string name="vomit_omeprazole_table_col2_row3">"20 mg"</string>
+
+
+    <!--Weakness-->
+
+    <string name="weak_title1">"Faiblesse et déshydratation sévère"</string>
+
+    <string name="weak_parag1">"La faiblesse et la léthargie accompagnant la diarrhée ou des vomissements importants, ainsi qu’un état de confusion, des yeux enfoncés, une peau ridée et un pouls faible, sont des signes de déshydratation sévère. Une réanimation liquidienne par voie intraveineuse (IV) doit être immédiatement initiée, en parallèle d’une solution de réhydratation orale (SRO)."</string>
+
+    <string name="weak_iv_title">"Réanimation liquidienne"</string>
+
+    <string name="weak_iv_parag">"Administrez 100 mL/kg de solution de lactate de Ringer (ou, à défaut, de solution saline normale), comme suit:"</string>
+
+    <string name="weak_iv_table_col1_row0">"Âge\ndu patient"</string>
+    <string name="weak_iv_table_col1_row1">"Nourrissons\n(moins de 12 mois)"</string>
+    <string name="weak_iv_table_col1_row2">"Plus âgés\n(12 mois ou plus,\ny compris les adultes)"</string>
+
+    <string name="weak_iv_table_col2_row0">"Donner d'abord\n30 ml / kg dans:"</string>
+    <string name="weak_iv_table_col2_row1">"1 heure (*)\n"</string>
+    <string name="weak_iv_table_col2_row2">"30 minutes (*)\n\n"</string>
+
+    <string name="weak_iv_table_col3_row0">"Puis donnez\n70 ml / kg dans:"</string>
+    <string name="weak_iv_table_col3_row1">"5 heure (*)\n"</string>
+    <string name="weak_iv_table_col3_row2">"2 1/2\nheures"</string>
+
+    <string name="weak_iv_table_footnote">"*Répétez une fois l’opération si le pouls radial est très faible ou imperceptible."</string>
+
+    <string name="weak_iv_note1">"◘ Réévaluez l’état du patient toutes les 1 à 2 heures."</string>
+    <string name="weak_iv_note2">"◘ Si l’état d’hydratation ne s’améliore pas, augmentez le débit de la perfusion."</string>
+    <string name="weak_iv_note3">"◘ Administrez aussi une solution de SRO (environ 5 mL/kg/heure) dès que le patient est en état de boire, généralement après 3 4 heures chez le nouveau-né ou 1 2 heures chez l’enfant, l’adolescent ou l’adulte."</string>
+    <string name="weak_iv_note4">"◘ Réévaluez l’état du patient pendant 6 heures (nouveau-né) et après 3 heures (autres patients). Classez l’état de déshydratation, puis choisissez le plan adapté pour la poursuite du traitement."</string>
+</resources>

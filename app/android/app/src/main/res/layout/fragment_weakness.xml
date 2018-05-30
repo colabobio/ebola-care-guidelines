@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Weakness and severe dehydration"
+            android:text="@string/weak_title1"
             android:id="@+id/textView1"
             android:paddingBottom="5dp"/>
 
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="The weakness and lethargy accompanying diarrhoea; or with significant vomiting, as well as confusion, sunken eyes, wrinkled skin and a weak pulse, are indication of severe dehydration. Patient should be immediately started on active intravenous (IV) fluid resuscitation while also offered Oral Rehydration Solution (ORS)."
+            android:text="@string/weak_parag1"
             android:id="@+id/textView2"
             android:paddingBottom="10dp"/>
 
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="IV fluid resuscitation"
+            android:text="@string/weak_iv_title"
             android:id="@+id/textView12"
             android:paddingBottom="5dp"/>
 
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Give 100 ml/kg Lactated Ringer’s solution (or, if LR not available, normal saline), divided as follows:"
+            android:text="@string/weak_iv_parag"
             android:id="@+id/textView13"
             android:paddingBottom="5dp"/>
 
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Patient\nage"
+            android:text="@string/weak_iv_table_col1_row0"
             android:id="@+id/textView3"
             android:background="@color/table_title_background"
             android:textColor="@color/white"></TextView>
@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="First give\n30 ml/kg in:"
+            android:text="@string/weak_iv_table_col2_row0"
             android:id="@+id/textView4"
             android:background="@color/table_title_background"
             android:textColor="@color/white"></TextView>
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Then give\n70 ml/kg in:"
+            android:text="@string/weak_iv_table_col3_row0"
             android:id="@+id/textView5"
             android:background="@color/table_title_background"
             android:textColor="@color/white"></TextView>
@@ -102,7 +102,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/table_column_background"
                 android:padding="5dp"
-                android:text="Infants\n(under 12 months)"
+                android:text="@string/weak_iv_table_col1_row1"
                 android:textColor="@color/table_column_text"></TextView>
 
             <TextView
@@ -110,14 +110,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="1 hour (*)\n"></TextView>
+                android:text="@string/weak_iv_table_col2_row1"></TextView>
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="5 hours (*)\n"></TextView>
+                android:text="@string/weak_iv_table_col3_row1"></TextView>
         </TableRow>
 
 
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/table_column_background"
                 android:padding="5dp"
-                android:text="Older\n(12 months or older,\nincluding adults)"
+                android:text="@string/weak_iv_table_col1_row2"
                 android:textColor="@color/table_column_text"></TextView>
 
             <TextView
@@ -140,14 +140,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="30 minutes (*)\n\n"></TextView>
+                android:text="@string/weak_iv_table_col2_row2"></TextView>
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:padding="5dp"
-                android:text="2 and 1/2\nhours\n\n"></TextView>
+                android:text="@string/weak_iv_table_col3_row2"></TextView>
         </TableRow>
         </TableLayout>
 
@@ -155,14 +155,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="* Repeat once if radial pulse is very weak or not detectable."
+            android:text="@string/weak_iv_table_footnote"
             android:id="@+id/textView14"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ Reassess the patient every 1–2 hours."
+            android:text="@string/weak_iv_note1"
             android:id="@+id/textView15"
             android:paddingTop="5dp"/>
 
@@ -170,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ If hydration status is not improving, give the IV drip more rapidly."
+            android:text="@string/weak_iv_note2"
             android:id="@+id/textView16"
             android:paddingTop="5dp"/>
 
@@ -178,7 +178,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ Also give ORS (about 5 ml/kg/hour) as soon as the patient can drink, usually after 3– 4 hours (infant) or 1–2 hours for children, adolescents, and adults."
+            android:text="@string/weak_iv_note3"
             android:id="@+id/textView17"
             android:paddingTop="5dp"/>
 
@@ -186,7 +186,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="◘ Reassess an infant for 6 hours and older patient after 3 hours. Classify dehydration. Then choose the appropriate plan to continue treatment."
+            android:text="@string/weak_iv_note4"
             android:id="@+id/textView18"
             android:paddingTop="5dp"/>
 

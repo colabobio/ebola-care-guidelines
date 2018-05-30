@@ -23,14 +23,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Fever/headache"
+            android:text="@string/fever_title1"
             android:id="@+id/textViewTitle"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Treat with oral administration of Paracetamol (dose by weight is 15 mg/kg):"
+            android:text="@string/fever_parag1"
             />
 
         <TableLayout
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Patient age"
+            android:text="@string/fever_para_table_col1_row0"
             android:id="@+id/textViewA"
             android:background="@color/table_title_background"
             android:textColor="@color/foreground_material_dark"></TextView>
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Paracetamol dose"
+            android:text="@string/fever_para_table_col2_row0"
             android:id="@+id/textViewB"
             android:background="@color/table_title_background"
             android:textColor="@color/foreground_material_dark"></TextView>
@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="6 months–\n2 years"
+            android:text="@string/fever_para_table_col1_row1"
             android:id="@+id/textViewC"
             android:background="@color/table_column_background"
             android:textColor="@color/material_grey_100"></TextView>
@@ -81,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="100 mg every 4–6 hours\n"
+            android:text="@string/fever_para_table_col2_row1"
             android:id="@+id/textViewD"></TextView>
 
         </TableRow>
@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="3–5 years"
+            android:text="@string/fever_para_table_col1_row2"
             android:id="@+id/textViewE"
             android:background="@color/table_column_background"
             android:textColor="@color/material_grey_100"></TextView>
@@ -104,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="200 mg every 4–6 hours"
+            android:text="@string/fever_para_table_col2_row2"
             android:id="@+id/textViewF"></TextView>
         </TableRow>
 
@@ -117,7 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="6–9 years"
+            android:text="@string/fever_para_table_col1_row3"
             android:id="@+id/textViewG"
             android:background="@color/table_column_background"
             android:textColor="@color/material_grey_100"></TextView>
@@ -126,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="300 mg every 4–6 hours"
+            android:text="@string/fever_para_table_col2_row3"
             android:id="@+id/textViewH"></TextView>
         </TableRow>
 
@@ -139,7 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="10–15 years"
+            android:text="@string/fever_para_table_col1_row4"
             android:id="@+id/textViewI"
             android:background="@color/table_column_background"
             android:textColor="@color/material_grey_100"></TextView>
@@ -148,7 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="500 mg every 4–6 hours"
+            android:text="@string/fever_para_table_col2_row4"
             android:id="@+id/textViewJ"></TextView>
         </TableRow>
 
@@ -160,7 +160,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Adult"
+            android:text="@string/fever_para_table_col1_row5"
             android:id="@+id/textViewK"
             android:background="@color/table_column_background"
             android:textColor="@color/material_grey_100"></TextView>
@@ -169,7 +169,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="1000 mg every 4–6 hours"
+            android:text="@string/fever_para_table_col2_row5"
             android:id="@+id/textViewL"></TextView>
         </TableRow>
 

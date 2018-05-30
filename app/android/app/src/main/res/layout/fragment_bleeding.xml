@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Bleeding"
+            android:text="@string/bleed_title1"
             android:id="@+id/textView1"
             android:paddingTop="5dp"/>
 
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Transfusion of fresh whole blood or red blood cell components should be considered, guided by clinical and ideally laboratory indicators:"
+            android:text="@string/bleed_parag1"
             android:id="@+id/textView2"
             android:paddingBottom="5dp"/>
 
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
-            android:text="Clinical indicators"
+            android:text="@string/bleed_clinical_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
@@ -51,35 +51,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="  ◘ severe pallor"
+            android:text="@string/bleed_clinical_item1"
             android:id="@+id/textView3a"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="  ◘ fast pulse rate"
+            android:text="@string/bleed_clinical_item2"
             android:id="@+id/textView3b"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="  ◘ difficult breathing"
+            android:text="@string/bleed_clinical_item3"
             android:id="@+id/textView3c"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="  ◘ confusion"
+            android:text="@string/bleed_clinical_item4"
             android:id="@+id/textView3d"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="  ◘ restlessness"
+            android:text="@string/bleed_clinical_item5"
             android:id="@+id/textView3e"/>
 
         <TextView
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
-            android:text="Laboratory indicators"
+            android:text="@string/bleed_lab_title"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
@@ -95,28 +95,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="  ◘ Hgb ≤ 5 g/dl"
+            android:text="@string/bleed_lab_item1"
             android:id="@+id/textView4a"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="  ◘ hematocrit ≤ 15"
+            android:text="@string/bleed_lab_item2"
             android:id="@+id/textView4b"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="  ◘ INR ≥ 1.2"
+            android:text="@string/bleed_lab_item3"
             android:id="@+id/textView4c"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Vitamin K deficiency"
+            android:text="@string/bleed_vitk_title"
             android:id="@+id/textView7"
             android:paddingTop="20dp"
             android:paddingBottom="5dp"/>
@@ -125,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Many malnourished or ill patients with diminished oral intake, and those treated with antibiotics, have mild vitamin K deficiency which may lead to elevations in INR/PPT and predispose to bleeding."
+            android:text="@string/bleed_vitk_parag1"
             android:id="@+id/textView8"
             android:paddingBottom="5dp"/>
 
@@ -133,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Multivitamin and/or vitamin K administration (e.g. 10 mg orally daily for 3 days) at admission, or vitamin K 10 mg intravenously for those unable to take pills, who are bleeding and who have IV access, is reasonable. Treatment of significant bleeding with fresh frozen plasma should ideally be guided by INR/PT."
+            android:text="@string/bleed_vitk_parag2"
             android:id="@+id/textView9"
            android:paddingBottom="20dp"/>
 
@@ -141,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Additional treatment"
+            android:text="@string/bleed_add_title"
             android:id="@+id/textView10"
             android:paddingBottom="5dp"/>
 
@@ -149,7 +149,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Other medications to prevent or treat bleeding such as antifibrinolytics (IV tranexamic acid) may be reasonable based on extrapolation of evidence from other patient populations but direct evidence in patients with Ebola is lacking."
+            android:text="@string/bleed_add_parag"
             android:id="@+id/textView11"/>
 
     </LinearLayout>

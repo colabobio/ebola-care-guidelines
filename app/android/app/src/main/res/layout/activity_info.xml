@@ -109,7 +109,7 @@
                 android:nestedScrollingEnabled="false"
                 android:onClick="closeButton"
                 android:padding="15dp"
-                android:text="@string/close_info"
+                android:text="@string/continue_button"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="24dp"
                 android:textStyle="bold" />

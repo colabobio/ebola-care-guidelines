@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Fever/headache"
+            android:text="@string/fever_title1"
             android:id="@+id/textViewTitle"
             android:paddingBottom="5dp"/>
 
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Treat with oral administration of Paracetamol (dose by weight is 15 mg/kg):"
+            android:text="@string/fever_parag1"
             android:paddingBottom="5dp"
             />
 
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Patient age"
+            android:text="@string/fever_para_table_col1_row0"
             android:id="@+id/textViewA"
             android:background="@color/table_title_background"
             android:textColor="@color/white"></TextView>
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Paracetamol dose"
+            android:text="@string/fever_para_table_col2_row0"
             android:id="@+id/textViewB"
             android:background="@color/table_title_background"
             android:textColor="@color/white"></TextView>
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="6 months–\n2 years"
+            android:text="@string/fever_para_table_col1_row1"
             android:id="@+id/textViewC"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -86,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="100 mg every 4–6 hours\n"
+            android:text="@string/fever_para_table_col2_row1"
             android:id="@+id/textViewD"></TextView>
 
         </TableRow>
@@ -100,7 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="3–5 years"
+            android:text="@string/fever_para_table_col1_row2"
             android:id="@+id/textViewE"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -109,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="200 mg every 4–6 hours"
+            android:text="@string/fever_para_table_col2_row2"
             android:id="@+id/textViewF"></TextView>
         </TableRow>
 
@@ -122,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="6–9 years"
+            android:text="@string/fever_para_table_col1_row3"
             android:id="@+id/textViewG"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -131,7 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="300 mg every 4–6 hours"
+            android:text="@string/fever_para_table_col2_row3"
             android:id="@+id/textViewH"></TextView>
         </TableRow>
 
@@ -144,7 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="10–15 years"
+            android:text="@string/fever_para_table_col1_row4"
             android:id="@+id/textViewI"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -153,7 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="500 mg every 4–6 hours"
+            android:text="@string/fever_para_table_col2_row4"
             android:id="@+id/textViewJ"></TextView>
         </TableRow>
 
@@ -166,7 +166,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Adult"
+            android:text="@string/fever_para_table_col1_row5"
             android:id="@+id/textViewK"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -175,18 +175,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="1000 mg every 4–6 hours"
+            android:text="@string/fever_para_table_col2_row5"
             android:id="@+id/textViewL"></TextView>
         </TableRow>
 
         </TableLayout>
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Malaria treatment"
+            android:text="@string/fever_antimalarial_title"
             android:id="@+id/textView0"
             android:paddingTop="20dp"
             android:paddingBottom="5dp"/>
@@ -195,7 +194,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="All patients presenting to the emergency center with fever should also be given malaria treatment with Artesunate plus amodiaquine (AS+AQ) OR Artemether-lumefantrine (AL) OR Dihydroartemisinin plus piperaquine (DHP+PQP)."
+            android:text="@string/fever_antimalarial_parag"
             android:paddingBottom="10dp"
             />
 
@@ -204,7 +203,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Artesunate plus amodiaquine (AS+AQ)"
+            android:text="@string/fever_antimalarial_ASAQ_title"
             android:id="@+id/textView"
             android:textStyle="bold"/>
 
@@ -212,7 +211,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Fixed dose combination (50 mg + 153 mg/tablet)."
+            android:text="@string/fever_antimalarial_ASAQ_dose"
             android:paddingBottom="5dp"
             />
 
@@ -230,7 +229,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Patient\nage"
+            android:text="@string/fever_antimalarial_ASAQ_table_col1_row0"
             android:id="@+id/textView1"
             android:background="@color/table_title_background"
             android:textColor="@color/white"></TextView>
@@ -239,7 +238,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Daily dose\n"
+            android:text="@string/fever_antimalarial_ASAQ_table_col2_row0"
             android:id="@+id/textView2"
             android:background="@color/table_title_background"
             android:textColor="@color/material_grey_50"></TextView>
@@ -248,7 +247,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Patient\nweight"
+            android:text="@string/fever_antimalarial_ASAQ_table_col3_row0"
             android:id="@+id/textView3"
             android:background="@color/table_title_background"
             android:textColor="@color/material_grey_50"></TextView>
@@ -263,7 +262,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="2–11\nmonths"
+            android:text="@string/fever_antimalarial_ASAQ_table_col1_row1"
             android:id="@+id/textView4"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -272,14 +271,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="1/2 tablet\nfor 3 days"
+            android:text="@string/fever_antimalarial_ASAQ_table_col2_row1"
             android:id="@+id/textView5"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="5–9 kg\n"
+            android:text="@string/fever_antimalarial_ASAQ_table_col3_row1"
             android:id="@+id/textView6"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -293,7 +292,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="1–5\nyears"
+            android:text="@string/fever_antimalarial_ASAQ_table_col1_row2"
             android:id="@+id/textView7"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -302,14 +301,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="1 tablet\nfor 3 days"
+            android:text="@string/fever_antimalarial_ASAQ_table_col2_row2"
             android:id="@+id/textView8"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="9–18 kg\n"
+            android:text="@string/fever_antimalarial_ASAQ_table_col3_row2"
             android:id="@+id/textView9"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -323,7 +322,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="6–13\nyears"
+            android:text="@string/fever_antimalarial_ASAQ_table_col1_row3"
             android:id="@+id/textView10"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -332,14 +331,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="2 tablets\nfor 3 days"
+            android:text="@string/fever_antimalarial_ASAQ_table_col2_row3"
             android:id="@+id/textView11"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="19–35 kg\n"
+            android:text="@string/fever_antimalarial_ASAQ_table_col3_row3"
             android:id="@+id/textView12"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -353,7 +352,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="≥14\nyears"
+            android:text="@string/fever_antimalarial_ASAQ_table_col1_row4"
             android:id="@+id/textView13"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -362,14 +361,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="2 tablets\nfor 3 days"
+            android:text="@string/fever_antimalarial_ASAQ_table_col2_row4"
             android:id="@+id/textView14"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="≥35 kg\n"
+            android:text="@string/fever_antimalarial_ASAQ_table_col3_row4"
             android:id="@+id/textView15"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -381,7 +380,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Artemether-lumefantrine (AL)"
+            android:text="@string/fever_antimalarial_AL_title"
             android:id="@+id/textView16"
             android:textStyle="bold"
             android:paddingTop="10dp"/>
@@ -390,7 +389,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Fixed dose combination (20+ 120 mg/tablet)."
+            android:text="@string/fever_antimalarial_AL_dose"
             android:paddingBottom="5dp"
             />
 
@@ -408,7 +407,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Patient\nage"
+            android:text="@string/fever_antimalarial_AL_table_col1_row0"
             android:id="@+id/textView17"
             android:background="@color/table_title_background"
             android:textColor="@color/white"></TextView>
@@ -417,7 +416,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Daily dose\n"
+            android:text="@string/fever_antimalarial_AL_table_col2_row0"
             android:id="@+id/textView18"
             android:background="@color/table_title_background"
             android:textColor="@color/material_grey_50"></TextView>
@@ -426,7 +425,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Patient\nweight"
+            android:text="@string/fever_antimalarial_AL_table_col3_row0"
             android:id="@+id/textView19"
             android:background="@color/table_title_background"
             android:textColor="@color/material_grey_50"></TextView>
@@ -441,7 +440,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="2–24\nmonths"
+            android:text="@string/fever_antimalarial_AL_table_col1_row1"
             android:id="@+id/textView20"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -450,14 +449,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="1 tablet twice\nfor 3 days"
+            android:text="@string/fever_antimalarial_AL_table_col2_row1"
             android:id="@+id/textView21"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="5–15 kg\n"
+            android:text="@string/fever_antimalarial_AL_table_col3_row1"
             android:id="@+id/textView22"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -471,7 +470,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="25 months–\n7 years"
+            android:text="@string/fever_antimalarial_AL_table_col1_row2"
             android:id="@+id/textView23"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -480,14 +479,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="2 tablets twice\nfor 3 days"
+            android:text="@string/fever_antimalarial_AL_table_col2_row2"
             android:id="@+id/textView24"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="15–25 kg\n"
+            android:text="@string/fever_antimalarial_AL_table_col3_row2"
             android:id="@+id/textView25"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -501,7 +500,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="8–13\nyears"
+            android:text="@string/fever_antimalarial_AL_table_col1_row3"
             android:id="@+id/textView26"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -510,14 +509,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="3 tablets twice\nfor 3 days"
+            android:text="@string/fever_antimalarial_AL_table_col2_row3"
             android:id="@+id/textView27"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="26–35 kg\n"
+            android:text="@string/fever_antimalarial_AL_table_col3_row3"
             android:id="@+id/textView28"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -531,7 +530,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="≥14\nyears"
+            android:text="@string/fever_antimalarial_AL_table_col1_row4"
             android:id="@+id/textView29"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -540,14 +539,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="4 tablets twice\nfor 3 days"
+            android:text="@string/fever_antimalarial_AL_table_col2_row4"
             android:id="@+id/textView30"></TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="≥35 kg\n"
+            android:text="@string/fever_antimalarial_AL_table_col3_row4"
             android:id="@+id/textView31"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -561,7 +560,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Dihydroartemisinin plus piperaquine (DHP+PQP)"
+            android:text="@string/fever_antimalarial_DHPPQP_title"
             android:id="@+id/textView32"
             android:textStyle="bold"
             android:paddingTop="10dp"/>
@@ -570,7 +569,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Fixed dose combination (40 mg + 320 mg/tablet)."
+            android:text="@string/fever_antimalarial_DHPPQP_dose"
             android:paddingBottom="5dp"
             />
 
@@ -588,7 +587,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Patient\nweight"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col1_row0"
             android:id="@+id/textView35"
             android:background="@color/table_title_background"
             android:textColor="@color/material_grey_50"></TextView>
@@ -597,7 +596,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="Daily dose\n"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col2_row0"
             android:id="@+id/textView34"
             android:background="@color/table_title_background"
             android:textColor="@color/material_grey_50"></TextView>
@@ -612,7 +611,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="11–16 kg\n"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col1_row1"
             android:id="@+id/textView38"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -621,7 +620,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="1 tablet\nfor 3 days"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col2_row1"
             android:id="@+id/textView37"></TextView>
         </TableRow>
 
@@ -633,7 +632,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="17–24 kg\n"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col1_row2"
             android:id="@+id/textView41"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -642,7 +641,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="1.5 tablet\nfor 3 days"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col2_row2"
             android:id="@+id/textView40"></TextView>
 
         </TableRow>
@@ -655,7 +654,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="25–35 kg\n"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col1_row3"
             android:id="@+id/textView44"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -664,7 +663,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="2 tablets\nfor 3 days"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col2_row3"
             android:id="@+id/textView43"></TextView>
 
         </TableRow>
@@ -677,7 +676,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="36–59 kg\n"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col1_row4"
             android:id="@+id/textView45"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -686,7 +685,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="3 tablets\nfor 3 days"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col2_row4"
             android:id="@+id/textView46"></TextView>
         </TableRow>
 
@@ -698,7 +697,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="60–79 kg\n"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col1_row5"
             android:id="@+id/textView48"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -707,7 +706,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="4 tablets\nfor 3 days"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col2_row5"
             android:id="@+id/textView47"></TextView>
         </TableRow>
 
@@ -719,7 +718,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="≥80 kg\n"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col1_row6"
             android:id="@+id/textView50"
             android:background="@color/table_column_background"
             android:textColor="@color/table_column_text"></TextView>
@@ -728,7 +727,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:text="5 tablets\nfor 3 days"
+            android:text="@string/fever_antimalarial_DHPPQP_table_col2_row6"
             android:id="@+id/textView49"></TextView>
         </TableRow>
 

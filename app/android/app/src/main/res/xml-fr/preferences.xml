@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <ListPreference     android:title="Visualisation des risques"
+                      android:summary="Sélectionnez le mode de visualisation pour la prédiction de risque"
+                      android:key="vizOption"
+                      android:defaultValue="treat"
+                      android:entries="@array/listArrayViz"
+                      android:entryValues="@array/listValuesViz" />
+  <ListPreference     android:title="Seuil à haut risque"
+                      android:summary="Sélectionnez le pourcentage de seuil de risque pour définir les patients à haut risque"
+                      android:key="riskThreshold"
+                      android:defaultValue="0.4"
+                      android:entries="@array/listArrayRisk"
+                      android:entryValues="@array/listValuesRisk" />
+  <ListPreference     android:title="Contribution minimale du prédicteur"
+                      android:summary="Choisir la contribution minimale d'un prédicteur clinique à considérer comme un facteur important du risque total"
+                      android:key="contribThreshold"
+                      android:defaultValue="0.1"
+                      android:entries="@array/listArrayContrib"
+                      android:entryValues="@array/listValuesContrib" />
+</PreferenceScreen>

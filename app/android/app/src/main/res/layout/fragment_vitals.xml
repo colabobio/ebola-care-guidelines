@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Measure the patient's vitals upon arrival the treatment center and record them below."
+            android:text="@string/vitals_intro"
             android:id="@+id/signAndSympInfo"/>
 
       <Space
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Temperature in °C"
+            android:text="@string/vitals_temp"
             android:id="@+id/tempTextView"/>
 
         <EditText

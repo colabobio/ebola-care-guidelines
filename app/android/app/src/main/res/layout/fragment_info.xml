@@ -26,14 +26,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Enter patient's age either in years or months. Typically, providing age in years is enough for adult patients, but for children younger than 2 years, should be given in months because the dosage of certain drugs depends on the month."
+            android:text="@string/info_age_intro"
             android:id="@+id/ageHelp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Age in years"
+            android:text="@string/info_age_years"
             android:id="@+id/ageYearsTextView"/>
 
         <EditText
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Age in months"
+            android:text="@string/info_age_months"
             android:id="@+id/ageMonthsTextView"/>
 
         <EditText
@@ -65,14 +65,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Enter patient's weight. If precise age in months is not available for young children, then weight will be use to recomend dosage of certain drugs."
+        android:text="@string/info_weight_intro"
         android:id="@+id/weightHelp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Weight in kg"
+        android:text="@string/info_weight_kg"
         android:id="@+id/weigthTextView"/>
 
     <EditText

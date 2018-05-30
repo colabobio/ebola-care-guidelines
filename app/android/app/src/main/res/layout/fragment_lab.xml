@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Use this section to record all available results from laboratory tests."
+            android:text="@string/lab_intro"
             android:id="@+id/labInfo"/>
 
         <Space
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="RT-PCR Cycle Threshold"
+            android:text="@string/lab_pcr"
             android:id="@+id/ctTextView"/>
 
         <EditText

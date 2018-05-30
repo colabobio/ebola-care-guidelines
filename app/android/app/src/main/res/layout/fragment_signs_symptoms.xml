@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Record below the observed signs and reported symptoms at admission, using the 'Do not know' option if it is not possible to determine whether the sign/symptom is present or not."
+            android:text="@string/clinical_intro"
             android:id="@+id/signAndSympInfo"/>
 
         <Space
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Diarrhoea"
+            android:text="@string/clinical_diarr"
             android:id="@+id/diaTextView"/>
 
         <RadioGroup
@@ -53,7 +53,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
+                android:text="@string/clinical_yes"
                 android:id="@+id/diaRadioButtonYes"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -61,7 +61,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="@string/clinical_no"
                 android:id="@+id/diaRadioButtonNo"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -69,7 +69,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not know"
+                android:text="@string/clinical_dontknow"
                 android:id="@+id/diaRadioButtonNA"
                 android:checked="true"
                 android:onClick="onRadioButtonClicked"/>
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Asthenia/Weakness"
+            android:text="@string/clinical_weak"
             android:id="@+id/weakTextView"/>
 
         <RadioGroup
@@ -95,7 +95,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
+                android:text="@string/clinical_yes"
                 android:id="@+id/weakRadioButtonYes"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -103,7 +103,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="@string/clinical_no"
                 android:id="@+id/weakRadioButtonNo"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -111,7 +111,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not know"
+                android:text="@string/clinical_dontknow"
                 android:id="@+id/weakRadioButtonNA"
                 android:checked="true"
                 android:onClick="onRadioButtonClicked"/>
@@ -125,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Jaundice"
+            android:text="@string/clinical_jaun"
             android:id="@+id/junTextView"/>
 
         <RadioGroup
@@ -138,7 +138,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
+                android:text="@string/clinical_yes"
                 android:id="@+id/jaunRadioButtonYes"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -146,7 +146,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="@string/clinical_no"
                 android:id="@+id/jaunRadioButtonNo"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -154,7 +154,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not know"
+                android:text="@string/clinical_dontknow"
                 android:id="@+id/jaunRadioButtonNA"
                 android:checked="true"
                 android:onClick="onRadioButtonClicked"/>
@@ -168,7 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Bleeding"
+            android:text="@string/clinical_bleed"
             android:id="@+id/bleedTextView"/>
 
         <RadioGroup
@@ -180,7 +180,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
+                android:text="@string/clinical_yes"
                 android:id="@+id/bleedRadioButtonYes"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -188,7 +188,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="@string/clinical_no"
                 android:id="@+id/bleedRadioButtonNo"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -196,7 +196,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not know"
+                android:text="@string/clinical_dontknow"
                 android:id="@+id/bleedRadioButtonNA"
                 android:checked="true"
                 android:onClick="onRadioButtonClicked"/>
@@ -210,7 +210,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Headache"
+            android:text="@string/clinical_head"
             android:id="@+id/headTextView"/>
 
         <RadioGroup
@@ -222,7 +222,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
+                android:text="@string/clinical_yes"
                 android:id="@+id/headRadioButtonYes"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -230,7 +230,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="@string/clinical_no"
                 android:id="@+id/headRadioButtonNo"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -238,7 +238,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not know"
+                android:text="@string/clinical_dontknow"
                 android:id="@+id/headRadioButtonNA"
                 android:checked="true"
                 android:onClick="onRadioButtonClicked"/>
@@ -252,7 +252,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Vomiting"
+            android:text="@string/clinical_vomit"
             android:id="@+id/vomTextView"/>
 
         <RadioGroup
@@ -264,7 +264,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
+                android:text="@string/clinical_yes"
                 android:id="@+id/vomRadioButtonYes"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -272,7 +272,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="@string/clinical_no"
                 android:id="@+id/vomRadioButtonNo"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -280,7 +280,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not know"
+                android:text="@string/clinical_dontknow"
                 android:id="@+id/vomRadioButtonNA"
                 android:checked="true"
                 android:onClick="onRadioButtonClicked"/>
@@ -294,7 +294,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Abdomen pain"
+            android:text="@string/clinical_pain"
             android:id="@+id/abdTextView"/>
 
         <RadioGroup
@@ -307,7 +307,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
+                android:text="@string/clinical_yes"
                 android:id="@+id/abdRadioButtonYes"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -315,7 +315,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="@string/clinical_no"
                 android:id="@+id/abdRadioButtonNo"
                 android:checked="false"
                 android:onClick="onRadioButtonClicked"/>
@@ -323,7 +323,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not know"
+                android:text="@string/clinical_dontknow"
                 android:id="@+id/abdRadioButtonNA"
                 android:checked="true"
                 android:onClick="onRadioButtonClicked"/>

@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Jaundice and liver damage"
+                android:text="@string/jaundice_title1"
                 android:id="@+id/textView1"
                 android:paddingBottom="5dp"/>
 
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Jaundice is not common in EVD, but it likely indicates an acute case with damage to the parenchymal cells of liver. Confirm Hepatic/hepatocellular jaundice by urine tests (dark urine, presence of conjugated bilirubin, urobilirubin > 2 units). Follow up closely and apply appropriate treatment for other signs/symptoms."
+                android:text="@string/jaundice_parag1"
                 android:id="@+id/textView2"
                 android:paddingBottom="20dp"/>
 
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Nutrition recommendations"
+                android:text="@string/jaundice_title2"
                 android:id="@+id/textView3"
                 android:paddingBottom="5dp"/>
 
@@ -51,9 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Exercise caution when feeding the patient who have no appetite. Even in critically ill patients without severe dehydration, excess energy or protein is not needed and an excess could further compromise liver and kidney function."
+                android:text="@string/jaundice_parag2"
                 android:id="@+id/textView4"/>
-
 
         </LinearLayout>
       </ScrollView>
