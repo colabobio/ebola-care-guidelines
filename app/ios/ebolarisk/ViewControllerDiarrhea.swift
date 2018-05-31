@@ -16,19 +16,45 @@ class ViewControllerDiarrhea: ViewControllerTreatment {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
     
-    let dehydraText = "Patient is at risk of dehydration, the most frequent and important cause of further deterioration. The WHO Oral Rehydration Solution (ORS) is best suited for treating dehydration."
+    let dehyraTitle = NSLocalizedString("diarr_title1", comment: "diarr_title1")
+    let dehydraText = NSLocalizedString("diarr_parag1", comment: "diarr_parag1")
     
-    let orsAges = ["Patient age", "Less than 4 months", "4-11 months", "12-23 months", "2-4 years", "5-15 years", "15 years and older"]
-    let orsAmount = ["ORS amount", "200-400 ml", "400-600 ml", "600-800 ml", "800-1200 ml", "1200-2200 ml", "2200-2400 ml"]
-    let orsWeights = ["Patient weight", "Less than 5 kg", "5-7.9 kg", "8-10.9 kg", "11-15.9 kg", "16-29.9 kg", "30 kg or more"]
+    let orsTitle = NSLocalizedString("diarr_ors_table_title", comment: "diarr_ors_table_title")
     
-    let orsText1 = "◘ Reassess the patient’s condition after four hours, and provide more ORS as detailed above if dehydration persists."
-    let orsText2 = "◘ If a patient (child or adult) has no diarrhoea or dehydration, and finds it difficult to drink ORS, use flavoured ORS."
-    let orsText3 = "◘ Do not use sports drinks, or sugary drinks such as fruit flavoured and fizzy commercial drinks, as they can worsen diarrhoea."
+    let orsAges = [NSLocalizedString("diarr_ors_table_col1_row0", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row1", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row2", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row3", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row4", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row5", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row6", comment: "table_item")]
+    let orsAmount = [NSLocalizedString("diarr_ors_table_col2_row0", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row1", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row2", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row3", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row4", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row5", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row6", comment: "table_item")]
+    let orsWeights = [NSLocalizedString("diarr_ors_table_col3_row0", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row1", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row2", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row3", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row4", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row5", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row6", comment: "table_item")]
     
-    let zincText = "Give the patient Zinc sulphate, especially children:"
-    let zincAges = ["Patient age", "Under 6 months", "Over 6 months"]
-    let zincAmount = ["Zinc dose", "10 mg per day for 10-14 days", "20 mg per day for 10-14 days"]
+    let orsText1 = NSLocalizedString("diarr_note1", comment: "diarr_note1")
+    let orsText2 = NSLocalizedString("diarr_note2", comment: "diarr_note2")
+    let orsText3 = NSLocalizedString("diarr_note3", comment: "diarr_note3")
+    
+    let zincTitle = NSLocalizedString("diarr_zinc_title", comment: "diarr_zinc_title")
+    let zincText = NSLocalizedString("diarr_zinc_parag", comment: "diarr_zinc_parag")
+    let zincAges = [NSLocalizedString("diarr_zinc_table_col1_row0", comment: "table_item"),
+                    NSLocalizedString("diarr_zinc_table_col1_row1", comment: "table_item"),
+                    NSLocalizedString("diarr_zinc_table_col1_row2", comment: "table_item")]
+    let zincAmount = [NSLocalizedString("diarr_zinc_table_col1_row0", comment: "table_item"),
+                      NSLocalizedString("diarr_zinc_table_col1_row1", comment: "table_item"),
+                      NSLocalizedString("diarr_zinc_table_col1_row2", comment: "table_item")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +85,10 @@ class ViewControllerDiarrhea: ViewControllerTreatment {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "Diarrhoea and dehydration", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: dehyraTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: dehydraText, left: xpos, top: ypos) + itemSpacing
         
-        ypos += addSubTitle(title: "ORS amount to be given in first 4 hours", left: xpos, top: ypos) + itemSpacing
+        ypos += addSubTitle(title: orsTitle, left: xpos, top: ypos) + itemSpacing
         var row = getOSRow(ageYears: ageYears, ageMonths: ageMonths, weight: weight)
         ypos += create3ColumnDoubleEntryTable(column1: orsAges, column2: orsAmount, column3: orsWeights, selRow: row, left: xpos, top: ypos) + itemSpacing
 
@@ -70,7 +96,7 @@ class ViewControllerDiarrhea: ViewControllerTreatment {
         ypos += addTextParagraph(text: orsText2, left: xpos, top: ypos) + itemSpacing/2
         ypos += addTextParagraph(text: orsText3, left: xpos, top: ypos) + itemSpacing
         
-        ypos += addSubTitle(title: "Zinc treatment", left: xpos, top: ypos) + itemSpacing
+        ypos += addSubTitle(title: zincTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: zincText, left: xpos, top: ypos) + itemSpacing
         row = getZincRow(ageYears: ageYears, ageMonths: ageYears)
         ypos += create2ColumnTable(column1: zincAges, column2: zincAmount, selRow: row, left: xpos, top: ypos) + itemSpacing

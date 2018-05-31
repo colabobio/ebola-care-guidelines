@@ -15,19 +15,45 @@ class ViewControllerVomit: ViewControllerTreatment {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
     
-    let vomitText = "Nausea and vomiting can be managed with Ondansetron:"
-    let ondanAges = ["Patient age", "4-12 years", "Adult"]
-    let ondanDose = ["Daily dose", "4 mg two times a day", "8 mg two times a day"]
+    let vomitTitle = NSLocalizedString("vomit_title1", comment: "vomit_title1")
+    let vomitText = NSLocalizedString("vomit_parag1", comment: "vomit_parag1")
+    let ondanAges = [NSLocalizedString("vomit_ondansetron_table_col1_row0", comment: "table_item"),
+                     NSLocalizedString("vomit_ondansetron_table_col1_row1", comment: "table_item"),
+                     NSLocalizedString("vomit_ondansetron_table_col1_row2", comment: "table_item")]
+    let ondanDose = [NSLocalizedString("vomit_ondansetron_table_col2_row0", comment: "table_item"),
+                     NSLocalizedString("vomit_ondansetron_table_col2_row1", comment: "table_item"),
+                     NSLocalizedString("vomit_ondansetron_table_col2_row2", comment: "table_item")]
 
-    let dehydraText = "Patient is at risk of dehydration, the most frequent and important cause of further deterioration. The WHO Oral Rehydration Solution (ORS) is best suited for treating dehydration."
+    let dehydraTitle = NSLocalizedString("vomit_dehydration_title", comment: "vomit_dehydration_title")
+    let dehydraText = NSLocalizedString("vomit_dehydration_parag", comment: "vomit_dehydration_parag")
     
-    let orsAges = ["Patient age", "Less than 4 months", "4-11 months", "12-23 months", "2-4 years", "5-15 years", "15 years and older"]
-    let orsAmount = ["ORS amount", "200-400 ml", "400-600 ml", "600-800 ml", "800-1200 ml", "1200-2200 ml", "2200-2400 ml"]
-    let orsWeights = ["Patient weight", "Less than 5 kg", "5-7.9 kg", "8-10.9 kg", "11-15.9 kg", "16-29.9 kg", "30 kg or more"]
+    let orsTitle = NSLocalizedString("diarr_ors_table_title", comment: "diarr_ors_table_title")
     
-    let orsText1 = "◘ Reassess the patient’s condition after four hours, and provide more ORS as detailed above if dehydration persists."
-    let orsText2 = "◘ If a patient (child or adult) has no diarrhoea or dehydration, and finds it difficult to drink ORS, use flavoured ORS."
-    let orsText3 = "◘ Do not use sports drinks, or sugary drinks such as fruit flavoured and fizzy commercial drinks, as they can worsen diarrhoea."
+    let orsAges = [NSLocalizedString("diarr_ors_table_col1_row0", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row1", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row2", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row3", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row4", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row5", comment: "table_item"),
+                   NSLocalizedString("diarr_ors_table_col1_row6", comment: "table_item")]
+    let orsAmount = [NSLocalizedString("diarr_ors_table_col2_row0", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row1", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row2", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row3", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row4", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row5", comment: "table_item"),
+                     NSLocalizedString("diarr_ors_table_col2_row6", comment: "table_item")]
+    let orsWeights = [NSLocalizedString("diarr_ors_table_col3_row0", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row1", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row2", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row3", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row4", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row5", comment: "table_item"),
+                      NSLocalizedString("diarr_ors_table_col3_row6", comment: "table_item")]
+    
+    let orsText1 = NSLocalizedString("diarr_note1", comment: "diarr_note1")
+    let orsText2 = NSLocalizedString("diarr_note2", comment: "diarr_note2")
+    let orsText3 = NSLocalizedString("diarr_note3", comment: "diarr_note3")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,14 +69,14 @@ class ViewControllerVomit: ViewControllerTreatment {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "Nausea and Vomiting", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: vomitTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: vomitText, left: xpos, top: ypos) + itemSpacing
         ypos += create2ColumnTable(column1: ondanAges, column2: ondanDose, selRow: -1, left: xpos, top: ypos) + 2 * itemSpacing
         
-        ypos += addMainTitle(title: "Dehydration", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: dehydraTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: dehydraText, left: xpos, top: ypos) + itemSpacing
         
-        ypos += addSubTitle(title: "ORS amount to be given in first 4 hours", left: xpos, top: ypos) + itemSpacing
+        ypos += addSubTitle(title: orsTitle, left: xpos, top: ypos) + itemSpacing
         ypos += create3ColumnDoubleEntryTable(column1: orsAges, column2: orsAmount, column3: orsWeights, selRow: -1, left: xpos, top: ypos) + itemSpacing
         
         ypos += addTextParagraph(text: orsText1, left: xpos, top: ypos) + itemSpacing/2

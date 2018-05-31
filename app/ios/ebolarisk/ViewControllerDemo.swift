@@ -21,6 +21,8 @@ class ViewControllerDemo: UIViewController, UITextFieldDelegate {
     // https://stackoverflow.com/a/40249707 (works very nicely)
     
     // MARK: Properties
+    @IBOutlet weak var infoAgeView: UITextView!
+    @IBOutlet weak var infoWeightView: UITextView!
     @IBOutlet weak var yearsField: UITextField!
     @IBOutlet weak var monthsField: UITextField!
     @IBOutlet weak var weightField: UITextField!
@@ -33,6 +35,9 @@ class ViewControllerDemo: UIViewController, UITextFieldDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
 
+        infoAgeView.text = NSLocalizedString("info_age_intro", comment: "info_age_intro")
+        infoWeightView.text = NSLocalizedString("info_weight_intro", comment: "info_weight_intro")
+        
         // Increase the text size in the tab items:
         let attrsNormal = [
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14.0)

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ebolarisk/ViewControllerFever.swift"
-            timestampString = "546375068.472699"
+            timestampString = "549490265.178423"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215">
+            startingLineNumber = "266"
+            endingLineNumber = "266">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

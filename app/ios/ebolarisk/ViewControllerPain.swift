@@ -15,9 +15,16 @@ class ViewControllerPain: ViewControllerTreatment {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
 
-    let painText = "Treat with oral administration of Omeprazole, once a day before food:"
-    let omepraAges = ["Patient age", "6 months–2 years", "2–12 years", "Adult"]
-    let omepraDose = ["Omeprazole dose", "10 mg", "10 mg", "20 mg"]
+    let painTitle = NSLocalizedString("pain_title1", comment: "pain_title1")
+    let painText = NSLocalizedString("pain_parag1", comment: "pain_parag1")
+    let omepraAges = [NSLocalizedString("vomit_omeprazole_table_col1_row0", comment: "table_item"),
+                      NSLocalizedString("vomit_omeprazole_table_col1_row1", comment: "table_item"),
+                      NSLocalizedString("vomit_omeprazole_table_col1_row2", comment: "table_item"),
+                      NSLocalizedString("vomit_omeprazole_table_col1_row3", comment: "table_item")]
+    let omepraDose = [NSLocalizedString("vomit_omeprazole_table_col2_row0", comment: "table_item"),
+                      NSLocalizedString("vomit_omeprazole_table_col2_row1", comment: "table_item"),
+                      NSLocalizedString("vomit_omeprazole_table_col2_row2", comment: "table_item"),
+                      NSLocalizedString("vomit_omeprazole_table_col2_row3", comment: "table_item")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +40,7 @@ class ViewControllerPain: ViewControllerTreatment {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "Abdominal/epigastric pain", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: painTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: painText, left: xpos, top: ypos) + itemSpacing
         ypos += create2ColumnTable(column1: omepraAges, column2: omepraDose, selRow: -1, left: xpos, top: ypos) + itemSpacing
         

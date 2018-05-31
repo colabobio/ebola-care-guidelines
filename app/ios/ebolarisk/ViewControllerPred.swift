@@ -25,29 +25,27 @@ class ViewControllerPred: UIViewController {
     let rowSpacing = CGFloat(10)
     let textTab = CGFloat(20)
     
-    let errorMsg1 = "Not enough information!"
-    let errorMsg2 = "You need to provide at least patient's age and RT-PCR Cycle Threshold (CT) value."
+    let errorMsg1 = NSLocalizedString("no_data_err1", comment: "no_data_err1")
+    let errorMsg2 = NSLocalizedString("no_data_err2", comment: "no_data_err2")
     
     let varOrder = ["cycletime", "PatientAge", "FeverTemperature", "Jaundice", "Bleeding", "Headache", "Diarrhoea", "Vomit", "AbdominalPain", "AstheniaWeakness", "WellnessScale"]
     
-    let varAlias = ["PCR CT", "Age", "Temperature", "Jaundice", "Bleeding", "Headache", "Diarrhoea", "Vomiting", "Abdomen pain", "Weakness", "Wellness"]
-    
-    let varSymptom = ["Viral load", "Age", "Fever", "Jaundice", "Bleeding", "Headache", "Diarrhoea", "Vomiting", "Abdomen pain", "Weakness", "Wellness"]
-    
-    let varSegues = ["Viral load":"showVLoadSegue",
-                     "Age":"showAgeSegue",
-                     "Fever":"showFeverSegue",
-                     "Jaundice":"showJaundiceSegue",
-                     "Bleeding":"showBleedingSegue",
-                     "Headache":"showHeadacheSegue",
-                     "Diarrhoea":"showDiarrheaSegue",
-                     "Vomiting":"showVomitSegue",
-                     "Abdomen pain":"showPainSegue",
-                     "Weakness":"showWeakSegue"]
+    let varSegues = ["showVLoadSegue",
+                     "showAgeSegue",
+                     "showFeverSegue",
+                     "showJaundiceSegue",
+                     "showBleedingSegue",
+                     "showHeadacheSegue",
+                     "showDiarrheaSegue",
+                     "showVomitSegue",
+                     "showPainSegue",
+                     "showWeakSegue"]
     
     let varTypes = [INT, INT, FLOAT, BINARY, BINARY, BINARY, BINARY, BINARY, BINARY, BINARY, INT]
     
-    let binLabels = ["no", "yes"]
+    var varAlias = ["PCR CT", "Age", "Temperature", "Jaundice", "Bleeding", "Headache", "Diarrhoea", "Vomiting", "Abdomen pain", "Weakness", "Wellness"]
+    var varSymptom = ["Viral load", "Age", "Fever", "Jaundice", "Bleeding", "Headache", "Diarrhoea", "Vomiting", "Abdomen pain", "Weakness", "Wellness"]
+    var binLabels = ["no", "yes"]
     
     // MARK: properties
     @IBOutlet weak var predView: UIView!
@@ -60,6 +58,10 @@ class ViewControllerPred: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        varAlias = NSLocalizedString("var_alias", comment: "var_alias").components(separatedBy: ":")
+        varSymptom = NSLocalizedString("var_symptom", comment: "var_symptom").components(separatedBy: ":")
+        binLabels = NSLocalizedString("var_bin_labels", comment: "var_bin_labels").components(separatedBy: ":")
         
         let showTreatment = UserDefaults.standard.bool(forKey: "show_treatments")
         let riskThreshold = UserDefaults.standard.float(forKey: "highrisk_threshold")
@@ -139,7 +141,7 @@ class ViewControllerPred: UIViewController {
         titleLabel.textColor = .white
         titleLabel.backgroundColor = Utils.UIColorFromRGB(rgbValue: 0xFF00A79D)
         titleLabel.font = titleFont
-        titleLabel.text = "Mortality risk of patient"
+        titleLabel.text = NSLocalizedString("patient_risk", comment: "patient_risk")
         self.predView.addSubview(titleLabel)
         yTop += hBox + 2 * padding
         
@@ -169,7 +171,7 @@ class ViewControllerPred: UIViewController {
         subtitleLabel.textColor = .white
         subtitleLabel.backgroundColor = Utils.UIColorFromRGB(rgbValue: 0xFF00A79D)
         subtitleLabel.font = subtitleFont
-        subtitleLabel.text = "Contribution from each predictor"
+        subtitleLabel.text = NSLocalizedString("predictor_contrib", comment: "predictor_contrib")
         self.predView.addSubview(subtitleLabel)
         yTop += hBox + padding
         
@@ -247,9 +249,9 @@ class ViewControllerPred: UIViewController {
         
         let highRisk = riskThreshold <= risk
         let riskMsg = highRisk ?
-            "Based on presentation signs, symptoms, and PCR data, this patient has more than \(Int(100 * riskThreshold))% chance of dying. Reassess for emergency clinical signs, monitor input and output by the bedside, and perform priority lab testing if possible."
+             String(format: NSLocalizedString("hrisk_msg", comment: "hrisk_msg"), (Int(100 * riskThreshold)))
             :
-            "Based on presentation signs, symptoms, and PCR data, this patient has less than \(Int(100 * riskThreshold))% chance of dying. Make sure the patient remains stable, by keeping him or her hydrated and taking care of any clinical signs with the appropriate procedure.";
+            String(format: NSLocalizedString("lmrisk_msg", comment: "lmrisk_msg"), (Int(100 * riskThreshold)));
 
         let w = self.view.frame.width
         let margin = CGFloat(30)
@@ -263,7 +265,7 @@ class ViewControllerPred: UIViewController {
         titleLabel.textColor = .white
         titleLabel.backgroundColor = highRisk ? Utils.UIColorFromRGB(rgbValue: 0xFFE34242) : Utils.UIColorFromRGB(rgbValue: 0xFFEAA147)
         titleLabel.font = titleFont
-        titleLabel.text = highRisk ? "HIGH RISK PATIENT" : "LOW/MEDIUM RISK PATIENT"
+        titleLabel.text = highRisk ? NSLocalizedString("hrisk_patient", comment: "hrisk_patient") : NSLocalizedString("lmrisk_patient", comment: "lmrisk_patient")
         self.predView.addSubview(titleLabel)
         yTop += hBox + padding;
         
@@ -293,7 +295,7 @@ class ViewControllerPred: UIViewController {
         subtitleLabel.textColor = .white
         subtitleLabel.backgroundColor = Utils.UIColorFromRGB(rgbValue: 0xFF6F6F6F)
         subtitleLabel.font = titleFont
-        subtitleLabel.text = highRisk ? "This elevated risk is due to:" : "This risk is due to:"
+        subtitleLabel.text = highRisk ? NSLocalizedString("hrisk_reason", comment: "hrisk_reason") : NSLocalizedString("lmrisk_reason", comment: "lmrisk_reason")
         self.predView.addSubview(subtitleLabel)
         yTop += hBox + padding
         
@@ -313,7 +315,7 @@ class ViewControllerPred: UIViewController {
                     let bw = w - 2 * margin2
                     let bh = varHeight - 2 * rowSpacing
                     
-                    let button = PredButton(frame: CGRect(x: bx, y: by, width: bw, height: bh), rgbValue: highRisk ? 0xFFE34242 : 0xFFEAA147)
+                    let button = PredButton(frame: CGRect(x: bx, y: by, width: bw, height: bh), rgbValue: highRisk ? 0xFFE34242 : 0xFFEAA147, idx: i)
                     button.backgroundColor = .white
                     button.contentHorizontalAlignment = .left
                     button.setTitle(label, for: .normal)
@@ -348,7 +350,8 @@ class ViewControllerPred: UIViewController {
         // https://digitalleaves.com/define-segues-programmatically/
         // 1. Create segues manually linking the pred view controller with each one of the symptom controllers
         // 2. Solve the relationship between buttons and segues below:
-        if let title = sender.currentTitle, let segue = varSegues[title] {
+        if let pred = sender as? PredButton {
+          let segue = varSegues[pred.index]
           self.performSegue(withIdentifier: segue, sender: nil)
         }
     }

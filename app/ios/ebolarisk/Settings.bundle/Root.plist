@@ -16,7 +16,7 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Show treatments</string>
+			<string>show_treatments_title</string>
 			<key>Key</key>
 			<string>show_treatments</string>
 			<key>DefaultValue</key>
@@ -26,7 +26,7 @@
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
 			<key>Title</key>
-			<string>High-risk threshold</string>
+			<string>highrisk_threshold_title</string>
 			<key>Key</key>
 			<string>highrisk_threshold</string>
 			<key>DefaultValue</key>
@@ -48,34 +48,32 @@
 				<real>0.7</real>
 			</array>
 		</dict>
-        <dict>
-            <key>Type</key>
-            <string>PSMultiValueSpecifier</string>
-            <key>Title</key>
-            <string>Min. predictor contribution</string>
-            <key>Key</key>
-            <string>min_predcontrib</string>
-            <key>DefaultValue</key>
-            <real>0.1</real>
-            <key>Titles</key>
-            <array>
-                <string>0.1</string>
-                <string>0.2</string>
-                <string>0.3</string>
-                <string>0.4</string>
-                <string>0.5</string>
-            </array>
-            <key>Values</key>
-            <array>
-                <real>0.1</real>
-                <real>0.2</real>
-                <real>0.3</real>
-                <real>0.4</real>
-                <real>0.5</real>
-            </array>
-        </dict>
-        
-        
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>min_predcontrib_title</string>
+			<key>Key</key>
+			<string>min_predcontrib</string>
+			<key>DefaultValue</key>
+			<real>0.1</real>
+			<key>Titles</key>
+			<array>
+				<string>0.1</string>
+				<string>0.2</string>
+				<string>0.3</string>
+				<string>0.4</string>
+				<string>0.5</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<real>0.1</real>
+				<real>0.2</real>
+				<real>0.3</real>
+				<real>0.4</real>
+				<real>0.5</real>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

@@ -13,6 +13,7 @@ class ViewControllerLab: UIViewController, UITextFieldDelegate {
     let dataHolder = DataHolder.instance
     
     // MARK: Properties
+    @IBOutlet weak var infoLabView: UITextView!
     @IBOutlet weak var pcrField: UITextField!
     @IBOutlet weak var riskButton: UIButton!
     
@@ -20,6 +21,8 @@ class ViewControllerLab: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        infoLabView.text = NSLocalizedString("lab_intro", comment: "lab_intro")
         
         riskButton.layer.shadowColor = UIColor.black.cgColor
         riskButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)

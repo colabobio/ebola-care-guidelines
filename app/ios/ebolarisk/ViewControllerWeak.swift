@@ -16,19 +16,27 @@ class ViewControllerWeak: ViewControllerTreatment {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
     
-    let weaknessText = "The weakness and lethargy accompanying diarrhoea; or with significant vomiting, as well as confusion, sunken eyes, wrinkled skin and a weak pulse, are indication of severe dehydration. Patient should be immediately started on active intravenous (IV) fluid resuscitation while also offered Oral Rehydration Solution (ORS)."
+    let weaknessTitle = NSLocalizedString("weak_title1", comment: "weak_title1")
+    let weaknessText = NSLocalizedString("weak_parag1", comment: "weak_parag1")
     
-    let ivfluidText = "Give 100 ml/kg Lactated Ringer’s solution (or, if LR not available, normal saline), divided as follows:"
+    let ivfluidTitle = NSLocalizedString("weak_iv_title", comment: "weak_iv_title")
+    let ivfluidText = NSLocalizedString("weak_iv_parag", comment: "weak_iv_parag")
     
-    let ivfluidAges = ["Patient age", "Infants (under 12 months)", "Older (12 months or older, including adults)"]
-    let ivfluidFirst = ["First give 30 ml/kg in:", "1 hour (*)", "30 minutes (*)"]
-    let ivfluidSecond = ["Then give 70 ml/kg in:", "5 hours (*)", "2 and 1/2 hour"]
-    let ivfluidFootnote = "* Repeat once if radial pulse is very weak or not detectable."
+    let ivfluidAges = [NSLocalizedString("weak_iv_table_col1_row0", comment: "table_item"),
+                       NSLocalizedString("weak_iv_table_col1_row1", comment: "table_item"),
+                       NSLocalizedString("weak_iv_table_col1_row2", comment: "diarr_title1")]
+    let ivfluidFirst = [NSLocalizedString("weak_iv_table_col2_row0", comment: "table_item"),
+                        NSLocalizedString("weak_iv_table_col2_row1", comment: "table_item"),
+                        NSLocalizedString("weak_iv_table_col2_row2", comment: "table_item")]
+    let ivfluidSecond = [NSLocalizedString("weak_iv_table_col3_row0", comment: "table_item"),
+                         NSLocalizedString("weak_iv_table_col3_row1", comment: "table_item"),
+                         NSLocalizedString("weak_iv_table_col3_row2", comment: "table_item")]
+    let ivfluidFootnote = NSLocalizedString("weak_iv_table_footnote", comment: "weak_iv_table_footnote")
     
-    let recoveryText1 = "◘ Reassess the patient every 1–2 hours."
-    let recoveryText2 = "◘ If hydration status is not improving, give the IV drip more rapidly."
-    let recoveryText3 = "◘ Give ORS (about 5 ml/kg/hour) as soon as the patient can drink, usually after 3– 4 hours (infant) or 1–2 hours for children, adolescents, and adults."
-    let recoveryText4 = "◘ Reassess an infant for 6 hours and older patient after 3 hours. Classify dehydration. Then choose the appropriate plan to continue treatment."
+    let recoveryText1 = NSLocalizedString("weak_iv_note1", comment: "weak_iv_note1")
+    let recoveryText2 = NSLocalizedString("weak_iv_note2", comment: "weak_iv_note2")
+    let recoveryText3 = NSLocalizedString("weak_iv_note3", comment: "weak_iv_note3")
+    let recoveryText4 = NSLocalizedString("weak_iv_note4", comment: "weak_iv_note4")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +62,9 @@ class ViewControllerWeak: ViewControllerTreatment {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "Weakness and severe dehydration", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: weaknessTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: weaknessText, left: xpos, top: ypos) + itemSpacing
-        ypos += addSubTitle(title: "IV fluid resuscitation", left: xpos, top: ypos) + itemSpacing
+        ypos += addSubTitle(title: ivfluidTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: ivfluidText, left: xpos, top: ypos) + itemSpacing
         let row = getIVFluidRow(ageYears: ageYears, ageMonths: ageMonths)
         ypos += create3ColumnTable(column1: ivfluidAges, column2: ivfluidFirst, column3: ivfluidSecond, selRow: row, left: xpos, top: ypos) + itemSpacing/2

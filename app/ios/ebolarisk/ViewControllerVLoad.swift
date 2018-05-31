@@ -15,39 +15,50 @@ class ViewControllerVLoad: ViewControllerTreatment {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
     
-    let vloadText = "High viral load is the most direct indication of a severe case. It is important to regularly:"
+    let vloadTitle = NSLocalizedString("vload_title1", comment: "vload_title1")
+    let vloadText = NSLocalizedString("vload_intro", comment: "vload_intro")
     
-    let vloadCheck1 = "◘ Reassess for emergency clinical signs and use the Ebola-simplified Quick Check or another triage/severity score and the ETAT for children."
-    let vloadCheck2 = "◘ Monitor input and output (when possible) and record at the bedside. When impractical to document separately (in several buckets), the total volume of urine, vomit and stool collected in a bedside bucket may be qualitatively or quantitatively estimated based on volume measures marked on the outside of the bucket."
-    let vloadCheck3 = "◘ Priority lab testing for ill patients:"
-    let vloadCheck3a = "   ○ electrolytes- K, Na, HCO3"
-    let vloadCheck3b = "   ○ glucose"
-    let vloadCheck3c = "   ○ creatinine"
-    let vloadCheck3d = "   ○ lactate"
-    let vloadCheck3e = "   ○ for women of childbearing age: pregnancy test"
-    let vloadCheck4 = "◘ Second priority:"
-    let vloadCheck4a = "   ○ magnesium"
-    let vloadCheck4b = "   ○ haemoglobin or hematocrit"
-    let vloadCheck4c = "   ○ platelet count"
-    let vloadCheck4d = "   ○ INR and PTT"
+    let vloadCheck1 = NSLocalizedString("vload_list_item1", comment: "vload_list_item1")
+    let vloadCheck2 = NSLocalizedString("vload_list_item2", comment: "vload_list_item2")
+    let vloadCheck3 = NSLocalizedString("vload_list_item3", comment: "vload_list_item3")
+    let vloadCheck3a = NSLocalizedString("vload_list_item3a", comment: "vload_list_item3a")
+    let vloadCheck3b = NSLocalizedString("vload_list_item3b", comment: "vload_list_item3b")
+    let vloadCheck3c = NSLocalizedString("vload_list_item3c", comment: "vload_list_item3c")
+    let vloadCheck3d = NSLocalizedString("vload_list_item3d", comment: "vload_list_item3d")
+    let vloadCheck3e = NSLocalizedString("vload_list_item3e", comment: "vload_list_item3e")
+    let vloadCheck4 = NSLocalizedString("vload_list_item4", comment: "vload_list_item4")
+    let vloadCheck4a = NSLocalizedString("vload_list_item4a", comment: "vload_list_item4a")
+    let vloadCheck4b = NSLocalizedString("vload_list_item4b", comment: "vload_list_item4b")
+    let vloadCheck4c = NSLocalizedString("vload_list_item4c", comment: "vload_list_item4c")
+    let vloadCheck4d = NSLocalizedString("vload_list_item4d", comment: "vload_list_item4d")
     
-    let shockText1 = "◘ General signs of shock (poor perfusion):"
-    let signsText1 = "   ○ Fast, weak pulse"
-    let signsText2 = "   ○ Pallor or cold extremities"
-    let signsText3 = "   ○ Prolonged capillary refill (>3 seconds)"
-    let signsText4 = "   ○ Dizziness or inability to stand"
-    let signsText5 = "   ○ Decreased urine output (≤30 ml/hour)"
-    let signsText6 = "   ○ Difficulty breathing"
-    let signsText7 = "   ○ Impaired consciousness, lethargy, agitation, confusion"
-    let signsText8 = "   ○ Low BP (SBP≤90 in adults; check SBP by age/weight of child)"
-    let shockText2 = "◘ Call for help from the most experienced clinician available when an Ebola patient develops shock."
-    let shockText3 = "◘ EVD patients can be in shock from hypovolaemic from GI loss (most common in the 2014- 2015 outbreak), septic shock or haemorrhagic shock (uncommon) or a combination of these."
+    let shockTitle = NSLocalizedString("vload_shock_title", comment: "vload_shock_title")
+    let shockText1 = NSLocalizedString("vload_shock_list_item1", comment: "vload_shock_list_item1")
+    let signsText1 = NSLocalizedString("vload_shock_list_item1a", comment: "vload_shock_list_item1a")
+    let signsText2 = NSLocalizedString("vload_shock_list_item1b", comment: "vload_shock_list_item1b")
+    let signsText3 = NSLocalizedString("vload_shock_list_item1c", comment: "vload_shock_list_item1c")
+    let signsText4 = NSLocalizedString("vload_shock_list_item1d", comment: "vload_shock_list_item1d")
+    let signsText5 = NSLocalizedString("vload_shock_list_item1e", comment: "vload_shock_list_item1e")
+    let signsText6 = NSLocalizedString("vload_shock_list_item1f", comment: "vload_shock_list_item1f")
+    let signsText7 = NSLocalizedString("vload_shock_list_item1g", comment: "vload_shock_list_item1g")
+    let signsText8 = NSLocalizedString("vload_shock_list_item1h", comment: "vload_shock_list_item1h")
+    let shockText2 = NSLocalizedString("vload_shock_list_item2", comment: "vload_shock_list_item2")
+    let shockText3 = NSLocalizedString("vload_shock_list_item3", comment: "vload_shock_list_item3")
     
-    let respText = "Oxygen: titrate to Sp02≥90%. If SpO2<90%, start adult on 5 litres/minute (nasal prongs); start child at 1–2 litres/minute (nasal prongs). In the acute phase of shock (first 24 hours) in children, where there is impaired oxygen delivery, also give oxygen if SpO2<94%. Evaluate for pneumonia, wheezing, fluid overload, congestive heart failure and manage accordingly. (Do not share nasal prongs–dispose of them once used by a patient.)"
-    let anxietyText = "Provide psychological support. Depression, associated with feelings of hopelessness and/or suicidal thoughts, may be present. See section 10.11 (Mental health problems) in the IMAI District Clinician Manual for their management. Diazepam – adults: 5–15 mg/day in 3 divided doses may be considered in severe cases."
-    let confusionText = "Reason with the patient in a calm and non-aggressive fashion. Keep lights on at night. Consider diazepam 5 mg at night (adult)."
-    let agressionText = "Give sedation: haloperidol 2.5 to 5 mg IM (depending on size of adult). Approach patient with caution, call for assistance, and give treatment only if safe to do so."
-    let neurologicalText = "This includes peripheral neuropathy, cranial nerve palsies, encephalopathy, aphonia, cardiac failure. Consider thiamine deficiency (beriberi) and give vitamin B1: 50 mg IM or IV daily for several days."
+    let respTitle = NSLocalizedString("vload_breath_title", comment: "vload_breath_title")
+    let respText = NSLocalizedString("vload_breath_parag", comment: "vload_breath_parag")
+    
+    let anxietyTitle = NSLocalizedString("vload_anxiety_title", comment: "vload_anxiety_title")
+    let anxietyText = NSLocalizedString("vload_anxiety_parag", comment: "vload_anxiety_parag")
+    
+    let confusionTitle = NSLocalizedString("vload_confusion_coop_title", comment: "vload_confusion_coop_title")
+    let confusionText = NSLocalizedString("vload_confusion_coop_parag", comment: "vload_confusion_coop_parag")
+    
+    let agresionTitle = NSLocalizedString("vload_agit_noncoop_title", comment: "vload_agit_noncoop_title")
+    let agressionText = NSLocalizedString("vload_agit_noncoop_parag", comment: "vload_agit_noncoop_parag")
+    
+    let neurologicalTitle = NSLocalizedString("vload_neuro_title", comment: "vload_neuro_title")
+    let neurologicalText = NSLocalizedString("vload_neuro_parag", comment: "vload_neuro_parag")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +74,7 @@ class ViewControllerVLoad: ViewControllerTreatment {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "High viral load and severely ill patients", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: vloadTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: vloadText, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: vloadCheck1, left: xpos, top: ypos) +  itemSpacing
         ypos += addTextParagraph(text: vloadCheck2, left: xpos, top: ypos) +  itemSpacing
@@ -79,7 +90,7 @@ class ViewControllerVLoad: ViewControllerTreatment {
         ypos += addTextParagraph(text: vloadCheck4c, left: xpos, top: ypos) +  itemSpacing
         ypos += addTextParagraph(text: vloadCheck4d, left: xpos, top: ypos) +  2 * itemSpacing
         
-        ypos += addMainTitle(title: "Shock", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: shockTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: shockText1, left: xpos, top: ypos) +  itemSpacing
         ypos += addTextParagraph(text: signsText1, left: xpos, top: ypos) +  itemSpacing
         ypos += addTextParagraph(text: signsText2, left: xpos, top: ypos) +  itemSpacing
@@ -92,19 +103,19 @@ class ViewControllerVLoad: ViewControllerTreatment {
         ypos += addTextParagraph(text: shockText2, left: xpos, top: ypos) +  itemSpacing
         ypos += addTextParagraph(text: shockText3, left: xpos, top: ypos) +  2 * itemSpacing
         
-        ypos += addMainTitle(title: "Difficulty breathing/respiratory distress", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: respTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: respText, left: xpos, top: ypos) +  2 * itemSpacing
         
-        ypos += addMainTitle(title: "Anxiety", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: anxietyTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: anxietyText, left: xpos, top: ypos) + 2 *  itemSpacing
         
-        ypos += addMainTitle(title: "Confusion in cooperative patient", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: confusionTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: confusionText, left: xpos, top: ypos) +  2 * itemSpacing
         
-        ypos += addMainTitle(title: "Agitation, confusion and aggression in non-cooperative adult patient", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: agresionTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: agressionText, left: xpos, top: ypos) +  2 * itemSpacing
         
-        ypos += addMainTitle(title: "Unexplained neurological symptoms", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: neurologicalTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: neurologicalText, left: xpos, top: ypos) +  itemSpacing
         
         return ypos

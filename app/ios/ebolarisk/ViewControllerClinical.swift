@@ -12,6 +12,8 @@ class ViewControllerClinical: UIViewController, BEMCheckBoxDelegate {
 
     let dataHolder = DataHolder.instance
     
+    @IBOutlet weak var infoClinicalView: UITextView!
+    
     // Radio boxes from:
     // https://github.com/Boris-Em/BEMCheckBox
     var diarrhoeaGroup: BEMCheckBoxGroup?
@@ -59,6 +61,8 @@ class ViewControllerClinical: UIViewController, BEMCheckBoxDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        infoClinicalView.text = NSLocalizedString("clinical_intro", comment: "clinical_intro")
         
         riskButton.layer.shadowColor = UIColor.black.cgColor
         riskButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)

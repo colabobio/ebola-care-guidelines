@@ -10,13 +10,15 @@ import UIKit
 
 @IBDesignable
 class PredButton: UIButton {
+    var index: Int
     var crossColorRGBValue: UInt
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(frame: CGRect, rgbValue: UInt) {
+    init(frame: CGRect, rgbValue: UInt, idx: Int) {
+        index = idx
         crossColorRGBValue = rgbValue
         super.init(frame: frame)
     }

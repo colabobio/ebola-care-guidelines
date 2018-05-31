@@ -1,0 +1,132 @@
+
+/* Class = "UITabBarItem"; title = "LAB"; ObjectID = "0sV-ZI-Cjo"; */
+"0sV-ZI-Cjo.title" = "LAB";
+
+/* Class = "UILabel"; text = "Do not know"; ObjectID = "1DC-tB-bGP"; */
+"1DC-tB-bGP.text" = "Inconnu";
+
+/* Class = "UILabel"; text = "Do not know"; ObjectID = "2rv-Sg-kok"; */
+"2rv-Sg-kok.text" = "Inconnu";
+
+/* Class = "UILabel"; text = "Age in years"; ObjectID = "3ev-xh-TDg"; */
+"3ev-xh-TDg.text" = "Âge en années";
+
+/* Class = "UITabBarItem"; title = "CLINICAL"; ObjectID = "4UZ-qw-BSR"; */
+"4UZ-qw-BSR.title" = "CLINICAL";
+
+/* Class = "UITextView"; text = "Enter patient's age either in years or months..."; ObjectID = "4wh-yA-Rgs"; */
+"4wh-yA-Rgs.text" = "Entrer l'âge du patient soit en années soit en mois. En règle générale, l'âge en années est suffisant pour les patients adultes, mais pour les enfants < 2 ans, l’âge devrait être donné en mois pour adapter au mieux la posologie du traitement.";
+
+/* Class = "UILabel"; text = "Do not know"; ObjectID = "61C-5X-saG"; */
+"61C-5X-saG.text" = "Inconnu";
+
+/* Class = "UILabel"; text = "Weight in kg"; ObjectID = "6FF-GP-M9e"; */
+"6FF-GP-M9e.text" = "Poids en kg";
+
+/* Class = "UILabel"; text = "Do not know"; ObjectID = "7Ey-Hh-2UD"; */
+"7Ey-Hh-2UD.text" = "Inconnu";
+
+/* Class = "UILabel"; text = "Asthenia/Weakness"; ObjectID = "9dr-w8-zsg"; */
+"9dr-w8-zsg.text" = "Asthénie/Faiblesse";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "BFb-9J-3vb"; */
+"BFb-9J-3vb.text" = "Oui";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "BcD-WR-jBp"; */
+"BcD-WR-jBp.text" = "Non";
+
+/* Class = "UITextView"; text = "Measure the patient's vitals upon arrival the treatment center and record them below."; ObjectID = "ByN-Bx-BOi"; */
+"ByN-Bx-BOi.text" = "Mesurer les signes vitaux du patient à son arrivée au centre de traitement et les noter ci-dessous.";
+
+/* Class = "UILabel"; text = "Vomiting"; ObjectID = "COT-e5-vus"; */
+"COT-e5-vus.text" = "Vomissements";
+
+/* Class = "UILabel"; text = "Abdomen pain"; ObjectID = "Lwq-UL-LEC"; */
+"Lwq-UL-LEC.text" = "Douleur abdominale";
+
+/* Class = "UILabel"; text = "Do not know"; ObjectID = "MsB-kL-leB"; */
+"MsB-kL-leB.text" = "Inconnu";
+
+/* Class = "UILabel"; text = "Temperature in °C"; ObjectID = "NB9-x3-m0l"; */
+"NB9-x3-m0l.text" = "Température en °C";
+
+/* Class = "UILabel"; text = "Do not know"; ObjectID = "Nsz-0K-Hoj"; */
+"Nsz-0K-Hoj.text" = "Inconnu";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "Oat-tz-ZKc"; */
+"Oat-tz-ZKc.text" = "Non";
+
+/* Class = "UIButton"; normalTitle = "CONTINUE TO THE APP"; ObjectID = "PNt-LT-DPG"; */
+"PNt-LT-DPG.normalTitle" = "CONTINUER VERS L'APP";
+
+/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "Rsp-Tu-Uj3"; */
+"Rsp-Tu-Uj3.title" = "Paramètres";
+
+/* Class = "UILabel"; text = "RT-PCR Cycle Threshold"; ObjectID = "UQ0-Vc-KOg"; */
+"UQ0-Vc-KOg.text" = "Seuil de cycle RT-PCR";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "Voh-js-7vT"; */
+"Voh-js-7vT.text" = "Oui";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "WtC-F4-wii"; */
+"WtC-F4-wii.text" = "Oui";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "XoI-d7-a6c"; */
+"XoI-d7-a6c.text" = "Non";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "Xyi-jB-Yos"; */
+"Xyi-jB-Yos.text" = "Non";
+
+/* Class = "UILabel"; text = "Jaundice"; ObjectID = "aEd-Ih-Mh1"; */
+"aEd-Ih-Mh1.text" = "Jaunisse";
+
+/* Class = "UITabBarItem"; title = "INFO"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "INFO";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "adt-yY-Vp0"; */
+"adt-yY-Vp0.text" = "Non";
+
+/* Class = "UILabel"; text = "Do not know"; ObjectID = "bcy-uK-CyR"; */
+"bcy-uK-CyR.text" = "Inconnu";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "bv0-GV-9nb"; */
+"bv0-GV-9nb.text" = "Oui";
+
+/* Class = "UITabBarItem"; title = "VITALS"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "VITALS";
+
+/* Class = "UILabel"; text = "Diarrhoea"; ObjectID = "cTt-an-B55"; */
+"cTt-an-B55.text" = "Diarrhée";
+
+/* Class = "UILabel"; text = "Bleeding"; ObjectID = "gbl-bO-zh2"; */
+"gbl-bO-zh2.text" = "Saignement";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "irL-Dj-fHU"; */
+"irL-Dj-fHU.text" = "Non";
+
+/* Class = "UITextView"; text = "Enter patient's weight. If precise age in months is not available for young children, then weight will be use to recomend dosage of certain drugs."; ObjectID = "jpT-he-qiY"; */
+"jpT-he-qiY.text" = "Entrer le poids du patient. Si l'âge précis en mois n'est pas disponible pour les jeunes enfants, le poids sera utilisé pour recommander le dosage de certains médicaments.";
+
+/* Class = "UIBarButtonItem"; title = "Information"; ObjectID = "lLB-Kn-SM6"; */
+"lLB-Kn-SM6.title" = "Information";
+
+/* Class = "UILabel"; text = "Age in months"; ObjectID = "lVd-gS-tll"; */
+"lVd-gS-tll.text" = "Âge en mois";
+
+/* Class = "UILabel"; text = "Headache"; ObjectID = "ora-iy-hD7"; */
+"ora-iy-hD7.text" = "Maux de tête";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "pDM-e9-wNS"; */
+"pDM-e9-wNS.text" = "Oui";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "pQq-Xl-11a"; */
+"pQq-Xl-11a.text" = "Oui";
+
+/* Class = "UILabel"; text = "No"; ObjectID = "pqw-cX-ZvC"; */
+"pqw-cX-ZvC.text" = "Non";
+
+/* Class = "UITextView"; text = "Use this section to record all available results from laboratory tests."; ObjectID = "qGz-BI-vdM"; */
+"qGz-BI-vdM.text" = "Utiliser cette section pour noter tous les résultats disponibles des analyses de laboratoire.";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "vFb-mk-Lh2"; */
+"vFb-mk-Lh2.text" = "Oui";

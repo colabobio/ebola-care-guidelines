@@ -13,6 +13,7 @@ class ViewControllerVitals: UIViewController, UITextFieldDelegate {
     let dataHolder = DataHolder.instance
     
     // MARK: Properties
+    @IBOutlet weak var infoVitalsView: UITextView!
     @IBOutlet weak var tempField: UITextField!
     @IBOutlet weak var riskButton: UIButton!
     
@@ -20,6 +21,8 @@ class ViewControllerVitals: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        infoVitalsView.text = NSLocalizedString("vitals_intro", comment: "vitals_intro")
         
         riskButton.layer.shadowColor = UIColor.black.cgColor
         riskButton.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)

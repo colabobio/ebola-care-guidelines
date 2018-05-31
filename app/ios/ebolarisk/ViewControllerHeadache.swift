@@ -15,9 +15,20 @@ class ViewControllerHeadache: ViewControllerTreatment {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
     
+    let paraTitle = "Fever/headache"
     let paraText = "Treat with oral administration of Paracetamol (dose by weight is 15 mg/kg):"
-    let paraAges = ["Patient age", "6 months–2 years", "3–5 years", "6–9 years", "10–15 years", "Adult"]
-    let paraDose = ["Paracetamol dose", "100 mg every 4–6 hours", "200 mg every 4–6 hours", "300 mg every 4–6 hours", "500 mg every 4–6 hours", "1000 mg every 4–6 hours"]
+    let paracetamolAges = [NSLocalizedString("fever_para_table_col1_row0", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row1", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row2", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row3", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row4", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row5", comment: "table_item")]
+    let paracetamolDoses = [NSLocalizedString("fever_para_table_col2_row0", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row1", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row2", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row3", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row4", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row5", comment: "table_item")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +44,9 @@ class ViewControllerHeadache: ViewControllerTreatment {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "Fever/headache", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: paraTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: paraText, left: xpos, top: ypos) + itemSpacing
-        ypos += create2ColumnTable(column1: paraAges, column2: paraDose, selRow: -1, left: xpos, top: ypos) + itemSpacing
+        ypos += create2ColumnTable(column1: paracetamolAges, column2: paracetamolDoses, selRow: -1, left: xpos, top: ypos) + itemSpacing
         
         return ypos
     }

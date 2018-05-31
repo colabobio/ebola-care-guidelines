@@ -21,25 +21,76 @@ class ViewControllerFever: ViewControllerTreatment  {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
     
-    let feverText = "Treat with oral administration of Paracetamol (dose by weight is 15 mg/kg):"
-    let malariaText = "All patients presenting to the emergency center with fever should also be given malaria treatment with Artesunate plus amodiaquine (AS+AQ) OR Artemether-lumefantrine (AL) OR Dihydroartemisinin plus piperaquine (DHP+PQP)."
+    let feverTitle = NSLocalizedString("fever_title1", comment: "fever_title1")
+    let feverText = NSLocalizedString("fever_parag1", comment: "fever_parag1")
     
-    let paracetamolAges = ["Patient age", "6-24 months", "3-5 years", "6-9 years", "10-15 years", "Adult"]
-    let paracetamolDoses = ["Paracetamol dose", "100 mg every 4-6 hours", "200 mg every 4-6 hours", "300 mg every 4-6 hours", "500 mg every 4-6 hours", "1000 mg every 4-6 hours"]
+    let paracetamolAges = [NSLocalizedString("fever_para_table_col1_row0", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row1", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row2", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row3", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row4", comment: "table_item"),
+                           NSLocalizedString("fever_para_table_col1_row5", comment: "table_item")]    
+    let paracetamolDoses = [NSLocalizedString("fever_para_table_col2_row0", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row1", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row2", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row3", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row4", comment: "table_item"),
+                            NSLocalizedString("fever_para_table_col2_row5", comment: "table_item")]
     
-    let asaqText = "Fixed dose combination (50 mg + 153 mg/tablet)."
-    let asaqAges = ["Patient age", "2-11 months", "1-5 years", "6-13 years", "≥14 years"]
-    let asaqDoses = ["Daily dose", "1/2 tablet for 3 days", "1 tablet for 3 days", "2 tablets for 3 days", "2 tablets for 3 days"]
-    let asaqWeights = ["Patient weight", "5-9 kg", "9-18 kg", "19-35 kg", "≥35 kg"]
+    let malariaTitle = NSLocalizedString("fever_antimalarial_title", comment: "fever_antimalarial_title")
+    let malariaText = NSLocalizedString("fever_antimalarial_parag", comment: "fever_antimalarial_parag")
+    let asaqTitle = NSLocalizedString("fever_antimalarial_ASAQ_title", comment: "fever_antimalarial_ASAQ_title")
+    let asaqText = NSLocalizedString("fever_antimalarial_ASAQ_dose", comment: "fever_antimalarial_ASAQ_dose")
+    let asaqAges = [NSLocalizedString("fever_antimalarial_ASAQ_table_col1_row0", comment: "table_item"),
+                    NSLocalizedString("fever_antimalarial_ASAQ_table_col1_row1", comment: "table_item"),
+                    NSLocalizedString("fever_antimalarial_ASAQ_table_col1_row2", comment: "table_item"),
+                    NSLocalizedString("fever_antimalarial_ASAQ_table_col1_row3", comment: "table_item"),
+                    NSLocalizedString("fever_antimalarial_ASAQ_table_col1_row4", comment: "table_item")]
+    let asaqDoses = [NSLocalizedString("fever_antimalarial_ASAQ_table_col2_row0", comment: "table_item"),
+                     NSLocalizedString("fever_antimalarial_ASAQ_table_col2_row1", comment: "table_item"),
+                     NSLocalizedString("fever_antimalarial_ASAQ_table_col2_row2", comment: "table_item"),
+                     NSLocalizedString("fever_antimalarial_ASAQ_table_col2_row3", comment: "table_item"),
+                     NSLocalizedString("fever_antimalarial_ASAQ_table_col2_row4", comment: "table_item")]
+    let asaqWeights = [NSLocalizedString("fever_antimalarial_ASAQ_table_col3_row0", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_ASAQ_table_col3_row1", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_ASAQ_table_col3_row2", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_ASAQ_table_col3_row3", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_ASAQ_table_col3_row4", comment: "table_item")]
     
-    let alText = "Fixed dose combination (20+ 120 mg/tablet)."
-    let alAges = ["Patient age", "2-24 months", "25 months - 7 years", "8-13 years", "≥14 years"]
-    let alDoses = ["Daily dose", "1 tablet twice for 3 days", "2 tablets twice for 3 days", "3 tablets twice for 3 days", "4 tablets twice for 3 days"]
-    let alWeights = ["Patient weight", "5-15 kg", "15-25 kg", "26-35 kg", "≥35 kg"]
+    let alTitle = NSLocalizedString("fever_antimalarial_AL_title", comment: "fever_antimalarial_AL_title")
+    let alText = NSLocalizedString("fever_antimalarial_AL_dose", comment: "fever_antimalarial_AL_dose")
+    let alAges = [NSLocalizedString("fever_antimalarial_AL_table_col1_row0", comment: "table_item"),
+                  NSLocalizedString("fever_antimalarial_AL_table_col1_row1", comment: "table_item"),
+                  NSLocalizedString("fever_antimalarial_AL_table_col1_row2", comment: "table_item"),
+                  NSLocalizedString("fever_antimalarial_AL_table_col1_row3", comment: "table_item"),
+                  NSLocalizedString("fever_antimalarial_AL_table_col1_row4", comment: "table_item")]
+    let alDoses = [NSLocalizedString("fever_antimalarial_AL_table_col2_row0", comment: "table_item"),
+                   NSLocalizedString("fever_antimalarial_AL_table_col2_row1", comment: "table_item"),
+                   NSLocalizedString("fever_antimalarial_AL_table_col2_row2", comment: "table_item"),
+                   NSLocalizedString("fever_antimalarial_AL_table_col2_row3", comment: "table_item"),
+                   NSLocalizedString("fever_antimalarial_AL_table_col2_row4", comment: "table_item")]
+    let alWeights = [NSLocalizedString("fever_antimalarial_AL_table_col3_row0", comment: "table_item"),
+                     NSLocalizedString("fever_antimalarial_AL_table_col3_row1", comment: "table_item"),
+                     NSLocalizedString("fever_antimalarial_AL_table_col3_row2", comment: "table_item"),
+                     NSLocalizedString("fever_antimalarial_AL_table_col3_row3", comment: "table_item"),
+                     NSLocalizedString("fever_antimalarial_AL_table_col3_row4", comment: "table_item")]
 
-    let dhppqpText = "Fixed dose combination (40 mg + 320 mg/tablet)."
-    let dhppqpWeights = ["Patient weight", "11-16 kg", "17-24 kg", "25-35 kg", "36-59 kg", "60-79 kg", "≥80 kg"]
-    let dhppqpDoses = ["Daily dose", "1 tablet for 3 days", "1.5 tablets for 3 days", "2 tablets for 3 days", "3 tablets for 3 days", "4 tablets for 3 days", "5 tablets for 3 days"]
+    let dhppqpTitle = NSLocalizedString("fever_antimalarial_DHPPQP_title", comment: "fever_antimalarial_DHPPQP_title")
+    let dhppqpText = NSLocalizedString("fever_antimalarial_DHPPQP_dose", comment: "fever_antimalarial_DHPPQP_dose")
+    let dhppqpWeights = [NSLocalizedString("fever_antimalarial_DHPPQP_table_col1_row0", comment: "table_item"),
+                         NSLocalizedString("fever_antimalarial_DHPPQP_table_col1_row1", comment: "table_item"),
+                         NSLocalizedString("fever_antimalarial_DHPPQP_table_col1_row2", comment: "table_item"),
+                         NSLocalizedString("fever_antimalarial_DHPPQP_table_col1_row3", comment: "table_item"),
+                         NSLocalizedString("fever_antimalarial_DHPPQP_table_col1_row4", comment: "table_item"),
+                         NSLocalizedString("fever_antimalarial_DHPPQP_table_col1_row5", comment: "table_item"),
+                         NSLocalizedString("fever_antimalarial_DHPPQP_table_col1_row6", comment: "table_item")]
+    let dhppqpDoses = [NSLocalizedString("fever_antimalarial_DHPPQP_table_col2_row0", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_DHPPQP_table_col2_row1", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_DHPPQP_table_col2_row2", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_DHPPQP_table_col2_row3", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_DHPPQP_table_col2_row4", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_DHPPQP_table_col2_row5", comment: "table_item"),
+                       NSLocalizedString("fever_antimalarial_DHPPQP_table_col2_row6", comment: "table_item")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,25 +121,25 @@ class ViewControllerFever: ViewControllerTreatment  {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "Fever/headache", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: feverTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: feverText, left: xpos, top: ypos) + itemSpacing
         var row = getParacetamolRow(ageYears: ageYears, ageMonths: ageMonths)
         ypos += create2ColumnTable(column1: paracetamolAges, column2: paracetamolDoses, selRow: row, left: xpos, top: ypos) + 2 * itemSpacing
         
-        ypos += addMainTitle(title: "Malaria treatment", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: malariaTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: malariaText, left: xpos, top: ypos) + itemSpacing
         
-        ypos += addSubTitle(title: "Artesunate plus amodiaquine (AS+AQ)", left: xpos, top: ypos) + itemSpacing
+        ypos += addSubTitle(title: asaqTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: asaqText, left: xpos, top: ypos) + itemSpacing
         row = getASAQRow(ageYears: ageYears, ageMonths: ageMonths, weight: weight)
         ypos += create3ColumnDoubleEntryTable(column1: asaqAges, column2: asaqDoses, column3: asaqWeights, selRow: row, left: xpos, top: ypos) + itemSpacing
         
-        ypos += addSubTitle(title: "Artemether-lumefantrine (AL)", left: xpos, top: ypos) + itemSpacing
+        ypos += addSubTitle(title: alTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: alText, left: xpos, top: ypos) + itemSpacing
         row = getALRow(ageYears: ageYears, ageMonths: ageMonths, weight: weight)
         ypos += create3ColumnDoubleEntryTable(column1: alAges, column2: alDoses, column3: alWeights, selRow: row, left: xpos, top: ypos) + itemSpacing
         
-        ypos += addSubTitle(title: "Dihydroartemisinin plus piperaquine (DHP+PQP)", left: xpos, top: ypos) + itemSpacing
+        ypos += addSubTitle(title: dhppqpTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: dhppqpText, left: xpos, top: ypos) + itemSpacing
         row = getDHPPQPRow(weight: weight)
         ypos += create2ColumnTable(column1: dhppqpWeights, column2: dhppqpDoses, selRow: row, left: xpos, top: ypos) + itemSpacing

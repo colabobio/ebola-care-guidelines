@@ -1,0 +1,346 @@
+/* 
+  Localizable.strings
+  ebolarisk
+
+  Created by Andres Colubri on 5/29/18.
+  Copyright © 2018 broadinstitute. All rights reserved.
+*/
+
+// Internationalization tutorial on iOS:
+// https://www.raywenderlich.com/180356/ios-internationalization
+
+// UITextView
+
+// Have to add the translations for the UITextViews in the main storyboard due to some unresolved bug in iOS:
+// https://stackoverflow.com/questions/19426421/uitextview-localized-with-xib-strings-file
+"info_age_intro" = "Enter age of patient either in years or months. Typically, providing age in years is enough for adult patients, but for children younger than 2 years, age should be given in months because the dosage of certain drugs depends on the month.";
+"info_weight_intro" = "Enter weight of patient. If precise age in months is not available for young children, then weight will be used to recommend dosage of certain drugs.";
+"vitals_intro" = "Measure the vitals of patient upon arrival at the treatment center and record them below.";
+"clinical_intro" = "Record below the observed signs and reported symptoms at admission, using the 'Do not know' option if it is not possible to determine whether the sign/symptom is present or not.";
+"lab_intro" = "Use this section to record all available results from laboratory tests.";
+
+// SPLASH SCREEN
+
+"info_title" = "Important information";
+
+"info_paragraph1" = "Ebola RISK is a proof-of-concept app designed to illustrate how Machine Learning models for clinical prognosis could inform patient care and management. It offers treatment options compiled from WHO\'s guidelines for hemorrhagic fever patients, prioritized by predicted mortality risk.";
+
+"info_paragraph2" = "Because it is a research prototype, this app should NOT be used to make treatment decisions on actual patients.";
+
+"info_paragraph4" = "Get the preprint of the article describing the derivation and validation of the models from:";
+
+// VISUALIZATION SCREEN
+
+"hrisk_msg" = "Based on presentation signs, symptoms, and PCR data, this patient has more than %d%% chance of dying. Reassess for emergency clinical signs, monitor input and output by the bedside, and perform priority lab testing if possible.";
+
+"lmrisk_msg" = "Based on presentation signs, symptoms, and PCR data, this patient has less than %d%% chance of dying. Make sure the patient remains stable, by keeping him or her hydrated and taking care of any clinical signs with the appropriate procedure.";
+
+"no_data_err1" = "Not enough information!";
+"no_data_err2" = "You need to provide at least patient's age and RT-PCR Cycle Threshold (CT) value.";
+
+"patient_risk" = "Mortality risk of patient";
+"predictor_contrib" = "Contribution from each predictor";
+
+"hrisk_patient" = "HIGH RISK PATIENT";
+"lmrisk_patient" = "LOW/MEDIUM RISK PATIENT";
+
+"hrisk_reason" = "This elevated risk is due to:";
+"lmrisk_reason" = "This risk is due to:";
+
+// MODEL VARIABLES
+
+"var_alias" = "PCR CT:Age:Temperature:Jaundice:Bleeding:Headache:Diarrhoea:Vomiting:Abdomen pain:Weakness:Wellness";
+"var_symptom" = "Viral load:Age:Fever:Jaundice:Bleeding:Headache:Diarrhoea:Vomiting:Abdomen pain:Weakness:Wellness";
+"var_bin_labels" = "no:yes";
+
+// AGE
+
+"age_title1" = "Children and elderly patients";
+"age_parag1" = "These patients are at increased risk. Follow very closely, reassessing for emergency clinical signs, making sure to avoid dehydration and maintaining electrolyte as well as blood pressure levels. Follow all procedures carefully, keeping doses within the corresponding age range.";
+
+"age_title2" = "Hypoglycaemia";
+"age_parag2" = "Although not commonly seen among adult patients, hypoglycaemia may accompany dehydration and may result in seizures, coma and death. Small children, critically ill adults, and elderly or severely malnourished patients are especially at risk.";
+
+"age_item1" = "◘ When hypoglycaemia is suspected, check glucose with bedside glucometer. Repeat as needed.";
+"age_item2" = "◘ Ampoules of D50 can be added to bags of Lactated Ringer's or Normal saline to provide some glucose.";
+"age_item3" = "◘ If measurement is not possible, give glucose empirically if the patient develops lethargy, seizure or coma.";
+
+// BLEEDING
+
+"bleed_title1" = "Bleeding";
+
+"bleed_parag1" = "Transfusion of fresh whole blood or red blood cell components should be considered, guided by clinical and ideally laboratory indicators:";
+
+"bleed_clinical_title" = "Clinical indicators";
+"bleed_clinical_item1" = "  ◘ Severe pallor";
+"bleed_clinical_item2" = "  ◘ Fast pulse rate (tachycardia,  = 100bpm)";
+"bleed_clinical_item3" = "  ◘ Difficulty breathing (dyspnea)";
+"bleed_clinical_item4" = "  ◘ Confusion";
+"bleed_clinical_item5" = "  ◘ Restlessness";
+
+"bleed_lab_title" = "Laboratory indicators";
+"bleed_lab_item1" = "  ◘ Hgb ≤ 5 g/dl";
+"bleed_lab_item2" = "  ◘ Hematocrit ≤ 15";
+"bleed_lab_item3" = "  ◘ INR ≥ 1.2";
+
+"bleed_vitk_title" = "Vitamin K deficiency";
+"bleed_vitk_parag1" = "Many malnourished or ill patients with diminished oral intake, and those treated with antibiotics, have mild vitamin K deficiency which may lead to elevations in INR/PPT and predispose to bleeding.";
+"bleed_vitk_parag2" = "Multivitamin and/or vitamin K administration in these patients is reasonable (e.g. 10 mg vitamin K PO 1x/d for 3 days at admission, or 10 mg intravenously for those unable to take pills, who are bleeding and who have IV access). Treatment of significant bleeding with fresh frozen plasma should ideally be guided by INR/PT.";
+
+"bleed_add_title" = "Additional treatment";
+"bleed_add_parag" = "Other medications to prevent or treat bleeding such as antifibrinolytics (IV tranexamic acid) may be reasonable based on extrapolation of evidence from other patient populations but direct evidence in patients with Ebola is lacking.";
+
+// DIARRHEA
+
+"diarr_title1" = "Diarrhea and dehydration";
+"diarr_parag1" = "Patient is at risk of dehydration, the most frequent and important cause of further deterioration. The WHO Oral Rehydration Solution (ORS) is best suited for treating dehydration.";
+
+"diarr_ors_table_title" = "ORS amount to given in first 4 hours";
+
+"diarr_ors_table_col1_row0" = "Patient Age";
+"diarr_ors_table_col1_row1" = "Less than 4 months";
+"diarr_ors_table_col1_row2" = "4–11 months";
+"diarr_ors_table_col1_row3" = "12–23 months";
+"diarr_ors_table_col1_row4" = "2 –4 years";
+"diarr_ors_table_col1_row5" = "5–14 years";
+"diarr_ors_table_col1_row6" = "15 years or older";
+
+"diarr_ors_table_col2_row0" = "ORS amount";
+"diarr_ors_table_col2_row1" = "200–400 ml";
+"diarr_ors_table_col2_row2" = "400–600 ml";
+"diarr_ors_table_col2_row3" = "600–800 ml";
+"diarr_ors_table_col2_row4" = "800–1200 ml";
+"diarr_ors_table_col2_row5" = "1200–2200 ml";
+"diarr_ors_table_col2_row6" = "2200–4000 ml";
+
+"diarr_ors_table_col3_row0" = "Patient weight";
+"diarr_ors_table_col3_row1" = "Less than 5 kg";
+"diarr_ors_table_col3_row2" = "5–7.9 kg";
+"diarr_ors_table_col3_row3" = "8–10.9 kg";
+"diarr_ors_table_col3_row4" = "11–15.9 kg";
+"diarr_ors_table_col3_row5" = "16–29.9 kg";
+"diarr_ors_table_col3_row6" = "30 kg or more";
+
+"diarr_note1" = "◘ Reassess the patient’s condition after four hours, and provide more ORS as detailed above if dehydration persists.";
+"diarr_note2" = "◘ If a patient (child or adult) has no diarrhoea or dehydration, and finds it difficult to drink ORS, use flavoured ORS.";
+"diarr_note3" = "◘ Do not use sports drinks, or sugary drinks such as fruit flavoured and fizzy commercial drinks, as they can worsen diarrhoea.";
+
+"diarr_zinc_title" = "Zinc treatment";
+
+"diarr_zinc_parag" = "Give the patient Zinc sulphate, especially children:";
+
+"diarr_zinc_table_col1_row0" = "Patient age";
+"diarr_zinc_table_col1_row1" = "Under 6 months";
+"diarr_zinc_table_col1_row2" = "Over 6 months";
+
+"diarr_zinc_table_col2_row0" = "Zinc dose";
+"diarr_zinc_table_col2_row1" = "10 mg per day for 10–14 days";
+"diarr_zinc_table_col2_row2" = "20 mg per day for 10–14 days";
+
+// FEVER
+
+"fever_title1" = "Fever/headache";
+"fever_parag1" = "Treat with oral administration of Paracetamol (dose by weight is 15 mg/kg):";
+
+"fever_para_table_col1_row0" = "Patient age";
+"fever_para_table_col1_row1" = "6 months–2 years";
+"fever_para_table_col1_row2" = "3–5 years";
+"fever_para_table_col1_row3" = "6–9 years";
+"fever_para_table_col1_row4" = "10–15 years";
+"fever_para_table_col1_row5" = "Adult";
+
+"fever_para_table_col2_row0" = "Paracetamol dose";
+"fever_para_table_col2_row1" = "100 mg every 4–6 hours";
+"fever_para_table_col2_row2" = "200 mg every 4–6 hours";
+"fever_para_table_col2_row3" = "300 mg every 4–6 hours";
+"fever_para_table_col2_row4" = "500 mg every 4–6 hours";
+"fever_para_table_col2_row5" = "1000 mg every 4–6 hours";
+
+"fever_antimalarial_title" = "Antimalarial treatment";
+"fever_antimalarial_parag" = "All patients presenting to the emergency center with fever should also be given malaria treatment with Artesunate plus amodiaquine (AS+AQ) OR Artemether-lumefantrine (AL) OR Dihydroartemisinin plus piperaquine (DHP+PQP).";
+
+"fever_antimalarial_ASAQ_title" = "Artesunate plus amodiaquine (AS+AQ)";
+"fever_antimalarial_ASAQ_dose" = "Fixed dose combination (50 mg + 153 mg/tablet)";
+
+"fever_antimalarial_ASAQ_table_col1_row0" = "Patient age";
+"fever_antimalarial_ASAQ_table_col1_row1" = "2–11 months";
+"fever_antimalarial_ASAQ_table_col1_row2" = "1–5 years";
+"fever_antimalarial_ASAQ_table_col1_row3" = "6–13 years";
+"fever_antimalarial_ASAQ_table_col1_row4" = "≥14 years";
+
+"fever_antimalarial_ASAQ_table_col2_row0" = "Daily dose";
+"fever_antimalarial_ASAQ_table_col2_row1" = "1/2 tablet daily for 3 days";
+"fever_antimalarial_ASAQ_table_col2_row2" = "1 tablet daily for 3 days";
+"fever_antimalarial_ASAQ_table_col2_row3" = "2 tablets daily for 3 days";
+"fever_antimalarial_ASAQ_table_col2_row4" = "2 tablets daily for 3 days";
+
+"fever_antimalarial_ASAQ_table_col3_row0" = "Patient weight";
+"fever_antimalarial_ASAQ_table_col3_row1" = "5–9 kg";
+"fever_antimalarial_ASAQ_table_col3_row2" = "9–18 kg";
+"fever_antimalarial_ASAQ_table_col3_row3" = "19–35 kg";
+"fever_antimalarial_ASAQ_table_col3_row4" = "≥35 kg";
+
+"fever_antimalarial_AL_title" = "Artemether-lumefantrine (AL)";
+"fever_antimalarial_AL_dose" = "Fixed dose combination (20+ 120 mg/tablet)";
+
+"fever_antimalarial_AL_table_col1_row0" = "Patient age";
+"fever_antimalarial_AL_table_col1_row1" = "2–24 months";
+"fever_antimalarial_AL_table_col1_row2" = "25 months– 7 years";
+"fever_antimalarial_AL_table_col1_row3" = "8–13 years";
+"fever_antimalarial_AL_table_col1_row4" = "≥14 years";
+
+"fever_antimalarial_AL_table_col2_row0" = "Daily dose";
+"fever_antimalarial_AL_table_col2_row1" = "1 tablet twice daily for 3 days";
+"fever_antimalarial_AL_table_col2_row2" = "2 tablets twice daily for 3 days";
+"fever_antimalarial_AL_table_col2_row3" = "3 tablets twice daily for 3 days";
+"fever_antimalarial_AL_table_col2_row4" = "4 tablets twice daily for 3 days";
+
+"fever_antimalarial_AL_table_col3_row0" = "Patient weight";
+"fever_antimalarial_AL_table_col3_row1" = "5–15 kg";
+"fever_antimalarial_AL_table_col3_row2" = "15–25 kg";
+"fever_antimalarial_AL_table_col3_row3" = "25–35 kg";
+"fever_antimalarial_AL_table_col3_row4" = "≥35 kg";
+
+"fever_antimalarial_DHPPQP_title" = "Dihydroartemisinin plus piperaquine (DHP+PQP)";
+"fever_antimalarial_DHPPQP_dose" = "Fixed Dose combination (40 mg + 320 mg/tablet)";
+
+"fever_antimalarial_DHPPQP_table_col1_row0" = "Patient weight";
+"fever_antimalarial_DHPPQP_table_col1_row1" = "11–16 kg";
+"fever_antimalarial_DHPPQP_table_col1_row2" = "17–24 kg";
+"fever_antimalarial_DHPPQP_table_col1_row3" = "25–35 kg";
+"fever_antimalarial_DHPPQP_table_col1_row4" = "36–59 kg";
+"fever_antimalarial_DHPPQP_table_col1_row5" = "60–79 kg";
+"fever_antimalarial_DHPPQP_table_col1_row6" = "≥80 kg";
+
+"fever_antimalarial_DHPPQP_table_col2_row0" = "Daily dose";
+"fever_antimalarial_DHPPQP_table_col2_row1" = "1 tablet daily for 3 days";
+"fever_antimalarial_DHPPQP_table_col2_row2" = "1.5 tablet daily for 3 days";
+"fever_antimalarial_DHPPQP_table_col2_row3" = "2 tablets daily for 3 days";
+"fever_antimalarial_DHPPQP_table_col2_row4" = "3 tablets daily for 3 days";
+"fever_antimalarial_DHPPQP_table_col2_row5" = "4 tablets daily for 3 days";
+"fever_antimalarial_DHPPQP_table_col2_row6" = "5 tablets daily for 3 days";
+
+// VIRAL LOAD
+
+"vload_title1" = "High viral load and severely ill patients";
+
+"vload_intro" = "High viral load is the most direct indication of a severe case. It is important to regularly:";
+"vload_list_item1" = "◘ Reassess for emergency clinical signs and use the Ebola-simplified Quick Check or another triage/severity score and the ETAT for children.";
+"vload_list_item2" = "◘ Monitor input and output (when possible) and record at the bedside. When impractical to document separately (in several buckets), the total volume of urine, vomit and stool collected in a bedside bucket may be qualitatively or quantitatively estimated based on volume measures marked on the outside of the bucket.";
+"vload_list_item3" = "◘ Priority lab testing for ill patients:";
+"vload_list_item3a" = "   ○ electrolytes : K, Na, HCO3";
+"vload_list_item3b" = "   ○ glucose";
+"vload_list_item3c" = "   ○ creatinine";
+"vload_list_item3d" = "   ○ lactate";
+"vload_list_item3e" = "   ○ for women of childbearing age: pregnancy test";
+"vload_list_item4" = "◘ Secondary priority:";
+"vload_list_item4a" = "    ○ magnesium";
+"vload_list_item4b" = "    ○ haemoglobin or hematocrit";
+"vload_list_item4c" = "    ○ platelet count";
+"vload_list_item4d" = "    ○ INR and PTT";
+
+"vload_shock_title" = "Shock";
+
+"vload_shock_list_item1" = "◘ General signs of shock (poor perfusion):";
+"vload_shock_list_item1a" = "   ○ Fast, weak pulse";
+"vload_shock_list_item1b" = "   ○ Pallor or cold extremities";
+"vload_shock_list_item1c" = "   ○ Prolonged capillary refill ( = 3 seconds)";
+"vload_shock_list_item1d" = "   ○ Dizziness or inability to stand";
+"vload_shock_list_item1e" = "   ○ Decreased urine output (≤30 ml/hour)";
+"vload_shock_list_item1f" = "   ○ Difficulty breathing / Dyspnea";
+"vload_shock_list_item1g" = "   ○ Impaired consciousness, lethargy, agitation, confusion";
+"vload_shock_list_item1h" = "   ○ Low BP (SBP≤90 mmHg in adults; check SBP by age/weight of child)";
+"vload_shock_list_item2" = "◘ Call for help from the most experienced clinician available when an Ebola patient develops shock.";
+"vload_shock_list_item3" = "◘ EVD patients can be in shock from hypovolaemic from GI loss (most common in the 2014- 2015 outbreak), septic shock or haemorrhagic shock (uncommon) or a combination of these.";
+
+"vload_breath_title" = "Difficulty breathing and respiratory distress";
+
+"vload_breath_parag" = "Oxygen: titrate to Sp02≥90%. If SpO2&lt;90%, start adult on 5 litres/minute (nasal prongs); start child at 1–2 litres/minute (nasal prongs). In the acute phase of shock (first 24 hours) in children, where there is impaired oxygen delivery, also give oxygen if SpO2&lt;94%. Evaluate for pneumonia, wheezing, fluid overload, congestive heart failure and manage accordingly. (Do not share nasal prongs–dispose of them once used by a patient.)";
+
+"vload_anxiety_title" = "Anxiety";
+
+"vload_anxiety_parag" = "Provide psychological support. Depression, associated with feelings of hopelessness and/or suicidal thoughts, may be present. See section 10.11 (Mental health problems) in the IMAI District Clinician Manual for their management. Diazepam – adults: 5–15 mg/day in 3 divided doses may be considered in severe cases.";
+
+"vload_confusion_coop_title" = "Confusion in cooperative patient";
+
+"vload_confusion_coop_parag" = "Reason with the patient in a calm and non-aggressive fashion. Keep lights on at night. Consider diazepam 5 mg at night (adult).";
+
+"vload_agit_noncoop_title" = "Agitation, confusion and aggression in non-cooperative adult patient";
+
+"vload_agit_noncoop_parag" = "Give sedation: haloperidol 2.5 to 5 mg IM (depending on size of adult). Approach patient with caution, call for assistance, and give treatment only if safe to do so.";
+
+"vload_neuro_title" = "Unexplained neurological symptoms";
+
+"vload_neuro_parag" = "This includes peripheral neuropathy, cranial nerve palsies, encephalopathy, aphonia, and cardiac failure. Consider thiamine deficiency (beriberi) and give vitamin B1: 50 mg IM or IV daily for several days.";
+
+// JAUNDICE
+
+"jaundice_title1" = "Jaundice and liver damage";
+
+"jaundice_parag1" = "Jaundice is not common in EVD, but it likely indicates an acute case with damage to the parenchymal cells of liver. Confirm Hepatic/hepatocellular jaundice by urine tests (dark urine, presence of conjugated bilirubin, urobilirubin  =  2 units). Follow up closely and apply appropriate treatment for other signs/symptoms.";
+
+"jaundice_title2" = "Nutrition recommendations";
+
+"jaundice_parag2" = "Exercise caution when feeding the patient who have no appetite. Even in critically ill patients without severe dehydration, excess energy or protein is not needed and an excess could further compromise liver and kidney function.";
+
+// VOMIT
+
+"vomit_title1" = "Nausea and Vomiting";
+
+"vomit_parag1" = "Nausea and vomiting can be managed with Ondansetron:";
+
+"vomit_ondansetron_table_col1_row0" = "Patient age";
+"vomit_ondansetron_table_col1_row1" = "Age 4–12 years";
+"vomit_ondansetron_table_col1_row2" = "Adult";
+
+"vomit_ondansetron_table_col2_row0" = "Daily dose";
+"vomit_ondansetron_table_col2_row1" = "4 mg two times a day";
+"vomit_ondansetron_table_col2_row2" = "8 mg two times a day";
+
+"vomit_dehydration_title" = "Dehydration";
+"vomit_dehydration_parag" = "Patient is at risk of dehydration, especially if also presenting diarrhea. Dehydration is the most frequent and important cause of further deterioration. The WHO Oral Rehydration Solution (ORS) is best suited for treating dehydration.";
+
+// PAIN
+
+"pain_title1" = "Abdominal/epigastric pain";
+
+"pain_parag1" = "Treat with oral administration of Omeprazole, once a day before food:";
+
+"vomit_omeprazole_table_col1_row0" = "Patient age";
+"vomit_omeprazole_table_col1_row1" = "6 months–2 years";
+"vomit_omeprazole_table_col1_row2" = "2–12 years";
+"vomit_omeprazole_table_col1_row3" = "Adult";
+
+"vomit_omeprazole_table_col2_row0" = "Omeprazole dose";
+"vomit_omeprazole_table_col2_row1" = "10 mg";
+"vomit_omeprazole_table_col2_row2" = "10 mg";
+"vomit_omeprazole_table_col2_row3" = "20 mg";
+
+// WEAKNESS
+
+"weak_title1" = "Weakness and severe dehydration";
+
+"weak_parag1" = "The weakness and lethargy accompanying diarrhoea; or with significant vomiting, as well as confusion, sunken eyes, wrinkled skin and a weak pulse, are indication of severe dehydration. The patient should be immediately started on active intravenous (IV) fluid resuscitation while also offered Oral Rehydration Solution (ORS).";
+
+"weak_iv_title" = "IV fluid resuscitation";
+
+"weak_iv_parag" = "Give 100 ml/kg Lactated Ringer’s solution (or, if LR not available, normal saline), divided as follows:";
+
+"weak_iv_table_col1_row0" = "Patient Age";
+"weak_iv_table_col1_row1" = "Infants (under 12 months)";
+"weak_iv_table_col1_row2" = "Older (12 months or older, including adults)";
+
+"weak_iv_table_col2_row0" = "First give 30 ml/kg in:";
+"weak_iv_table_col2_row1" = "1 hour (*)";
+"weak_iv_table_col2_row2" = "30 minutes (*)";
+
+"weak_iv_table_col3_row0" = "Then give 70 ml/kg in:";
+"weak_iv_table_col3_row1" = "5 hours (*)";
+"weak_iv_table_col3_row2" = "2 1/2 hours";
+
+"weak_iv_table_footnote" = "* Repeat once if radial pulse is very weak or not detectable.";
+
+"weak_iv_note1" = "◘ Reassess the patient every 1–2 hours.";
+"weak_iv_note2" = "◘ If hydration status is not improving, give the IV drip more rapidly.";
+"weak_iv_note3" = "◘ Also give ORS (about 5 ml/kg/hour) as soon as the patient can drink, usually after 3– 4 hours (infant) or 1–2 hours for children, adolescents, and adults.";
+"weak_iv_note4" = "◘ Reassess an infant for 6 hours and older patient after 3 hours. Classify dehydration. Then choose the appropriate plan to continue treatment.";

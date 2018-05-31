@@ -15,11 +15,13 @@ class ViewControllerAge: ViewControllerTreatment {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
     
-    let ageText = "These patients are at increased risk. Follow very closely, reassessing for emergency clinical signs, making sure to avoid dehydration and maintaining electrolyte as well as blood pressure levels. Follow all procedures carefully, keeping doses within the corresponding age range."
-    let hypoglycemiaText = "Although not commonly seen among adult patients, hypoglycemia may accompany dehydration and may result in seizures, coma and death. Small children, critically ill adults, and elderly or severely malnourished patients are especially at risk."
-    let recomm1 = "  ◘ When hypoglycaemia is suspected, check glucose with bedside glucometer. Replete as needed."
-    let recomm2 = "  ◘ Ampoules of D50 can be added to bags of Lactated Ringer\'s or Normal saline to provide some glucose."
-    let recomm3 = "  ◘ If measurement is not possible, give glucose empirically if the patient develops lethargy, seizure or coma."
+    let ageTitle = NSLocalizedString("age_title1", comment: "age_title1")
+    let ageText = NSLocalizedString("age_parag1", comment: "age_parag1")
+    let hypoglycemiaTitle = NSLocalizedString("age_title2", comment: "age_title2")
+    let hypoglycemiaText = NSLocalizedString("age_parag2", comment: "age_parag2")
+    let recomm1 = NSLocalizedString("age_item1", comment: "age_item1")
+    let recomm2 = NSLocalizedString("age_item2", comment: "age_item2")
+    let recomm3 = NSLocalizedString("age_item3", comment: "age_item3")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +37,10 @@ class ViewControllerAge: ViewControllerTreatment {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "Children and elderly patients", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: ageTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: ageText, left: xpos, top: ypos) + 2 * itemSpacing
         
-        ypos += addMainTitle(title: "Hypoglycemia", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: hypoglycemiaTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: hypoglycemiaText, left: xpos, top: ypos) +  itemSpacing        
         ypos += addTextParagraph(text: recomm1, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: recomm2, left: xpos, top: ypos) + itemSpacing

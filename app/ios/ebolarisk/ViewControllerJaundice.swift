@@ -15,9 +15,11 @@ class ViewControllerJaundice: ViewControllerTreatment {
     let itemSpacing = CGFloat(8)
     let margin = CGFloat(8)
     
-    let jaundiceText = "Jaundice is not common in EVD, but it likely indicates an acute case with damage to the parenchymal cells of liver. Confirm Hepatic/hepatocellular jaundice by urine tests (dark urine, presence of conjugated bilirubin, urobilirubin > 2 units). Follow up closely and apply appropriate treatment for other signs/symptoms."
+    let jaundiceTitle = NSLocalizedString("jaundice_title1", comment: "jaundice_title1")
+    let jaundiceText = NSLocalizedString("jaundice_parag1", comment: "jaundice_parag1")
     
-    let nutritionText = "Exercise caution when feeding the patient who have no appetite. Even in critically ill patients without severe dehydration, excess energy or protein is not needed and an excess could further compromise liver and kidney function."
+    let nutritionTitle = NSLocalizedString("jaundice_title2", comment: "jaundice_title2")
+    let nutritionText = NSLocalizedString("jaundice_parag2", comment: "jaundice_parag2")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +35,10 @@ class ViewControllerJaundice: ViewControllerTreatment {
         let xpos = margin
         var ypos = itemSpacing
         
-        ypos += addMainTitle(title: "Jaundice and liver damage", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: jaundiceTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: jaundiceText, left: xpos, top: ypos) + 2 * itemSpacing
 
-        ypos += addMainTitle(title: "Nutrition recommendations", left: xpos, top: ypos) + itemSpacing
+        ypos += addMainTitle(title: nutritionTitle, left: xpos, top: ypos) + itemSpacing
         ypos += addTextParagraph(text: nutritionText, left: xpos, top: ypos) + itemSpacing
         
         return ypos

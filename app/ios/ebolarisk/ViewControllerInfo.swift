@@ -20,13 +20,12 @@ class ViewControllerInfo: UIViewController {
     let itemSpacing = CGFloat(10)
     let warnPaddingY = CGFloat(10)
     
-    let titleMsg = "Important information"
-    let infoMsg = "Ebola RISK is a proof-of-concept app designed to illustrate how Machine Learning models for clinical prognosis could inform patient care and management. It offers treatment options compiled from WHO\'s guidelines for hemorrhagic fever patients, prioritized by predicted mortality risk."
-    let warnMsg = "Because it is a research prototype, this app should NOT be used to make treatment decisions on actual patients."
-    let preprintMsg = "Get the preprint of the article describing the derivation and validation of the models from:"
+    let titleMsg = NSLocalizedString("info_title", comment: "info_title")
+    let infoMsg = NSLocalizedString("info_paragraph1", comment: "info_paragraph1")
+    let warnMsg = NSLocalizedString("info_paragraph2", comment: "info_paragraph2")
+    let preprintMsg = NSLocalizedString("info_paragraph4", comment: "info_paragraph4")
     let preprintURL = "http://biorxiv.org/cgi/content/short/294587v3"
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
