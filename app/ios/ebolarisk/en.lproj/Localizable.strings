@@ -25,7 +25,7 @@
 
 "info_paragraph1" = "Ebola RISK is a proof-of-concept app designed to illustrate how Machine Learning models for clinical prognosis could inform patient care and management. It offers treatment options compiled from WHO\'s guidelines for hemorrhagic fever patients, prioritized by predicted mortality risk.";
 
-"info_paragraph2" = "Because it is a research prototype, this app should NOT be used to make treatment decisions on actual patients.";
+"info_paragraph2" = "Use the predictions and clinical management recommendations from this app in combination with clinical judgement.";
 
 "info_paragraph4" = "Get the preprint of the article describing the derivation and validation of the models from:";
 

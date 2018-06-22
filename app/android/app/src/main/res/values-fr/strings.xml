@@ -14,7 +14,7 @@
     <string name="info_paragraph1">
         "Ebola RISK est une application par preuve de concept, conçue pour illustrer comment les modèles de Machine Learning pourraient orienter les soins et la gestion des patients selon leur pronostic clinique. Il offre des options de traitement (compilées à partir des protocoles de l'OMS pour la fièvre hémorragique) classées par ordre de priorité selon le risque de mortalité prédit."</string>
     <string name="info_paragraph2">
-        "Comme il s’agit d’un prototype de recherche, cette application ne devrait pas être utilisée pour prendre des décisions de traitement pour les patients réels."</string>
+        "Utiliser les prévisions et la prise en charge clinique recommandée de cette application en combinaison avec le jugement clinique."</string>
     <string name="info_paragraph4">
         "Obtenez la pré-impression de l'article décrivant la dérivation et la validation des modèles ici: "</string>
 
@@ -114,7 +114,7 @@
     <string name="bleed_vitk_parag1">"Les patients malnutris et ceux traités avec des antibiotiques présentent souvent une carence légère en vitamine K qui peut entraîner une élévation du INR / PTT et donc prédisposer à des saignements."</string>
     <string name="bleed_vitk_parag2">"L'administration de multivitamines et / ou de vitamine K est donc envisageable chez ces patients (par exemple 10 mg vitamine K 1x/j, PO pendant 3 jours à l'admission ou 10 mg IV pour ceux qui ne peuvent pas ingérer des comprimés per os et qui ont un accès IV). Le traitement de saignements significatifs avec du plasma frais congelé devrait idéalement être guidé par INR / PT."</string>
 
-    <string name="bleed_add_title">Traitement supplémentaire"</string>
+    <string name="bleed_add_title">"Traitement supplémentaire"</string>
     <string name="bleed_add_parag">"D'autres médicaments pour prévenir ou traiter les saignements tels que les antifibrinolytiques (acide tranexamique IV) peuvent être envisagés sur la base de preuves provenant d'autres populations de patients. Les preuves directes chez les patients atteints d'Ebola sont limitées."</string>
 
     <!--Diarrhea-->
@@ -148,9 +148,9 @@
     <string name="diarr_ors_table_col3_row5">"16 à 29,9 kg"</string>
     <string name="diarr_ors_table_col3_row6">"30 kg\nou plus"</string>
 
-    <string name="diarr_note1">"◘ Réévaluer l’état du patient au bout de quatre heures et lui administrer davantage de SRO, en suivant les indications ci-dessus, si la déshydratation persiste.</string>
-    <string name="diarr_note2">"◘ Si un patient (enfant ou adulte) ne présente pas de diarrhée ni de déshydratation, et qu’il éprouve des difficultés pour boire la SRO, utiliser une SRO aromatisée.</string>
-    <string name="diarr_note3">"◘ Ne pas utiliser de boissons énergétiques (pour sportifs) car elles risquent d’aggraver la diarrhée.</string>
+    <string name="diarr_note1">"◘ Réévaluer l’état du patient au bout de quatre heures et lui administrer davantage de SRO, en suivant les indications ci-dessus, si la déshydratation persiste."</string>
+    <string name="diarr_note2">"◘ Si un patient (enfant ou adulte) ne présente pas de diarrhée ni de déshydratation, et qu’il éprouve des difficultés pour boire la SRO, utiliser une SRO aromatisée."</string>
+    <string name="diarr_note3">"◘ Ne pas utiliser de boissons énergétiques (pour sportifs) car elles risquent d’aggraver la diarrhée."</string>
 
     <string name="diarr_zinc_title">"Traitement de zinc"</string>
 

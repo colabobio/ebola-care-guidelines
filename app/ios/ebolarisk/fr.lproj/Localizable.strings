@@ -8,7 +8,7 @@
 
 // Internationalization tutorial on iOS:
 // https://www.raywenderlich.com/180356/ios-internationalization
-
+    
 // UITextView
 
 // Have to add the translations for the UITextViews in the main storyboard due to some unresolved bug in iOS:
@@ -25,7 +25,7 @@
 
 "info_paragraph1" = "Ebola RISK est une application par preuve de concept, conçue pour illustrer comment les modèles de Machine Learning pourraient orienter les soins et la gestion des patients selon leur pronostic clinique. Il offre des options de traitement (compilées à partir des protocoles de l'OMS pour la fièvre hémorragique) classées par ordre de priorité selon le risque de mortalité prédit.";
 
-"info_paragraph2" = "Comme il s’agit d’un prototype de recherche, cette application ne devrait pas être utilisée pour prendre des décisions de traitement pour les patients réels.";
+"info_paragraph2" = "Utiliser les prévisions et la prise en charge clinique recommandée de cette application en combinaison avec le jugement clinique.";
 
 "info_paragraph4" = "Obtenez la pré-impression de l'article décrivant la dérivation et la validation des modèles ici:";
 
