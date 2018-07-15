@@ -1,0 +1,21 @@
+Logistic Regression Model
+ 
+ fit.mult.impute(formula = as.formula(well_lgr_formula), fitter = lrm, 
+     xtrans = well_impute, data = src_data)
+ 
+                       Model Likelihood     Discrimination    Rank Discrim.    
+                          Ratio Test           Indexes           Indexes       
+ Obs           470    LR chi2      84.86    R2       0.221    C       0.732    
+  0            199    d.f.             5    g        1.136    Dxy     0.465    
+  1            271    Pr(> chi2) <0.0001    gr       3.146    gamma   0.465    
+ max |deriv| 5e-06                          gp       0.230    tau-a   0.228    
+                                            Brier    0.205                     
+ 
+                   Coef    S.E.    Wald Z Pr(>|Z|)
+ Intercept         12.1684 13.9740  0.87  0.3839  
+ PatientAge        -0.0451  0.0160 -2.82  0.0049  
+ PatientAge'        0.0774  0.0209  3.70  0.0002  
+ FeverTemperature  -0.3728  0.3793 -0.98  0.3256  
+ FeverTemperature'  0.6445  0.5037  1.28  0.2007  
+ WellnessScale      0.7811  0.1704  4.58  <0.0001 
+ 

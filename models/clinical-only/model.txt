@@ -1,0 +1,26 @@
+Logistic Regression Model
+ 
+ fit.mult.impute(formula = as.formula(clin_lgr_formula), fitter = lrm, 
+     xtrans = clin_impute, data = src_data)
+ 
+                       Model Likelihood     Discrimination    Rank Discrim.    
+                          Ratio Test           Indexes           Indexes       
+ Obs           470    LR chi2      57.11    R2       0.154    C       0.692    
+  0            197    d.f.            10    g        0.892    Dxy     0.384    
+  1            273    Pr(> chi2) <0.0001    gr       2.449    gamma   0.384    
+ max |deriv| 1e-05                          gp       0.189    tau-a   0.188    
+                                            Brier    0.217                     
+ 
+                   Coef    S.E.    Wald Z Pr(>|Z|)
+ Intercept          2.1052 14.9804  0.14  0.8882  
+ PatientAge        -0.0506  0.0155 -3.28  0.0011  
+ PatientAge'        0.0830  0.0202  4.11  <0.0001 
+ FeverTemperature  -0.0527  0.4051 -0.13  0.8964  
+ FeverTemperature'  0.5273  0.6689  0.79  0.4305  
+ Jaundice           1.3150  0.5879  2.24  0.0253  
+ Bleeding           1.0955  0.4935  2.22  0.0264  
+ Breathlessness     0.1164  0.2672  0.44  0.6631  
+ AstheniaWeakness   0.2936  0.2372  1.24  0.2157  
+ Diarrhoea          0.2138  0.2209  0.97  0.3332  
+ Confusion          0.7783  0.5875  1.32  0.1853  
+ 

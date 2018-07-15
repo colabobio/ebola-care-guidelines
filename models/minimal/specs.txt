@@ -1,0 +1,6 @@
+fit.mult.impute(formula = as.formula(min_lgr_formula), fitter = lrm, 
+    xtrans = min_impute, data = src_data)
+
+           Assumption Parameters d.f.
+PatientAge rcspline    5 30 58   2   
+cycletime  asis                  1   

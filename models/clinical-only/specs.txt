@@ -1,0 +1,12 @@
+fit.mult.impute(formula = as.formula(clin_lgr_formula), fitter = lrm, 
+    xtrans = clin_impute, data = src_data)
+
+                 Assumption Parameters      d.f.
+PatientAge       rcspline    5 30 58        2   
+FeverTemperature rcspline    36.3 37.2 39.3 2   
+Jaundice         asis                       1   
+Bleeding         asis                       1   
+Breathlessness   asis                       1   
+AstheniaWeakness asis                       1   
+Diarrhoea        asis                       1   
+Confusion        asis                       1   

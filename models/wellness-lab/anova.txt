@@ -1,0 +1,12 @@
+                Wald Statistics          Response: Disposition 
+
+ Factor           Chi-Square d.f. P     
+ PatientAge       20.11      2    <.0001
+  Nonlinear       13.96      1    0.0002
+ cycletime        20.56      1    <.0001
+ malaria1          0.67      1    0.4119
+ FeverTemperature  1.90      2    0.3875
+  Nonlinear        1.02      1    0.3113
+ WellnessScale     7.71      1    0.0055
+ TOTAL NONLINEAR  14.87      2    0.0006
+ TOTAL            51.79      7    <.0001

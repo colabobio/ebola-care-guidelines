@@ -1,0 +1,7 @@
+"Term","Coefficient","Type","Knots"
+"Intercept",12.1683605990286,"linear","none"
+"PatientAge",-0.0451480103560567,"RCS0","none"
+"PatientAge'",0.0774340287079694,"RCS1","5 30 58"
+"FeverTemperature",-0.372832264448311,"RCS0","none"
+"FeverTemperature'",0.644469729926827,"RCS1","36.2 37.4 39.1"
+"WellnessScale",0.781071349573181,"linear","none"

@@ -1,0 +1,16 @@
+                Wald Statistics          Response: Disposition 
+
+ Factor           Chi-Square d.f. P     
+ PatientAge       22.40       2   <.0001
+  Nonlinear       16.16       1   0.0001
+ cycletime        32.53       1   <.0001
+ malaria1          0.37       1   0.5448
+ FeverTemperature  2.26       2   0.3237
+  Nonlinear        0.69       1   0.4047
+ Jaundice          3.82       1   0.0508
+ Bleeding          2.77       1   0.0963
+ Breathlessness    0.15       1   0.6959
+ AstheniaWeakness  0.22       1   0.6424
+ Confusion         0.96       1   0.3268
+ TOTAL NONLINEAR  16.51       2   0.0003
+ TOTAL            52.73      11   <.0001

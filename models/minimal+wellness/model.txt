@@ -1,0 +1,20 @@
+Logistic Regression Model
+ 
+ fit.mult.impute(formula = as.formula(mwell_lgr_formula), fitter = lrm, 
+     xtrans = mwell_impute, data = src_data)
+ 
+                       Model Likelihood     Discrimination    Rank Discrim.    
+                          Ratio Test           Indexes           Indexes       
+ Obs           470    LR chi2     122.30    R2       0.307    C       0.785    
+  0            200    d.f.             4    g        1.447    Dxy     0.570    
+  1            270    Pr(> chi2) <0.0001    gr       4.279    gamma   0.570    
+ max |deriv| 1e-09                          gp       0.275    tau-a   0.279    
+                                            Brier    0.188                     
+ 
+               Coef    S.E.   Wald Z Pr(>|Z|)
+ Intercept      2.5686 1.0658  2.41  0.0159  
+ PatientAge    -0.0477 0.0164 -2.91  0.0036  
+ PatientAge'    0.0904 0.0218  4.14  <0.0001 
+ cycletime     -0.1326 0.0289 -4.59  <0.0001 
+ WellnessScale  0.5049 0.1906  2.65  0.0081  
+ 

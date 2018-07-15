@@ -1,0 +1,9 @@
+fit.mult.impute(formula = as.formula(wlab_lgr_formula), fitter = lrm, 
+    xtrans = wlab_impute, data = src_data)
+
+                 Assumption Parameters      d.f.
+PatientAge       rcspline    5 30 58        2   
+cycletime        asis                       1   
+malaria1         asis                       1   
+FeverTemperature rcspline    36.4 37.4 39.4 2   
+WellnessScale    asis                       1   

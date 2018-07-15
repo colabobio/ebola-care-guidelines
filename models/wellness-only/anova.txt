@@ -1,0 +1,10 @@
+                Wald Statistics          Response: Disposition 
+
+ Factor           Chi-Square d.f. P     
+ PatientAge       15.83      2    0.0004
+  Nonlinear       13.68      1    0.0002
+ FeverTemperature  1.88      2    0.3908
+  Nonlinear        1.64      1    0.2007
+ WellnessScale    21.02      1    <.0001
+ TOTAL NONLINEAR  14.86      2    0.0006
+ TOTAL            34.11      5    <.0001

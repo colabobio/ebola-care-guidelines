@@ -1,0 +1,19 @@
+Logistic Regression Model
+ 
+ fit.mult.impute(formula = as.formula(min_lgr_formula), fitter = lrm, 
+     xtrans = min_impute, data = src_data)
+ 
+                       Model Likelihood     Discrimination    Rank Discrim.    
+                          Ratio Test           Indexes           Indexes       
+ Obs           470    LR chi2     101.61    R2       0.261    C       0.767    
+  0            200    d.f.             3    g        1.265    Dxy     0.533    
+  1            270    Pr(> chi2) <0.0001    gr       3.560    gamma   0.533    
+ max |deriv| 2e-06                          gp       0.250    tau-a   0.261    
+                                            Brier    0.197                     
+ 
+             Coef    S.E.   Wald Z Pr(>|Z|)
+ Intercept    4.6003 0.7092  6.49  <0.0001 
+ PatientAge  -0.0500 0.0161 -3.11  0.0019  
+ PatientAge'  0.0939 0.0214  4.38  <0.0001 
+ cycletime   -0.1584 0.0260 -6.09  <0.0001 
+ 

@@ -1,6 +1,0 @@
-[1] "Apparent AUC : 0.771 95 CI: 0.725, 0.811"
-[1] "Corrected AUC: 0.759 95 CI: 0.710, 0.801"
-[1] "Brier score  : 0.203 95 CI: 0.159, 0.250"
-[1] "Calibration  : 0.019 95 CI: 0.011, 0.029"
-[1] "Accuracy     : 0.678 95 CI: 0.622, 0.728"
-[1] "Adjusted R2  : 0.174 95 CI: 0.133, 0.217"
