@@ -6,7 +6,7 @@
 "cycletime",-0.149371811457234,"linear","none"
 "malaria1",0.294191020677565,"linear","none"
 "FeverTemperature",-0.165236823053598,"RCS0","none"
-"FeverTemperature'",0.568265449852161,"RCS1",""
+"FeverTemperature'",0.568265449852161,"RCS1","36.3 37.3 39.1"
 "Jaundice",1.33031240673828,"linear","none"
 "Bleeding",0.962694946919499,"linear","none"
 "Breathlessness",0.124002430079846,"linear","none"
