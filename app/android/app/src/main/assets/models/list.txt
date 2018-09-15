@@ -1,0 +1,10 @@
+parsimonious
+parsimonious-nomalaria
+kenema-lab
+wellness-lab
+wellness-lab-nomalaria
+minimal-wellness
+minimal
+clinical-only
+kenema-clinical
+wellness-only

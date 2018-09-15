@@ -1,0 +1,17 @@
+description=Lamontagne et al. Evidence-based guidelines for supportive care of patients with Ebola virus disease. The Lancet (2017)
+url=http://dx.doi.org/10.1016/S0140-6736(17)31795-6
+
+description=Skrable et al. The natural history of acute Ebola Virus Disease among patients managed in five Ebola treatment units in West Africa: A retrospective cohort study. PLOS Neglected Tropical Diseases (2017)
+url=https://doi.org/10.1371/journal.pntd.0005700
+
+description=WHO. Clinical management of patients with viral haemorrhagic fever. A pocket guide for font-line health care workers
+url=http://www.who.int/csr/resources/publications/clinical-management-patients/en/
+
+description=WHO. Manual for the care and management of patients in Ebola Care Units/ Community Care Centres. Interim emergency guidance
+url=http://www.who.int/csr/resources/publications/ebola/patient-care-CCUs/en/
+
+description=UpToDate. Treatment and prevention of Ebola virus disease
+url=https://www.uptodate.com/contents/treatment-and-prevention-of-ebola-virus-disease
+
+description=MSF Medical Guidelines. Viral haemorrhagic fevers
+url=https://medicalguidelines.msf.org/viewport/CG/english/viral-haemorrhagic-fevers-16690024.html

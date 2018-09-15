@@ -1,0 +1,1254 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DataInputActivity$PlaceholderFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/triage_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_intro"
+                android:id="@+id/signAndSympInfo"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <!--self-reported FEVER signs at triage-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_fever"
+                android:id="@+id/FeverLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Fever:1"
+                    android:id="@+id/FeverYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Fever:0"
+                    android:id="@+id/FeverNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Fever:na"
+                    android:id="@+id/FeverNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_fever_temperature"
+                android:id="@+id/FeverTemperatureLabel"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:onClick="onEditTextClicked"
+                android:tag="FeverTemperature"
+                android:id="@+id/FeverTemperatureEdit"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_fever_no_days"
+                android:id="@+id/FeverNoDaysLabel"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:onClick="onEditTextClicked"
+                android:tag="FeverNoDays"
+                android:id="@+id/FeverNoDaysEdit"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_days_since_symptom_onset"
+                android:id="@+id/DaysSinceSymptomOnsetLabel"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:onClick="onEditTextClicked"
+                android:tag="DaysSinceSymptomOnset"
+                android:id="@+id/DaysSinceSymptomOnsetEdit"/>
+
+            <!--self-reported PAIN signs at triage-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_bone_muscle_joint_pain"
+                android:id="@+id/BoneMuscleJointPainLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BoneMuscleJointPain:1"
+                    android:id="@+id/BoneMuscleJointPainYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BoneMuscleJointPain:0"
+                    android:id="@+id/BoneMuscleJointPainNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BoneMuscleJointPain:na"
+                    android:id="@+id/BoneMuscleJointPainNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_headache"
+                android:id="@+id/HeadacheLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Headache:1"
+                    android:id="@+id/HeadacheYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Headache:0"
+                    android:id="@+id/HeadacheNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Headache:na"
+                    android:id="@+id/HeadacheNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_abdominal_pain"
+                android:id="@+id/AbdominalPainLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="AbdominalPain:1"
+                    android:id="@+id/AbdominalPainYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="AbdominalPain:0"
+                    android:id="@+id/AbdominalPainNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="AbdominalPain:na"
+                    android:id="@+id/AbdominalPainNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_chest_pain"
+                android:id="@+id/ChestPainLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="ChestPain:1"
+                    android:id="@+id/ChestPainYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="ChestPain:0"
+                    android:id="@+id/ChestPainNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="ChestPain:na"
+                    android:id="@+id/ChestPainNABtn"/>
+            </RadioGroup>
+
+            <!--self-reported GASTROINTESTINAL DISEASE signs at triage-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_nausea"
+                android:id="@+id/NauseaLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Nausea:1"
+                    android:id="@+id/NauseaYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Nausea:0"
+                    android:id="@+id/NauseaNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Nausea:na"
+                    android:id="@+id/NauseaNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_vomit"
+                android:id="@+id/VomitLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Vomit:1"
+                    android:id="@+id/VomitYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Vomit:0"
+                    android:id="@+id/VomitNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Vomit:na"
+                    android:id="@+id/VomitNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_diarrhoea"
+                android:id="@+id/DiarrhoeaLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Diarrhoea:1"
+                    android:id="@+id/DiarrhoeaYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Diarrhoea:0"
+                    android:id="@+id/DiarrhoeaNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Diarrhoea:na"
+                    android:id="@+id/DiarrhoeaNABtn"/>
+            </RadioGroup>
+
+            <!--self-reported MALNOURISHMENT signs at triage-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_anorexia"
+                android:id="@+id/AnorexiaLabel"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/AnorexiaYesBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Anorexia:1"
+                    android:text="@string/response_yes" />
+
+                <RadioButton
+                    android:id="@+id/AnorexiaNoBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Anorexia:0"
+                    android:text="@string/response_no" />
+
+                <RadioButton
+                    android:id="@+id/AnorexiaNABtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Anorexia:na"
+                    android:text="@string/response_na" />
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_asthenia_weakness"
+                android:id="@+id/AstheniaWeaknessLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="AstheniaWeakness:1"
+                    android:id="@+id/AstheniaWeaknessYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="AstheniaWeakness:0"
+                    android:id="@+id/AstheniaWeaknessNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="AstheniaWeakness:na"
+                    android:id="@+id/AstheniaWeaknessNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_loss_appetite"
+                android:id="@+id/LossApetiteLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="LossAppetite:1"
+                    android:id="@+id/LossApetiteYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="LossAppetite:0"
+                    android:id="@+id/LossApetiteNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="LossAppetite:na"
+                    android:id="@+id/LossApetiteNABtn"/>
+            </RadioGroup>
+
+            <!--self-reported HAEMORRHAGE signs at triage-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_bleeding"
+                android:id="@+id/BleedingLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Bleeding:1"
+                    android:id="@+id/BleedingYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Bleeding:0"
+                    android:id="@+id/BleedingNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Bleeding:na"
+                    android:id="@+id/BleedingNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_haemorrhagic_eyes"
+                android:id="@+id/HaemorrhagicEyesLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="HaemorrhagicEyes:1"
+                    android:id="@+id/HaemorrhagicEyesYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="HaemorrhagicEyes:0"
+                    android:id="@+id/HaemorrhagicEyesNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="HaemorrhagicEyes:na"
+                    android:id="@+id/HaemorrhagicEyesNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_other_haemorrhage"
+                android:id="@+id/OtherHaemorrhageLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="OtherHaemorrhage:1"
+                    android:id="@+id/OtherHaemorrhageYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="OtherHaemorrhage:0"
+                    android:id="@+id/OtherHaemorrhageNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="OtherHaemorrhage:na"
+                    android:id="@+id/OtherHaemorrhageNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_rash"
+                android:id="@+id/RashLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Rash:1"
+                    android:id="@+id/RashYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Rash:0"
+                    android:id="@+id/RashNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Rash:na"
+                    android:id="@+id/RashNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_bloody_vomit"
+                android:id="@+id/BloodyVomitLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BloodyVomit:1"
+                    android:id="@+id/BloodyVomitYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BloodyVomit:0"
+                    android:id="@+id/BloodyVomitNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BloodyVomit:na"
+                    android:id="@+id/BloodyVomitNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_bloody_diarrhoea"
+                android:id="@+id/BloodyDiarrhoeaLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BloodyDiarrhoea:1"
+                    android:id="@+id/BloodyDiarrhoeaYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BloodyDiarrhoea:0"
+                    android:id="@+id/BloodyDiarrhoeaNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="BloodyDiarrhoea:na"
+                    android:id="@+id/BloodyDiarrhoeaNABtn"/>
+            </RadioGroup>
+
+            <!--Neurological signs/symptoms-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_photophobia"
+                android:id="@+id/PhotophobiaLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Photophobia:1"
+                    android:id="@+id/PhotophobiaYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Photophobia:0"
+                    android:id="@+id/PhotophobiaNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Photophobia:na"
+                    android:id="@+id/PhotophobiaNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_confusion"
+                android:id="@+id/ConfusionLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Confusion:1"
+                    android:id="@+id/ConfusionYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Confusion:0"
+                    android:id="@+id/ConfusionNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Confusion:na"
+                    android:id="@+id/ConfusionNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_coma"
+                android:id="@+id/ComaLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Coma:1"
+                    android:id="@+id/ComaYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Coma:0"
+                    android:id="@+id/ComaNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Coma:na"
+                    android:id="@+id/ComaNABtn"/>
+            </RadioGroup>
+
+            <!--Other signs/symptoms-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_breathlessness"
+                android:id="@+id/BreathlessnessLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Breathlessness:1"
+                    android:id="@+id/BreathlessnessYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Breathlessness:0"
+                    android:id="@+id/BreathlessnessNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Breathlessness:na"
+                    android:id="@+id/BreathlessnessNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_jaundice"
+                android:id="@+id/JaundiceLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Jaundice:1"
+                    android:id="@+id/JaundiceYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Jaundice:0"
+                    android:id="@+id/JaundiceNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Jaundice:na"
+                    android:id="@+id/JaundiceNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_throat"
+                android:id="@+id/ThroatLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Throat:1"
+                    android:id="@+id/ThroatYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Throat:0"
+                    android:id="@+id/ThroatNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Throat:na"
+                    android:id="@+id/ThroatNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_swallow"
+                android:id="@+id/SwallowingProblemsLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="SwallowingProblems:1"
+                    android:id="@+id/SwallowingProblemsYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="SwallowingProblems:0"
+                    android:id="@+id/SwallowingProblemsNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="SwallowingProblems:na"
+                    android:id="@+id/SwallowingProblemsNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_hiccups"
+                android:id="@+id/HiccupsLabel"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Hiccups:1"
+                    android:id="@+id/HiccupsYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Hiccups:0"
+                    android:id="@+id/HiccupsNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Hiccups:na"
+                    android:id="@+id/HiccupsNABtn"/>
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_cough"
+                android:id="@+id/CoughLabel"/>
+
+            <RadioGroup
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_yes"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Cough:1"
+                    android:id="@+id/CoughYesBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_no"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Cough:0"
+                    android:id="@+id/CoughNoBtn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/response_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="Cough:na"
+                    android:id="@+id/CoughNABtn"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

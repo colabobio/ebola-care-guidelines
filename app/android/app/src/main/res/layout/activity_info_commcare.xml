@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".CommCareInfoActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_view"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top">
+
+            <TextView
+                android:id="@+id/fullscreen_content0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center|top"
+                android:keepScreenOn="true"
+                android:padding="10dp"
+                android:text="@string/info_commcare_title"
+                android:textColor="@color/background_material_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fullscreen_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:text="@string/info_commcare_description"
+                android:textColor="@color/background_material_dark"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:gravity="center|top"/>
+
+            <TextView
+                android:id="@+id/fullscreen_article"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true"
+                android:text="@string/info_preprint_url"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:gravity="center|top"
+                android:autoLink="web"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/overlayColor"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/continue_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/continue_to_commcare_button"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:onClick="continueToCommCareButton"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

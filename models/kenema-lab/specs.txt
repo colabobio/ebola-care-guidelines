@@ -1,0 +1,12 @@
+fit.mult.impute(formula = as.formula(klab_lgr_formula), fitter = lrm, 
+    xtrans = klab_impute, data = src_data)
+
+                 Assumption Parameters      d.f.
+PatientAge       rcspline    5 30 58        2   
+cycletime        asis                       1   
+FeverTemperature rcspline    36.3 37.3 39.4 2   
+Jaundice         asis                       1   
+Bleeding         asis                       1   
+Throat           asis                       1   
+AstheniaWeakness asis                       1   
+Confusion        asis                       1   

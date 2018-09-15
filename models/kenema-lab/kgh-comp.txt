@@ -1,0 +1,12 @@
+Measures of performance
+AUC           : 0.9481481481481481
+Brier         : 0.21896866303751017
+Calibration   : 0.15779468834520752
+Discrimination: 0.06933593750000001
+Accuracy      : 0.875
+Sensitivity   : 0.8888888888888888
+Specificity   : 0.8
+PPV           : 0.96
+NPV           : 0.5714285714285714
+LR+           : 4.4444444444444455
+LR-           : 0.13888888888888895

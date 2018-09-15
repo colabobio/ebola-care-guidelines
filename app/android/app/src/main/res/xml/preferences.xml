@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-  <ListPreference     android:title="Risk visualization"
-                      android:summary="Select the visualization mode for the risk prediction"
-                      android:key="vizOption"
-                      android:defaultValue="treat"
-                      android:entries="@array/listArrayViz"
-                      android:entryValues="@array/listValuesViz" />
-  <ListPreference     android:title="High-risk threshold"
-                      android:summary="Select the percent risk threshold to define high-risk patients"
-                      android:key="riskThreshold"
-                      android:defaultValue="0.4"
-                      android:entries="@array/listArrayRisk"
-                      android:entryValues="@array/listValuesRisk" />
-  <ListPreference     android:title="Minimum predictor contribution"
-                      android:summary="Select the minimum contribution of a clinical predictor to be considered a significant driver of the overall risk"
-                      android:key="contribThreshold"
-                      android:defaultValue="0.1"
-                      android:entries="@array/listArrayContrib"
-                      android:entryValues="@array/listValuesContrib" />
+  <ListPreference android:title="@string/prefs_threshold_title"
+                  android:summary="@string/prefs_threshold_summary"
+                  android:key="riskThreshold"
+                  android:defaultValue="0.6"
+                  android:entries="@array/listLabelsRisk"
+                  android:entryValues="@array/listValuesRisk" />
+  <ListPreference android:title="Data-entry form"
+      android:summary="Select the form to enter patient data"
+      android:key="dataEntryForm"
+      android:defaultValue="0"
+      android:entries="@array/listLabelsForm"
+      android:entryValues="@array/listValuesForm" />
 </PreferenceScreen>

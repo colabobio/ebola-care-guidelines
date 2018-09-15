@@ -1,0 +1,26 @@
+Logistic Regression Model
+ 
+ fit.mult.impute(formula = as.formula(klab_lgr_formula), fitter = lrm, 
+     xtrans = klab_impute, data = src_data)
+ 
+                       Model Likelihood     Discrimination    Rank Discrim.    
+                          Ratio Test           Indexes           Indexes       
+ Obs           470    LR chi2     125.51    R2       0.315    C       0.791    
+  0            201    d.f.            10    g        1.480    Dxy     0.583    
+  1            269    Pr(> chi2) <0.0001    gr       4.417    gamma   0.583    
+ max |deriv| 1e-08                          gp       0.278    tau-a   0.285    
+                                            Brier    0.185                     
+ 
+                   Coef    S.E.    Wald Z Pr(>|Z|)
+ Intercept         17.3586 16.3243  1.06  0.2876  
+ PatientAge        -0.0548  0.0184 -2.98  0.0029  
+ PatientAge'        0.1016  0.0248  4.10  <0.0001 
+ cycletime         -0.1585  0.0269 -5.89  <0.0001 
+ FeverTemperature  -0.3552  0.4376 -0.81  0.4170  
+ FeverTemperature'  0.8309  0.7724  1.08  0.2820  
+ Jaundice           1.3990  0.7524  1.86  0.0630  
+ Bleeding           0.9917  0.5662  1.75  0.0799  
+ Throat             0.0949  0.8254  0.11  0.9085  
+ AstheniaWeakness   0.1384  0.2668  0.52  0.6041  
+ Confusion          0.5001  0.5529  0.90  0.3657  
+ 

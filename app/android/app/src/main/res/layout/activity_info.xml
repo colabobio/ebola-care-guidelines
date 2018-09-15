@@ -1,10 +1,11 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:background="#ffffff"
-             tools:context="org.broadinstitute.ebolarisk.InfoActivity">
-
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".InfoActivity">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -14,8 +15,8 @@
         android:id="@+id/fullscreen_view"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="left|top">
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top">
 
     <TextView
         android:id="@+id/fullscreen_content0"
@@ -35,46 +36,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:keepScreenOn="true"
-        android:text="@string/info_paragraph1"
+        android:text="@string/info_description"
         android:textColor="@color/background_material_dark"
         android:textSize="18sp"
         android:padding="10dp"
         android:gravity="center|top"/>
 
-     <TextView
+    <TextView
          android:id="@+id/fullscreen_content2"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:keepScreenOn="true"
-         android:text="@string/info_paragraph2"
+         android:text="@string/info_warning"
          android:textSize="24sp"
          android:padding="10dp"
          android:gravity="center|top"
          android:background="#d47272"
          android:textColor="#ececec"/>
 
-        <TextView
-            android:id="@+id/fullscreen_content4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:keepScreenOn="true"
-            android:text="@string/info_paragraph4"
-            android:textColor="@color/background_material_dark"
-            android:textSize="14sp"
-            android:padding="5dp"
-            android:gravity="center|top"/>
+    <TextView
+        android:id="@+id/fullscreen_content4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="@string/info_preprint"
+        android:textColor="@color/background_material_dark"
+        android:layout_marginTop="15sp"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:gravity="center|top"/>
 
-        <TextView
-            android:id="@+id/fullscreen_article"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:keepScreenOn="true"
-            android:text="http://biorxiv.org/cgi/content/short/294587v3"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            android:padding="5dp"
-            android:gravity="center|top"
-            android:autoLink="web"/>
+    <TextView
+        android:id="@+id/fullscreen_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="@string/info_preprint_url"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:gravity="center|top"
+        android:autoLink="web"/>
 
     </LinearLayout>
 
@@ -94,25 +96,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
+            android:background="@color/overlayColor"
             android:orientation="horizontal"
             tools:ignore="UselessParent">
 
             <Button
-                android:id="@+id/close_button"
-                style="@style/Base.Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
+                android:id="@+id/continue_button"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:allowUndo="true"
-                android:background="#cbcbcb"
-                android:nestedScrollingEnabled="false"
-                android:onClick="closeButton"
-                android:padding="15dp"
                 android:text="@string/continue_button"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="24dp"
-                android:textStyle="bold" />
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:onClick="continueButton"/>
 
         </LinearLayout>
     </FrameLayout>

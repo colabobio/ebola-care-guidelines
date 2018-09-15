@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Follow-up patient</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/5A0449CF-F3D8-45F5-9BF1-FEB159967237" uiVersion="1" version="1" name="Follow-up patient">
+					<disposition />
+				</data>
+			</instance>
+			<bind vellum:nodeset="#form/disposition" nodeset="/data/disposition" required="true()" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="disposition-label">
+						<value>Disposition</value>
+					</text>
+					<text id="disposition-survived-label">
+						<value>Survived</value>
+					</text>
+					<text id="disposition-died-label">
+						<value>Died</value>
+					</text>
+					<text id="disposition-transferred-label">
+						<value>Transferred</value>
+					</text>
+					<text id="disposition-doa-label">
+						<value>DOA</value>
+					</text>
+					<text id="disposition-not_admitted-label">
+						<value>Not admitted</value>
+					</text>
+					<text id="disposition-do_not_know-label">
+						<value>Do not know</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<select1 vellum:ref="#form/disposition" ref="/data/disposition">
+			<label ref="jr:itext('disposition-label')" />
+			<item>
+				<label ref="jr:itext('disposition-survived-label')" />
+				<value>survived</value>
+			</item>
+			<item>
+				<label ref="jr:itext('disposition-died-label')" />
+				<value>died</value>
+			</item>
+			<item>
+				<label ref="jr:itext('disposition-transferred-label')" />
+				<value>transferred</value>
+			</item>
+			<item>
+				<label ref="jr:itext('disposition-doa-label')" />
+				<value>doa</value>
+			</item>
+			<item>
+				<label ref="jr:itext('disposition-not_admitted-label')" />
+				<value>not_admitted</value>
+			</item>
+			<item>
+				<label ref="jr:itext('disposition-do_not_know-label')" />
+				<value>do_not_know</value>
+			</item>
+		</select1>
+	</h:body>
+</h:html>

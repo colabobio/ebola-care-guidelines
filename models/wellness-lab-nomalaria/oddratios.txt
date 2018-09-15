@@ -1,0 +1,6 @@
+PatientAge 0.289411456024
+PatientAge' 3.66326059784
+cycletime 0.461360770837
+FeverTemperature 0.650634733642
+FeverTemperature' 3.69239334651
+WellnessScale 1.69759983082

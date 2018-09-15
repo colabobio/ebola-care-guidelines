@@ -1,0 +1,107 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DataInputActivity$PlaceholderFragment">
+    
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/wellness_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/wellness_intro"
+                android:id="@+id/WellnessScaleLabel"/>
+
+            <RadioGroup
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:weightSum="1">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellness_scale_0"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="WellnessScale:0"
+                    android:id="@+id/WellnessScale0Btn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellness_scale_1"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="WellnessScale:1"
+                    android:id="@+id/WellnessScale1Btn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellness_scale_2"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="WellnessScale:2"
+                    android:id="@+id/WellnessScale2Btn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellness_scale_3"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="WellnessScale:3"
+                    android:id="@+id/WellnessScale3Btn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellness_scale_4"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="WellnessScale:4"
+                    android:id="@+id/WellnessScale4Btn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellness_scale_5"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="WellnessScale:5"
+                    android:id="@+id/WellnessScale5Btn"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wellness_scale_na"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:tag="WellnessScale:NA"
+                    android:id="@+id/WellnessScaleNABtn"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Register patient</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/32853A6A-71E3-489F-8B58-215F2679B174" uiVersion="1" version="1" name="Register patient">
+					<patient_information>
+						<name />
+						<age_in_years />
+						<sex />
+						<pregnant />
+						<weight_in_kg />
+						<height_in_cm />
+						<body_temperature_in_c />
+						<enter_signssymptoms />
+						<signs_and_symptoms_at_triage />
+						<number_of_days_of_fever_before_triage />
+						<number_of_days_since_symptoms_first_occurred />
+						<enter_laboratory_results />
+						<rt-pcr_cycle_threshold />
+						<malaria_test />
+						<wellness_scale />
+					</patient_information>
+				</data>
+			</instance>
+			<bind vellum:nodeset="#form/patient_information" nodeset="/data/patient_information" />
+			<bind vellum:nodeset="#form/patient_information/name" nodeset="/data/patient_information/name" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/patient_information/age_in_years" nodeset="/data/patient_information/age_in_years" type="xsd:int" required="true()" />
+			<bind vellum:nodeset="#form/patient_information/sex" nodeset="/data/patient_information/sex" />
+			<bind vellum:nodeset="#form/patient_information/pregnant" nodeset="/data/patient_information/pregnant" vellum:relevant="#form/patient_information/sex = '0'" relevant="/data/patient_information/sex = '0'" />
+			<bind vellum:nodeset="#form/patient_information/weight_in_kg" nodeset="/data/patient_information/weight_in_kg" type="xsd:int" />
+			<bind vellum:nodeset="#form/patient_information/height_in_cm" nodeset="/data/patient_information/height_in_cm" type="xsd:int" required="false()" />
+			<bind vellum:nodeset="#form/patient_information/body_temperature_in_c" nodeset="/data/patient_information/body_temperature_in_c" type="xsd:double" constraint=". &gt; 35 and . &lt; 42" />
+			<bind vellum:nodeset="#form/patient_information/enter_signssymptoms" nodeset="/data/patient_information/enter_signssymptoms" required="true()" />
+			<bind vellum:nodeset="#form/patient_information/signs_and_symptoms_at_triage" nodeset="/data/patient_information/signs_and_symptoms_at_triage" vellum:relevant="#form/patient_information/enter_signssymptoms = '1'" relevant="/data/patient_information/enter_signssymptoms = '1'" />
+			<bind vellum:nodeset="#form/patient_information/number_of_days_of_fever_before_triage" nodeset="/data/patient_information/number_of_days_of_fever_before_triage" type="xsd:int" />
+			<bind vellum:nodeset="#form/patient_information/number_of_days_since_symptoms_first_occurred" nodeset="/data/patient_information/number_of_days_since_symptoms_first_occurred" type="xsd:int" vellum:relevant="#form/patient_information/enter_signssymptoms = '1'" relevant="/data/patient_information/enter_signssymptoms = '1'" />
+			<bind vellum:nodeset="#form/patient_information/enter_laboratory_results" nodeset="/data/patient_information/enter_laboratory_results" required="true()" />
+			<bind vellum:nodeset="#form/patient_information/rt-pcr_cycle_threshold" nodeset="/data/patient_information/rt-pcr_cycle_threshold" type="xsd:int" vellum:relevant="#form/patient_information/enter_laboratory_results = '1'" relevant="/data/patient_information/enter_laboratory_results = '1'" />
+			<bind vellum:nodeset="#form/patient_information/malaria_test" nodeset="/data/patient_information/malaria_test" vellum:relevant="#form/patient_information/enter_laboratory_results = '1'" relevant="/data/patient_information/enter_laboratory_results = '1'" />
+			<bind vellum:nodeset="#form/patient_information/wellness_scale" nodeset="/data/patient_information/wellness_scale" />
+			<itext>
+				<translation lang="en" default="">
+					<text id="patient_information-label">
+						<value>Patient Information</value>
+					</text>
+					<text id="patient_information/name-label">
+						<value>Name</value>
+					</text>
+					<text id="patient_information/age_in_years-label">
+						<value>Age in years</value>
+					</text>
+					<text id="patient_information/sex-label">
+						<value>Sex</value>
+					</text>
+					<text id="patient_information/sex-0-label">
+						<value>Female</value>
+					</text>
+					<text id="patient_information/sex-1-label">
+						<value>Male</value>
+					</text>
+					<text id="patient_information/sex-NA-label">
+						<value>Do not know</value>
+					</text>
+					<text id="patient_information/pregnant-label">
+						<value>Pregnant</value>
+					</text>
+					<text id="patient_information/pregnant-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="patient_information/pregnant-0-label">
+						<value>No</value>
+					</text>
+					<text id="patient_information/pregnant-NA-label">
+						<value>Do not know</value>
+					</text>
+					<text id="patient_information/weight_in_kg-label">
+						<value>Weight in kg</value>
+					</text>
+					<text id="patient_information/height_in_cm-label">
+						<value>Height in cm</value>
+					</text>
+					<text id="patient_information/body_temperature_in_c-label">
+						<value>Body temperature in °C</value>
+					</text>
+					<text id="patient_information/enter_signssymptoms-label">
+						<value>Do you have signs/symptoms to enter?</value>
+					</text>
+					<text id="patient_information/enter_signssymptoms-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="patient_information/enter_signssymptoms-0-label">
+						<value>No</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-label">
+						<value>Signs and symptoms at triage</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Fever-label">
+						<value>Fever</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-BoneMuscleJointPain-label">
+						<value>Bone/muscle/joint pain</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Headache-label">
+						<value>Headache</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-AbdominalPain-label">
+						<value>Abdominal pain</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-ChestPain-label">
+						<value>Chest pain</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Nausea-label">
+						<value>Nausea</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Vomit-label">
+						<value>Vomit</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Diarrhoea-label">
+						<value>Diarrhoea</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Anorexia-label">
+						<value>Anorexia</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-AstheniaWeakness-label">
+						<value>Asthenia/weakness</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-LossAppetite-label">
+						<value>Loss of appetite</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Bleeding-label">
+						<value>Bleeding</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-HaemorrhagicEyes-label">
+						<value>Haemorrhagic eyes</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-OtherHaemorrhage-label">
+						<value>Other haemorrhage</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Rash-label">
+						<value>Skin rash</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-BloodyVomit-label">
+						<value>Bloody vomit</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-BloodyDiarrhoea-label">
+						<value>Bloody diarrhoea</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Photophobia-label">
+						<value>Photophobia</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Confusion-label">
+						<value>Confusion</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Coma-label">
+						<value>Coma</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Breathlessness-label">
+						<value>Breathlessness</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Jaundice-label">
+						<value>Jaundice</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Throat-label">
+						<value>Sore throat</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-SwallowingProblems-label">
+						<value>Swallowing problems</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Hiccups-label">
+						<value>Hiccups</value>
+					</text>
+					<text id="patient_information/signs_and_symptoms_at_triage-Cough-label">
+						<value>Cough</value>
+					</text>
+					<text id="patient_information/number_of_days_of_fever_before_triage-label">
+						<value>Number of days of fever before triage</value>
+					</text>
+					<text id="patient_information/number_of_days_since_symptoms_first_occurred-label">
+						<value>Number of days since symptoms first occurred</value>
+					</text>
+					<text id="patient_information/enter_laboratory_results-label">
+						<value>Do you have laboratory results?</value>
+					</text>
+					<text id="patient_information/enter_laboratory_results-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="patient_information/enter_laboratory_results-0-label">
+						<value>No</value>
+					</text>
+					<text id="patient_information/rt-pcr_cycle_threshold-label">
+						<value>RT-PCR Cycle Threshold</value>
+					</text>
+					<text id="patient_information/malaria_test-label">
+						<value>Malaria test</value>
+					</text>
+					<text id="patient_information/malaria_test-1-label">
+						<value>Positive</value>
+					</text>
+					<text id="patient_information/malaria_test-0-label">
+						<value>Negative</value>
+					</text>
+					<text id="patient_information/malaria_test-NA-label">
+						<value>Not available</value>
+					</text>
+					<text id="patient_information/wellness_scale-label">
+						<value>Wellness scale</value>
+					</text>
+					<text id="patient_information/wellness_scale-NA-label">
+						<value>No assessed</value>
+					</text>
+					<text id="patient_information/wellness_scale-0-label">
+						<value>Completely cured</value>
+					</text>
+					<text id="patient_information/wellness_scale-1-label">
+						<value>No symptoms: drinks and eats okay</value>
+					</text>
+					<text id="patient_information/wellness_scale-2-label">
+						<value>Few symptoms: drinks and eats okay</value>
+					</text>
+					<text id="patient_information/wellness_scale-3-label">
+						<value>Moderate symptoms: can walk, sit, and feed self</value>
+					</text>
+					<text id="patient_information/wellness_scale-4-label">
+						<value>Sick: needs help to be fed, drink, and take medications</value>
+					</text>
+					<text id="patient_information/wellness_scale-5-label">
+						<value>Very sick: needs IV fluids and medications, lots of help</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<group vellum:ref="#form/patient_information" ref="/data/patient_information">
+			<label ref="jr:itext('patient_information-label')" />
+			<input vellum:ref="#form/patient_information/name" ref="/data/patient_information/name">
+				<label ref="jr:itext('patient_information/name-label')" />
+			</input>
+			<input vellum:ref="#form/patient_information/age_in_years" ref="/data/patient_information/age_in_years">
+				<label ref="jr:itext('patient_information/age_in_years-label')" />
+			</input>
+			<select1 vellum:ref="#form/patient_information/sex" ref="/data/patient_information/sex">
+				<label ref="jr:itext('patient_information/sex-label')" />
+				<item>
+					<label ref="jr:itext('patient_information/sex-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/sex-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/sex-NA-label')" />
+					<value>NA</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/patient_information/pregnant" ref="/data/patient_information/pregnant">
+				<label ref="jr:itext('patient_information/pregnant-label')" />
+				<item>
+					<label ref="jr:itext('patient_information/pregnant-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/pregnant-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/pregnant-NA-label')" />
+					<value>NA</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/patient_information/weight_in_kg" ref="/data/patient_information/weight_in_kg">
+				<label ref="jr:itext('patient_information/weight_in_kg-label')" />
+			</input>
+			<input vellum:ref="#form/patient_information/height_in_cm" ref="/data/patient_information/height_in_cm">
+				<label ref="jr:itext('patient_information/height_in_cm-label')" />
+			</input>
+			<input vellum:ref="#form/patient_information/body_temperature_in_c" ref="/data/patient_information/body_temperature_in_c">
+				<label ref="jr:itext('patient_information/body_temperature_in_c-label')" />
+			</input>
+			<select1 vellum:ref="#form/patient_information/enter_signssymptoms" ref="/data/patient_information/enter_signssymptoms">
+				<label ref="jr:itext('patient_information/enter_signssymptoms-label')" />
+				<item>
+					<label ref="jr:itext('patient_information/enter_signssymptoms-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/enter_signssymptoms-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select vellum:ref="#form/patient_information/signs_and_symptoms_at_triage" ref="/data/patient_information/signs_and_symptoms_at_triage">
+				<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-label')" />
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Fever-label')" />
+					<value>Fever</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-BoneMuscleJointPain-label')" />
+					<value>BoneMuscleJointPain</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Headache-label')" />
+					<value>Headache</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-AbdominalPain-label')" />
+					<value>AbdominalPain</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-ChestPain-label')" />
+					<value>ChestPain</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Nausea-label')" />
+					<value>Nausea</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Vomit-label')" />
+					<value>Vomit</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Diarrhoea-label')" />
+					<value>Diarrhoea</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Anorexia-label')" />
+					<value>Anorexia</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-AstheniaWeakness-label')" />
+					<value>AstheniaWeakness</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-LossAppetite-label')" />
+					<value>LossAppetite</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Bleeding-label')" />
+					<value>Bleeding</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-HaemorrhagicEyes-label')" />
+					<value>HaemorrhagicEyes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-OtherHaemorrhage-label')" />
+					<value>OtherHaemorrhage</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Rash-label')" />
+					<value>Rash</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-BloodyVomit-label')" />
+					<value>BloodyVomit</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-BloodyDiarrhoea-label')" />
+					<value>BloodyDiarrhoea</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Photophobia-label')" />
+					<value>Photophobia</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Confusion-label')" />
+					<value>Confusion</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Coma-label')" />
+					<value>Coma</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Breathlessness-label')" />
+					<value>Breathlessness</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Jaundice-label')" />
+					<value>Jaundice</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Throat-label')" />
+					<value>Throat</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-SwallowingProblems-label')" />
+					<value>SwallowingProblems</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Hiccups-label')" />
+					<value>Hiccups</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Cough-label')" />
+					<value>Cough</value>
+				</item>
+			</select>
+			<input vellum:ref="#form/patient_information/number_of_days_of_fever_before_triage" ref="/data/patient_information/number_of_days_of_fever_before_triage">
+				<label ref="jr:itext('patient_information/number_of_days_of_fever_before_triage-label')" />
+			</input>
+			<input vellum:ref="#form/patient_information/number_of_days_since_symptoms_first_occurred" ref="/data/patient_information/number_of_days_since_symptoms_first_occurred">
+				<label ref="jr:itext('patient_information/number_of_days_since_symptoms_first_occurred-label')" />
+			</input>
+			<select1 vellum:ref="#form/patient_information/enter_laboratory_results" ref="/data/patient_information/enter_laboratory_results">
+				<label ref="jr:itext('patient_information/enter_laboratory_results-label')" />
+				<item>
+					<label ref="jr:itext('patient_information/enter_laboratory_results-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/enter_laboratory_results-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/patient_information/rt-pcr_cycle_threshold" ref="/data/patient_information/rt-pcr_cycle_threshold">
+				<label ref="jr:itext('patient_information/rt-pcr_cycle_threshold-label')" />
+			</input>
+			<select1 vellum:ref="#form/patient_information/malaria_test" ref="/data/patient_information/malaria_test">
+				<label ref="jr:itext('patient_information/malaria_test-label')" />
+				<item>
+					<label ref="jr:itext('patient_information/malaria_test-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/malaria_test-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/malaria_test-NA-label')" />
+					<value>NA</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/patient_information/wellness_scale" ref="/data/patient_information/wellness_scale">
+				<label ref="jr:itext('patient_information/wellness_scale-label')" />
+				<item>
+					<label ref="jr:itext('patient_information/wellness_scale-NA-label')" />
+					<value>NA</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/wellness_scale-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/wellness_scale-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/wellness_scale-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/wellness_scale-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/wellness_scale-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('patient_information/wellness_scale-5-label')" />
+					<value>5</value>
+				</item>
+			</select1>
+		</group>
+	</h:body>
+</h:html>
