@@ -1,5 +1,5 @@
 description=Lamontagne et al. Evidence-based guidelines for supportive care of patients with Ebola virus disease. The Lancet (2017)
-url=http://dx.doi.org/10.1016/S0140-6736(17)31795-6
+url=https://doi.org/10.1016/S0140-6736(17)31795-6
 
 description=Skrable et al. The natural history of acute Ebola Virus Disease among patients managed in five Ebola treatment units in West Africa: A retrospective cohort study. PLOS Neglected Tropical Diseases (2017)
 url=https://doi.org/10.1371/journal.pntd.0005700
