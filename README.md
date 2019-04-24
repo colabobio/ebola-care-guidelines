@@ -50,6 +50,9 @@ Certain recommendations are be highlighted depending on which signs/symptoms are
 
 ### Using the CommCare data-entry app
 
+[CommCare](https://www.dimagi.com/commcare/) is a platform to build data-collection apps. CommCare apps are defined through XML files that specifiy the forms (for example, triage) that make up a cases (for example, an incoming patients). These XML  files get compiled as Android apps that can be distributed among the team tasked with a particular data-collection campaign. 
+CommCare apps first store the data locally on the device and then upload them to a secure, HIPPA-compliant cloud server. You need to have a [CommCareHQ account](https://www.commcarehq.org/accounts/login/) in order to create and deploy your own data-collection apps. 
+
 <img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_settings.png" width="900"/>
 
 
