@@ -42,10 +42,15 @@ The default data-entry form is accessed by clicking on the "Enter Patient Data" 
 
 <img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/wellness_tab.png" width="400"/>
 
+There is no need to enter all the information, depending on what's available, the app will use a prognostic model to calculate a severity score for the patient. The numerical value of the score will be displayed at the top of the home screen:
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/score.png" width="300"/>
+
+Certain recommendations are be highlighted depending on which signs/symptoms are present, e.g.: oral dehydration is highlighted if the patient presents with nausea, diarrhoea , loss of appetite, haemorrhagic eyes, bloody diarrhoea, or confusion, or wellness scale is equal or higher than 4.
 
 ### Using the CommCare data-entry app
 
 
-## Severity score of a patient
+
 
 
