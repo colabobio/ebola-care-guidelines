@@ -51,7 +51,9 @@ Certain recommendations are be highlighted depending on which signs/symptoms are
 ### Using the CommCare data-entry app
 
 [CommCare](https://www.dimagi.com/commcare/) is a platform to build data-collection apps. CommCare apps are defined through XML files that specifiy the forms (for example, triage) that make up a cases (for example, an incoming patients). These XML  files get compiled as Android apps that can be distributed among the team tasked with a particular data-collection campaign. 
-CommCare apps first store the data locally on the device and then upload them to a secure, HIPPA-compliant cloud server. You need to have a [CommCareHQ account](https://www.commcarehq.org/accounts/login/) in order to create and deploy your own data-collection apps. 
+CommCare apps first store the data locally on the device and then upload them to a secure, HIPPA-compliant cloud server. It is required to have a [CommCareHQ account](https://www.commcarehq.org/accounts/login/) in order to create and deploy data-collection apps.
+
+Ebola Care Guidelines can retrieve data from a CommCare app collecting the variables defined in the default data-entry form described before. This CommCare app is not provided for installation, but the [commcare folder](https://github.com/broadinstitute/ebola-care-guidelines/tree/master/commcare) in the repo provides the XML files specifying the two forms needed in this app: the patient registration form (where all the variables seen above get entered) and the follow-up form (to enter the final disposition of the patient). These XML files can be loaded into a CommCareHQ account to build the data-entry app. Once this app is installed in the device, the settings have to be changed to switch from the default data-entry form to the CommCare app:
 
 <img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_settings.png" width="900"/>
 
