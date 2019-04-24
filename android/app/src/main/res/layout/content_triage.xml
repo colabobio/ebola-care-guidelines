@@ -33,6 +33,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"/>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/triage_days_since_symptom_onset"
+                android:id="@+id/DaysSinceSymptomOnsetLabel"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:onClick="onEditTextClicked"
+                android:tag="reftime"
+                android:id="@+id/DaysSinceSymptomOnsetEdit"/>
+
             <!--self-reported FEVER signs at triage-->
 
             <TextView
@@ -95,46 +116,6 @@
                 android:onClick="onEditTextClicked"
                 android:tag="FeverTemperature"
                 android:id="@+id/FeverTemperatureEdit"/>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/triage_fever_no_days"
-                android:id="@+id/FeverNoDaysLabel"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:onClick="onEditTextClicked"
-                android:tag="FeverNoDays"
-                android:id="@+id/FeverNoDaysEdit"/>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/triage_days_since_symptom_onset"
-                android:id="@+id/DaysSinceSymptomOnsetLabel"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:onClick="onEditTextClicked"
-                android:tag="DaysSinceSymptomOnset"
-                android:id="@+id/DaysSinceSymptomOnsetEdit"/>
 
             <!--self-reported PAIN signs at triage-->
 
@@ -458,50 +439,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/triage_anorexia"
-                android:id="@+id/AnorexiaLabel"/>
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/AnorexiaYesBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:onClick="onRadioButtonClicked"
-                    android:tag="Anorexia:1"
-                    android:text="@string/response_yes" />
-
-                <RadioButton
-                    android:id="@+id/AnorexiaNoBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:onClick="onRadioButtonClicked"
-                    android:tag="Anorexia:0"
-                    android:text="@string/response_no" />
-
-                <RadioButton
-                    android:id="@+id/AnorexiaNABtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:onClick="onRadioButtonClicked"
-                    android:tag="Anorexia:na"
-                    android:text="@string/response_na" />
-            </RadioGroup>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/triage_asthenia_weakness"
                 android:id="@+id/AstheniaWeaknessLabel"/>
 
@@ -670,50 +607,6 @@
                     android:onClick="onRadioButtonClicked"
                     android:tag="HaemorrhagicEyes:na"
                     android:id="@+id/HaemorrhagicEyesNABtn"/>
-            </RadioGroup>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/triage_other_haemorrhage"
-                android:id="@+id/OtherHaemorrhageLabel"/>
-
-            <RadioGroup
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/response_yes"
-                    android:checked="false"
-                    android:onClick="onRadioButtonClicked"
-                    android:tag="OtherHaemorrhage:1"
-                    android:id="@+id/OtherHaemorrhageYesBtn"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/response_no"
-                    android:checked="false"
-                    android:onClick="onRadioButtonClicked"
-                    android:tag="OtherHaemorrhage:0"
-                    android:id="@+id/OtherHaemorrhageNoBtn"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/response_na"
-                    android:checked="true"
-                    android:onClick="onRadioButtonClicked"
-                    android:tag="OtherHaemorrhage:na"
-                    android:id="@+id/OtherHaemorrhageNABtn"/>
             </RadioGroup>
 
             <Space

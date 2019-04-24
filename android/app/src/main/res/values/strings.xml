@@ -165,7 +165,7 @@
     <string name="antimalarials_antibiotics_description">
         "Ebola virus disease patients may require evaluation and/or treatment of other concomitant "
         "or possible infections (eg, malaria). In addition, empiric antimicrobial treatment should be "
-        "administered to patients with clinical evidence of bacterial sepsis, which may be a late complication"
+        "administered to patients with clinical evidence of bacterial sepsis, which may be a late complication. "
         "The choice of agent should provide adequate coverage for gram­negative pathogens. "
         "Empiric gram­positive therapy should be added in certain patients, such as those with "
         "hospital­acquired pneumonia or indwelling central venous catheters.\n"
@@ -239,7 +239,7 @@
 
     <string name="pregnancy_newborn">"Special considerations in pregnancy and the newborn"</string>
 
-    <!--SEVERITY SCORE VISUALIZATION-->s
+    <!--SEVERITY SCORE VISUALIZATION-->
 
     <string name="no_data_err1">"Not enough information!"</string>
     <string name="no_data_err2">"You need to provide at least patient's age and RT-PCR Cycle Threshold (CT) value."</string>
@@ -285,7 +285,7 @@
     <string name="triage_fever_temperature">"Temperature in °C:"</string>
 
     <string name="triage_fever_no_days">"Number of days with fever before triage:"</string>
-    <string name="triage_days_since_symptom_onset">"Numer of days since symptoms first occurred:"</string>
+    <string name="triage_days_since_symptom_onset">"Number of days since symptoms first occurred:"</string>
 
     <string name="triage_bone_muscle_joint_pain">"Bone/muscle/joint pain:"</string>
     <string name="triage_headache">"Headache:"</string>
@@ -299,7 +299,7 @@
 
     <string name="triage_anorexia">"Anorexia:"</string>
     <string name="triage_asthenia_weakness">"Asthenia/Weakness:"</string>
-    <string name="triage_loss_appetite">"Loss of apetite:"</string>
+    <string name="triage_loss_appetite">"Loss of appetite:"</string>
 
     <string name="triage_bleeding">"Bleeding:"</string>
     <string name="triage_haemorrhagic_eyes">"Haemorrhagic eyes:"</string>
@@ -324,6 +324,8 @@
     <string name="lab_intro">"Enter below all available results from laboratory tests."</string>
     <string name="lab_cycletime">"RT-PCR Cycle Threshold:"</string>
     <string name="lab_malaria">"Malaria test:"</string>
+    <string name="lab_cycletime_mean">"Cycle Threshold Mean:"</string>
+    <string name="lab_cycletime_std">"Cycle Threshold Standard Deviation:"</string>
 
     <!--WELLNESS SCALE-->
 
@@ -353,8 +355,7 @@
     <string name="PatientHeight">"Height"</string>
     <string name="Fever">"Fever"</string>
     <string name="FeverTemperature">"Temp"</string>
-    <string name="FeverNoDays">"Days of fever"</string>
-    <string name="DaysSinceSymptomOnset">"Days since symptom onset"</string>
+    <string name="reftime">"Days since symptom onset"</string>
     <string name="BoneMuscleJointPain">"Bone/muscle/joint pain"</string>
     <string name="Headache">"Headache"</string>
     <string name="AbdominalPain">"Abdominal pain"</string>
@@ -362,12 +363,10 @@
     <string name="Nausea">"Nausea"</string>
     <string name="Vomit">"Vomit"</string>
     <string name="Diarrhoea">"Diarrhoea"</string>
-    <string name="Anorexia">"Anorexia"</string>
     <string name="AstheniaWeakness">"Weakness"</string>
     <string name="LossAppetite">"No appetite"</string>
     <string name="Bleeding">"Bleeding"</string>
     <string name="HaemorrhagicEyes">"Haemorrhagic eyes"</string>
-    <string name="OtherHaemorrhage">"Other haemorrhage"</string>
     <string name="Rash">"Skin rash"</string>
     <string name="BloodyVomit">"Bloody vomit"</string>
     <string name="BloodyDiarrhoea">"Bloody diarrhoea"</string>
@@ -380,7 +379,9 @@
     <string name="SwallowingProblems">"Swallowing problems"</string>
     <string name="Hiccups">"Hiccups"</string>
     <string name="Cough">"Cough"</string>
-    <string name="cycletime">"Viral load"</string>
+    <string name="cycletime">"Cycle Threshold"</string>
+    <string name="CycletimeMean">"CT mean"</string>
+    <string name="CycletimeSTD">"CT standard deviation"</string>
     <string name="malaria1">"Malaria"</string>
     <string name="WellnessScale">"Wellness"</string>
 </resources>

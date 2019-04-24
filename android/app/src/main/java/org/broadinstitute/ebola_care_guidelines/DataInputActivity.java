@@ -108,11 +108,11 @@ public class DataInputActivity extends FragmentActivity {
   }
 
   public static Fragment newFragmentInstance(int sectionNumber) {
-     Bundle args = new Bundle();
-     args.putInt(PAGE_NUMBER, sectionNumber);
-     PlaceholderFragment fragment = new PlaceholderFragment();
-     fragment.setArguments(args);
-     return fragment;
+    Bundle args = new Bundle();
+    args.putInt(PAGE_NUMBER, sectionNumber);
+    PlaceholderFragment fragment = new PlaceholderFragment();
+    fragment.setArguments(args);
+    return fragment;
   }
 
   public static class PlaceholderFragment extends Fragment {
@@ -166,6 +166,21 @@ public class DataInputActivity extends FragmentActivity {
       return null;
     }
   }
+//
+//  private void setDefaultValues() {
+//    LinearLayout layout = findViewById(R.id.lab_layout);
+//    HashMap<String, EditText> allEditTexts = Utils.getEditTextsInLayout(layout, null);
+//    String[] varsWithDefs = DataHolder.getInstance().getVariablesWithDefaults();
+//    for (String var: varsWithDefs) {
+//      EditText et = allEditTexts.get(var);
+//      if (et == null) continue;
+//      String tag = (String)et.getTag();
+//      if (tag == null) continue;
+//      String varName = tag;
+//      String valStr = et.getText().toString();
+//      System.out.println("===================> TAG   " + varName + " " + valStr);
+//    }
+//  }
 
   private void extractValues(int tab) {
     LinearLayout layout;

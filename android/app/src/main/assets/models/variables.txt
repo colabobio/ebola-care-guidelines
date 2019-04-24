@@ -7,8 +7,7 @@ PatientHeight FLOAT
 # TRIAGE
 Fever:1 BINARY
 FeverTemperature FLOAT
-FeverNoDays INT
-DaysSinceSymptomOnset INT
+reftime INT
 BoneMuscleJointPain:1 BINARY
 Headache:1 BINARY 
 AbdominalPain:1 BINARY
@@ -16,12 +15,10 @@ ChestPain:1 BINARY
 Nausea:1 BINARY
 Vomit:1 BINARY
 Diarrhoea:1 BINARY
-Anorexia:1 BINARY
 AstheniaWeakness:1 BINARY
 LossAppetite:1 BINARY
 Bleeding:1 BINARY
 HaemorrhagicEyes:1 BINARY
-OtherHaemorrhage:1 BINARY
 Rash:1 BINARY
 BloodyVomit:1 BINARY
 BloodyDiarrhoea:1 BINARY
@@ -35,7 +32,9 @@ SwallowingProblems:1 BINARY
 Hiccups:1 BINARY
 Cough:1 BINARY
 # LAB
-cycletime INT
+cycletime EQUATION (cycletime-CycletimeMean)/CycletimeSTD
+CycletimeMean FLOAT DEF:25
+CycletimeSTD FLOAT DEF:5
 malaria1 BINARY {0:neg,1:pos}
 # WELLNESS
 WellnessScale INT

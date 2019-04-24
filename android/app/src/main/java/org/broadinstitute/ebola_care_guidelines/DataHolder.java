@@ -1,6 +1,5 @@
 package org.broadinstitute.ebola_care_guidelines;
 
-import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
 
@@ -9,6 +8,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import processing.core.PApplet;
+
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.ScriptableObject;
 
 // What's the best way to share data between activities?
 // http://stackoverflow.com/a/4878259
@@ -19,10 +22,12 @@ public class DataHolder implements DataTypes {
   private HashMap<String, Integer> varTypes;
 
   private HashMap<String, Float> floatVars;
-  private HashMap<String, Float> floatExtra;
+  private HashMap<String, Float> floatDefs;
+//  private HashMap<String, Float> floatExtra;
   private static DataHolder instance = new DataHolder();
 
   private HashMap<String, String[]> binLabels;
+  private HashMap<String, String> equations;
 
   private HashMap<String, ArrayList<String>> groups;
 
@@ -34,8 +39,10 @@ public class DataHolder implements DataTypes {
     models = null;
     selModel = null;
     floatVars = new HashMap<String, Float>();
-    floatExtra = new HashMap<String, Float>();
+    floatDefs = new HashMap<String, Float>();
+//    floatExtra = new HashMap<String, Float>();
     binLabels = new HashMap<String, String[]>();
+    equations = new HashMap<String, String>();
     groups = new HashMap<String, ArrayList<String>>();
   }
 
@@ -45,47 +52,41 @@ public class DataHolder implements DataTypes {
     instance.selModel = null;
   }
 
-  public void clearData() {
-    floatVars.clear();
-    floatExtra.clear();
-    selModel = null;
-  }
-
-  public boolean supportedVar(String name) {
-    return varTypes.containsKey(name);
-  }
-
-  public void setData(String var, boolean value) {
-    Log.e("----->", var + ": " + value);
-    if (value) floatVars.put(var, 1.0f);
-    else floatVars.put(var, 0.0f);
-    selectModel();
-  }
-
-  public void setData(String var, float value) {
-    Log.e("----->", var + ": " + value);
-    if (Float.isNaN(value)) {
-      floatVars.remove(var);
-    } else {
-      floatVars.put(var, value);
-    }
-    selectModel();
-  }
-
-  public void remData(String var) {
-    Log.e("----->", "Removed variable " + var);
-    floatVars.remove(var);
-    selectModel();
-  }
-
-  public void setDataExtra(String var, float value) {
-    Log.e("----->", var + ": " + value);
-    if (Float.isNaN(value)) {
-      floatExtra.remove(var);
-    } else {
-      floatExtra.put(var, value);
-    }
-  }
+//  public boolean supportedVar(String name) {
+//    return varTypes.containsKey(name);
+//  }
+//
+//  public void setData(String var, boolean value) {
+//    Log.e("----->", var + ": " + value);
+//    if (value) floatVars.put(var, 1.0f);
+//    else floatVars.put(var, 0.0f);
+//    selectModel();
+//  }
+//
+//  public void setData(String var, float value) {
+//    Log.e("----->", var + ": " + value);
+//    if (Float.isNaN(value)) {
+//      floatVars.remove(var);
+//    } else {
+//      floatVars.put(var, value);
+//    }
+//    selectModel();
+//  }
+//
+//  public void remData(String var) {
+//    Log.e("----->", "Removed variable " + var);
+//    floatVars.remove(var);
+//    selectModel();
+//  }
+//
+//  public void setDataExtra(String var, float value) {
+//    Log.e("----->", var + ": " + value);
+//    if (Float.isNaN(value)) {
+//      floatExtra.remove(var);
+//    } else {
+//      floatExtra.put(var, value);
+//    }
+//  }
 
   public void setData(HashMap<String, Float> data) {
     for (String var: data.keySet()) {
@@ -96,12 +97,26 @@ public class DataHolder implements DataTypes {
         floatVars.put(var, val);
       }
     }
+    setDefaults();
+    applyEquations();
     selectModel();
+  }
+
+  public void clearData() {
+    floatVars.clear();
+//    floatExtra.clear();
+    selModel = null;
   }
 
   public String[] getVariables() {
     String[] vars = new String[varTypes.keySet().size()];
     varTypes.keySet().toArray(vars);
+    return vars;
+  }
+
+  public String[] getVariablesWithDefaults() {
+    String[] vars = new String[floatDefs.keySet().size()];
+    floatDefs.keySet().toArray(vars);
     return vars;
   }
 
@@ -170,6 +185,99 @@ public class DataHolder implements DataTypes {
     selModel = null;
   }
 
+  private void setDefaults() {
+    if (floatDefs.size() == 0) return;
+
+    // Setting default values if variables not set
+    for (String var : floatDefs.keySet()) {
+      if (floatVars.containsKey(var)) continue;
+      floatVars.put(var, floatDefs.get(var));
+    }
+  }
+
+  private void applyEquations() {
+    if (equations.size() == 0) return;
+
+    Context context = Context.enter();
+
+    // This is required:
+    // https://stackoverflow.com/questions/14454686/android-rhino-error-cant-load-this-type-of-class-file
+    context.setOptimizationLevel(-1);
+
+    try {
+      Scriptable scope = context.initStandardObjects();
+
+      // Add all the current values to the context
+      for (String var : floatVars.keySet()) {
+        Object wrappedValue = Context.javaToJS(floatVars.get(var), scope);
+        ScriptableObject.putProperty(scope, var, wrappedValue);
+      }
+
+      // Evaluate each equation separately
+      for (String var : equations.keySet()) {
+        if (!floatVars.containsKey(var)) continue;
+        String equation = equations.get(var);
+        Object result = context.evaluateString(scope, equation, var, 1, null);
+        double res = (Double)result;
+
+        // The original value of this variable is replaced by the equation evaluation
+        float val0 = floatVars.get(var);
+
+        floatVars.put(var, (float)res);
+
+        // Storing the original, not-transformed value
+        floatVars.put("$" + var, val0);
+      }
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      // Exit the Context. This removes the association between the Context and the current thread and is an
+      // essential cleanup action. There should be a call to exit for every call to enter.
+      Context.exit();
+    }
+  }
+
+  private static void evalEquation() {
+    // Using Mozilla Rhino to evaluate variables defined through equations:
+    // https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino
+    // https://gist.github.com/ianwalter/5464572
+
+    double res = 0;
+    Context context = Context.enter();
+
+    // This is required:
+    // https://stackoverflow.com/questions/14454686/android-rhino-error-cant-load-this-type-of-class-file
+    context.setOptimizationLevel(-1);
+
+    try {
+      Scriptable scope = context.initStandardObjects();
+
+      Float cycletime = 22f;
+      Float CycletimeMean = 25f;
+      Float CycletimeSTD = 5f;
+
+      Object wrappedValue = Context.javaToJS(cycletime, scope);
+      ScriptableObject.putProperty(scope, "cycletime", wrappedValue);
+
+      Object wrappedCycletimeMean = Context.javaToJS(CycletimeMean, scope);
+      ScriptableObject.putProperty(scope, "CycletimeMean", wrappedCycletimeMean);
+
+      Object wrappedCycletimeSTD = Context.javaToJS(CycletimeSTD, scope);
+      ScriptableObject.putProperty(scope, "CycletimeSTD", wrappedCycletimeSTD);
+
+      Object result = context.evaluateString(scope, instance.equations.get("cycletime"), "cycletime", 1, null);
+      res = (Double)result;
+      Log.d("your-tag-here", "" + (float)res);
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      // Exit the Context. This removes the association between the Context and the current thread and is an
+      // essential cleanup action. There should be a call to exit for every call to enter.
+      Context.exit();
+    }
+  }
+
   public LogRegModel getSelectedModel() {
     return selModel;
   }
@@ -178,9 +286,9 @@ public class DataHolder implements DataTypes {
     return floatVars;
   }
 
-  public HashMap<String, Float> getExtraData() {
-    return floatExtra;
-  }
+//  public HashMap<String, Float> getExtraData() {
+//    return floatExtra;
+//  }
 
   public boolean conditionIsSatisfied(VarCondition cond, float highRisk) {
     String var = cond.getVariable();
@@ -213,8 +321,7 @@ public class DataHolder implements DataTypes {
         try {
           LogRegModel model = new LogRegModel(name,
               am.open("models/" + name + "/model.csv"),
-              am.open("models/" + name + "/ranges.txt"),
-              LogRegModel.CSV);
+              am.open("models/" + name + "/ranges.txt"));
           instance.models[i] = model;
         } catch (java.io.IOException ex) {
           ex.printStackTrace();
@@ -238,6 +345,7 @@ public class DataHolder implements DataTypes {
       for (int i = 0; i < lines.length; i++) {
         String line = lines[i];
         if (line.indexOf("#") == 0) continue;
+
         String parts[] = line.split("[ ]+");
         if (2 <= parts.length) {
           String name = parts[0].trim();
@@ -276,7 +384,27 @@ public class DataHolder implements DataTypes {
               }
             }
             instance.binLabels.put(name, labels);
+          } else if (typeStr.equals("EQUATION")) {
+            type = EQUATION;
+            String equation = "value";
+            if (parts.length == 3) {
+              equation = parts[2];
+            }
+            instance.equations.put(name, equation);
           }
+
+          if ((type == FLOAT || type == INT) && (parts.length == 3)) {
+            // Get default value, if any
+            String defStr = parts[2];
+            if (defStr.indexOf("DEF:") == 0) {
+              String[] defParts = defStr.split(":");
+              if (defParts.length == 2) {
+                float def = PApplet.parseFloat(defParts[1], 0);
+                instance.floatDefs.put(name, def);
+              }
+            }
+          }
+
           instance.varTypes.put(name, type);
         } else {
           instance.varTypes.put(parts[0], FLOAT);

@@ -103,9 +103,24 @@ public class Utils {
     return res.getString(id);
   }
 
+  static public String getResString(Context context, String name) {
+    if (-1 < name.indexOf("*")) {
+      String[] names = name.split("\\*");
+      String prod = "";
+      for (int i = 0; i < names.length; i++) {
+        String s = names[i].trim();
+        if (!prod.equals("")) prod += " x ";
+        prod += getResStringImpl(context, s);
+      }
+      return prod;
+    } else {
+      return getResStringImpl(context, name);
+    }
+  }
+
   // Get resource by name
   // https://stackoverflow.com/a/16444471
-  static public String getResString(Context context, String name) {
+  static private String getResStringImpl(Context context, String name) {
     Resources res = context.getResources();
     String pkg = context.getPackageName();
     int id = res.getIdentifier(name, "string", pkg);

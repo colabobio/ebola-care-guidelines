@@ -1,10 +1,8 @@
 parsimonious
-parsimonious-nomalaria
-kenema-lab
-wellness-lab
-wellness-lab-nomalaria
-minimal-wellness
+parsimonious-notemp
+ws-parsimonious
+ws-parsimonious-notemp
+ws-minimal
 minimal
 clinical-only
-kenema-clinical
-wellness-only
+ws-clinical-only

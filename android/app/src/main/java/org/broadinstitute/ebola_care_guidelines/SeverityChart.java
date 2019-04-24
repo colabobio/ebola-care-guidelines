@@ -1,7 +1,7 @@
 package org.broadinstitute.ebola_care_guidelines;
 
 import processing.core.PApplet;
-
+import processing.event.Event;
 import processing.core.PFont;
 
 import java.util.HashMap;
@@ -19,7 +19,7 @@ public class SeverityChart extends PApplet implements DataTypes {
   protected float risk = 0;
   protected LogRegModel model;
   protected HashMap<String, Float> data = null;
-  protected HashMap<String, Float> extra = null;
+//  protected HashMap<String, Float> extra = null;
   protected List<Map.Entry<String, Float[]>> details = null;
 
   // Variable and value labels
@@ -66,7 +66,7 @@ public class SeverityChart extends PApplet implements DataTypes {
   protected boolean dragging = false;
   protected boolean stopDraggingBot;
   protected boolean stopDraggingTop;
-  protected int releaseTime;
+  protected int eventTime;
 
   public void settings() {
     fullScreen(P2D);
@@ -90,7 +90,7 @@ public class SeverityChart extends PApplet implements DataTypes {
 //    topShadow = new ScrollShadow(shadowHeight, false);
 //    botShadow = new ScrollShadow(shadowHeight, true);
 
-    releaseTime = millis();
+    eventTime = millis();
   }
 
   public void draw() {
@@ -109,8 +109,8 @@ public class SeverityChart extends PApplet implements DataTypes {
 //    topShadow.draw();
 //    botShadow.draw();
 
-    if (2000 < millis() - releaseTime) {
-      // Stop looping if there is no interaction after two seconds. This should save battery.
+    if (2000 < millis() - eventTime) {
+      // Stop looping if there is no interaction after two seconds in order to save battery.
       noLoop();
     }
   }
@@ -118,7 +118,7 @@ public class SeverityChart extends PApplet implements DataTypes {
   public void resume() {
     // Resuming app, need to refresh screen by looping again for a while.
     loop();
-    releaseTime = millis();
+    eventTime = millis();
   }
 
   public void update(SharedPreferences prefs) {
@@ -127,7 +127,7 @@ public class SeverityChart extends PApplet implements DataTypes {
       riskThreshold = parseFloat(prefs.getString("riskThreshold", "0.5"));
 
       data = DataHolder.getInstance().getCurrentData();
-      extra = DataHolder.getInstance().getExtraData();
+//      extra = DataHolder.getInstance().getExtraData();
       risk = model.eval(data);
       details = model.evalDetails(data);
 
@@ -180,11 +180,11 @@ public class SeverityChart extends PApplet implements DataTypes {
 
   public void mousePressed() {
     loop();
+    eventTime = millis();
     translateY0 = translateY;
   }
 
   public void mouseDragged() {
-    loop();
     float dy = mouseY - pmouseY;
     if (totHeight + translateY + dy <= height) {
       if (dy > 0) {
@@ -230,7 +230,6 @@ public class SeverityChart extends PApplet implements DataTypes {
       stopDraggingTop = false;
       stopDraggingBot = false;
     }
-    releaseTime = millis();
   }
 
   private void initLocalizedLabels() {
@@ -306,7 +305,7 @@ public class SeverityChart extends PApplet implements DataTypes {
       float w = textWidth(alias + ": " + valueStr);
       maxWidth = PApplet.max(maxWidth, w);
     }
-    return maxWidth;
+    return PApplet.min(maxWidth, 0.5f * (width - 2 * marginGlobal));
   }
 
   private float drawMessageBox(String msg, PFont font, int bckgColor, int textColor, float yBox) {
@@ -372,14 +371,14 @@ public class SeverityChart extends PApplet implements DataTypes {
                                float scaledRange, PFont font, float yTop) {
     float barWidth = width - maxDetailsWidth - padding - 2 * marginGlobal;
     float barY = yTop + varHeight/2 - barHeight/2;
+    float txtY = yTop + varHeight/2 - 1.5f * barHeight/2;
 
     textFont(font);
     textAlign(RIGHT, CENTER);
 
     fill(0xFF6F6F6F);
     String valueStr = DataHolder.getInstance().getStringValue(value, var, 1, binLabels);
-    float tWidth = textWidth(alias + ": " + valueStr);
-    text(alias + ": " + valueStr, marginGlobal, barY, maxDetailsWidth, barHeight);
+    text(alias + ": " + valueStr, marginGlobal, txtY, maxDetailsWidth, 1.5f * barHeight);
 
     float barX = marginGlobal + maxDetailsWidth + padding;
 

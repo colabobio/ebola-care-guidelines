@@ -1,0 +1,6 @@
+"Term","Coefficient","Type","Knots"
+"Intercept",0.176273244947219,"linear","none"
+"PatientAge",-0.0826796074267566,"RCS0","none"
+"PatientAge'",0.146546489667446,"RCS1","4 28 60"
+"cycletime",-0.791718495455747,"linear","none"
+"WellnessScale",0.435910773763644,"linear","none"

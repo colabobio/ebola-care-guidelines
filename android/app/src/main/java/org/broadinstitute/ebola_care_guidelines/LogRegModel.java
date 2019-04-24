@@ -17,22 +17,19 @@ public class LogRegModel implements DataTypes {
   protected float rangeScale;
   protected Sigmoid sigmoid;
   protected HashMap<String, ModelTerm> terms;
+  protected HashMap<String, ProductTerm> pterms; // Product (interaction terms) terms
   protected String name;
 
-  public LogRegModel(String name, InputStream modelIS, InputStream minmaxIS, int format) {
+  public LogRegModel(String name, InputStream modelIS, InputStream minmaxIS) {
     this.name = name;
     intercept = 0;
     terms = new HashMap<String, ModelTerm>();
+    pterms = new HashMap<String, ProductTerm>();
     sigmoid = new Sigmoid();
 
-    if (format == MICE) {
-      loadTermsMICE(modelIS);
-    } else {
-      loadTermsCSV(modelIS);
-    }
-    System.out.println(toString());
-
+    loadTermsCSV(modelIS);
     loadRanges(minmaxIS);
+    System.out.println(toString());
   }
 
   public void setName(String name) {
@@ -43,18 +40,22 @@ public class LogRegModel implements DataTypes {
     return name;
   }
 
-  public boolean matches(Set<String> vars) {
-    Set<String> mvars = terms.keySet();
-    return vars.containsAll(mvars) && mvars.containsAll(vars);
-  }
-
-  public boolean contains(Set<String> vars) {
-    Set<String> mvars = terms.keySet();
-    return mvars.containsAll(vars);
-  }
+//  public boolean matches(Set<String> vars) {
+//    Set<String> mvars = terms.keySet();
+//    return vars.containsAll(mvars) && mvars.containsAll(vars);
+//  }
+//
+//  public boolean contains(Set<String> vars) {
+//    Set<String> mvars = terms.keySet();
+//    return mvars.containsAll(vars);
+//  }
 
   public boolean containedIn(Set<String> vars) {
     Set<String> mvars = terms.keySet();
+//    boolean res = vars.containsAll(mvars);
+//    PApplet.println("=============> ", name, res);
+//    PApplet.print("MODEL: "); PApplet.println(mvars.toArray());
+//    PApplet.print("DATA : "); PApplet.println(vars.toArray());
     return vars.containsAll(mvars);
   }
 
@@ -63,7 +64,11 @@ public class LogRegModel implements DataTypes {
   }
 
   void addTerm(ModelTerm term) {
-    terms.put(term.varName, term);
+    terms.put(term.name, term);
+  }
+
+  void addProductTerm(ProductTerm term) {
+    pterms.put(term.name, term);
   }
 
   public float eval(HashMap<String, Float> values) {
@@ -72,25 +77,78 @@ public class LogRegModel implements DataTypes {
 
   public float evalScore(HashMap<String, Float> values) {
     float score = intercept;
-    for (String var: values.keySet()) {
-      ModelTerm t = terms.get(var);
-      if (t == null) continue;
-      score += t.eval(values.get(var));
+
+    for (ModelTerm t: terms.values()) {
+      String var = t.name;
+      if (values.containsKey(var)) {
+        score += t.eval(values.get(var));
+      }
     }
+
+//    for (String var: values.keySet()) {
+//      ModelTerm t = terms.get(var);
+//      if (t == null) continue;
+//      score += t.eval(values.get(var));
+//    }
+
+    for (ProductTerm t: pterms.values()) {
+      String var1 = t.name1;
+      String var2 = t.name2;
+      if (values.containsKey(var1) && values.containsKey(var2)) {
+        score += t.eval(values.get(var1) * values.get(var2));
+      }
+    }
+
     return score;
   }
 
   public List<Map.Entry<String, Float[]>> evalDetails(HashMap<String, Float> values) {
     HashMap<String, Float[]> map = new HashMap<String, Float[]>();
-    for (String var: values.keySet()) {
-      ModelTerm t = terms.get(var);
-      if (t == null) continue;
-      float value = values.get(var);
-      float coeff0 = t.coeff(0);
-      float contrib = t.eval(value);
-      float scaledRange = PApplet.abs(t.max - t.min) / rangeScale;
-      float scaledContrib = PApplet.min(PApplet.abs(contrib - t.min) / rangeScale, scaledRange);
-      map.put(t.varName, new Float[]{value, contrib, scaledContrib, scaledRange, coeff0});
+
+    for (ModelTerm t: terms.values()) {
+      String var = t.name;
+      if (values.containsKey(var)) {
+        String var0 = "$" + var;
+        float value = values.get(var);
+        float value0 = value;
+        if (values.containsKey(var0)) {
+          // This variable is the result of a equation transformation, retrieving the original value for display purposes
+          value0 = values.get(var0);
+        }
+        map.put(t.name, t.contrib(value, value0));
+      }
+    }
+
+//    for (String var: values.keySet()) {
+//      ModelTerm t = terms.get(var);
+//      if (t == null) continue;
+//      float value = values.get(var);
+//      float coeff0 = t.coeff(0);
+//      float contrib = t.eval(value);
+//      float scaledRange = PApplet.abs(t.max - t.min) / rangeScale;
+//      float scaledContrib = PApplet.min(PApplet.abs(contrib - t.min) / rangeScale, scaledRange);
+//      map.put(t.name, t.test(value));
+//    }
+
+    for (ProductTerm t: pterms.values()) {
+      String var1 = t.name1;
+      String var2 = t.name2;
+      String var10 = "$" + var1;
+      String var20 = "$" + var2;
+      if (values.containsKey(var1) && values.containsKey(var2)) {
+        float value1 = values.get(var1);
+        float value10 = value1;
+        if (values.containsKey(var10)) value10 = values.get(var10);
+
+        float value2 = values.get(var2);
+        float value20 = value2;
+        if (values.containsKey(var20)) value20 = values.get(var20);
+
+        float value = value1 * value2;
+        float value0 = value10 * value20;
+
+        map.put(t.name, t.contrib(value, value0));
+      }
     }
 
     // Sorting the detailed contributions to the largest are first
@@ -105,59 +163,6 @@ public class LogRegModel implements DataTypes {
     });
 
     return details;
-  }
-
-  private void loadTermsMICE(InputStream is) {
-    float[] rcsCoeffs = null;
-    String[] lines = PApplet.loadStrings(is);
-
-    int pos = lines[0].indexOf("est") + 2;
-
-    int n = 1;
-    while (true) {
-      String line = lines[n++];
-      String s = line.substring(0, pos).trim();
-      String[] v = s.split(" ");
-      if (v.length == 1) break;
-      String valueStr = v[v.length - 1];
-      float value = PApplet.parseFloat(valueStr);
-
-      int pos0 = s.indexOf(valueStr);
-      String varStr = s.substring(0, pos0).trim();
-
-      if (varStr.indexOf("rcs") == 0) {
-        int pos1 = varStr.lastIndexOf(")");
-        String rcsString = varStr.substring(4, pos1);
-        String[] pieces = rcsString.split("c");
-
-        String[] part1 = pieces[0].split(",");
-        String varName = part1[0].trim();
-        int rcsOrder = PApplet.parseInt(part1[1].trim());
-        String[] knotStr = pieces[1].replace("(", "").replace(")", "").split(",");
-        float[] rcsKnots = new float[knotStr.length];
-        for (int i = 0; i < knotStr.length; i++) {
-          rcsKnots[i] = PApplet.parseFloat(knotStr[i]);
-        }
-
-        int coeffOrder = varStr.length() - varStr.replace("'", "").length();
-        if (coeffOrder == 0) {
-          rcsCoeffs = new float[rcsOrder - 1];
-        }
-        if (rcsCoeffs != null) rcsCoeffs[coeffOrder] = value;
-
-        if (coeffOrder == rcsOrder - 2) {
-          ModelTerm rcs = new RCSTerm(varName, rcsOrder, rcsCoeffs, rcsKnots);
-          addTerm(rcs);
-        }
-      } else {
-        if (varStr.equals("(Intercept)")) {
-          setIntercept(value);
-        } else {
-          ModelTerm lin = new LinearTerm(varStr, value);
-          addTerm(lin);
-        }
-      }
-    }
   }
 
   private void loadTermsCSV(InputStream is) {
@@ -179,6 +184,12 @@ public class LogRegModel implements DataTypes {
         if (ttype.equals("linear")) {
           ModelTerm term = new LinearTerm(name, value);
           addTerm(term);
+        } else if (ttype.contains("product")) {
+          String[] names = name.split("\\*");
+          String v1 = names[0].trim();
+          String v2 = names[1].trim();
+          ProductTerm term = new ProductTerm(v1, v2, value);
+          addProductTerm(term);
         } else if (ttype.contains("RCS")) {
           int coeffOrder = PApplet.parseInt(ttype.replace("RCS", ""));
           if (coeffOrder == 0) {
@@ -211,16 +222,26 @@ public class LogRegModel implements DataTypes {
     String[] lines = PApplet.loadStrings(is);
     rangeScale = 0;
     for (String line: lines) {
-      String[] pieces = line.split(" ");
-      String name = pieces[0];
-      float min = PApplet.parseFloat(pieces[1]);
-      float max = PApplet.parseFloat(pieces[2]);
+      String[] namval = line.split("=");
+      String name = namval[0];
+      String values = namval[1];
+      String[] minmax = values.split(",");
+      float min = PApplet.parseFloat(minmax[0]);
+      float max = PApplet.parseFloat(minmax[1]);
       ModelTerm term = terms.get(name);
       if (term != null) {
         term.setMin(min);
         term.setMax(max);
         float f = PApplet.abs(max - min);
         if (rangeScale < f) rangeScale = f;
+      } else {
+        term = pterms.get(name);
+        if (term != null) {
+          term.setMin(min);
+          term.setMax(max);
+          float f = PApplet.abs(max - min);
+          if (rangeScale < f) rangeScale = f;
+        }
       }
     }
   }
@@ -230,18 +251,28 @@ public class LogRegModel implements DataTypes {
     for (ModelTerm term: terms.values()) {
       res += "\n" + term.toString();
     }
+    for (ProductTerm term: pterms.values()) {
+      res += "\n" + term.toString();
+    }
     return res;
   }
 
   class ModelTerm {
-    String varName;
+    String name;
     float min, max;
 
-    ModelTerm(String name) { varName = name; }
+    ModelTerm(String name) { this.name = name; }
     float coeff(int i) { return 0; }
     float eval(float x) { return 0; }
     void setMin(float m) { min = m; }
     void setMax(float m) { max = m; }
+    Float[] contrib(float value, float value0) {
+      float coeff0 = coeff(0);
+      float contrib = eval(value);
+      float scaledRange = PApplet.abs(max - min) / rangeScale;
+      float scaledContrib = PApplet.min(PApplet.abs(contrib - min) / rangeScale, scaledRange);
+      return new Float[]{value0, contrib, scaledContrib, scaledRange, coeff0};
+    }
   }
 
   class LinearTerm extends ModelTerm {
@@ -256,7 +287,26 @@ public class LogRegModel implements DataTypes {
       return coeff * x;
     }
     public String toString() {
-      String res = "Linear term for " + varName + "\n";
+      String res = "Linear term for " + name + "\n";
+      res += "  Coefficient: " + coeff;
+      res += "\n  Minimum value: " + min;
+      res += "\n  Maximum value: " + max;
+      return res;
+    }
+  }
+
+  class ProductTerm extends LinearTerm {
+    String name1;
+    String name2;
+
+    ProductTerm(String name1, String name2, float c) {
+      super(name1 + " * " + name2, c);
+      this.name1 = name1;
+      this.name2 = name2;
+    }
+
+    public String toString() {
+      String res = "Product term for " + name + "\n";
       res += "  Coefficient: " + coeff;
       res += "\n  Minimum value: " + min;
       res += "\n  Maximum value: " + max;
@@ -307,7 +357,7 @@ public class LogRegModel implements DataTypes {
     }
 
     public String toString() {
-      String res = "RCS term of order " + order + " for " + varName + "\n";
+      String res = "RCS term of order " + order + " for " + name + "\n";
       res += "  Coefficients:";
       for (int i = 0; i < coeffs.length; i++) {
         res += " " + coeffs[i];

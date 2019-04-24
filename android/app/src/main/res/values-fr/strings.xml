@@ -1,0 +1,386 @@
+<resources>
+    <string name="app_name">Ebola Care Guidelines</string>
+
+    <!--TOOLBAR ACTIONS-->
+
+    <string name="action_settings">Réglages</string>
+    <string name="action_references">Références</string>
+    <string name="action_info">Information</string>
+
+    <!--BUTTONS-->
+
+    <string name="continue_button">Continuer à l’app</string>
+    <string name="show_guidelines">"Montrer les directives de traitement"</string>
+
+    <!--SPLASH SCREEN -->
+
+    <string name="info_title">Information importante</string>
+    <string name="info_description">
+        "Ebola Care Guidelines est une application de recherche qui illustre l’utilisation de Machine Learning "
+        "dans des modèles pronostiques pour un accès personnalisé aux directives de soins de soutien, basées sur la recherche, destinées aux patients atteints par le virus Ebola."</string>
+    <string name="info_warning">
+        "Utiliser ces modèles pronostiques et les directives de soins de soutien en combinaison avec votre jugement clinique."</string>
+    <string name="info_preprint">
+        "Obtenir une pré-impression de l’article décrivant l’application et ses modèles pronostics ici:"</string>
+
+    <string name="info_preprint_url">"http://biorxiv.org/cgi/content/short/294587"</string>
+
+    <!--PREFERENCES-->
+
+    <string name="prefs_threshold_title">" Seuil de «haut risque»"</string>
+    <string name="prefs_threshold_summary">"Sélectionner le seuil de gravité pour les patients à haut risque"</string>
+
+    <string name="prefs_dataentry_title">"Formulaire de saisie des données"</string>
+    <string name="prefs_dataentry_summary">"Sélectionner le formulaire de saisie des données du patient"</string>
+
+    <string name="prefs_dataentry_builtin">"Utiliser le formulaire intégré"</string>
+    <string name="prefs_dataentry_commcare">"Utiliser le formulaire de CommCare"</string>
+
+    <!--COMMCARE INFO-->
+
+    <string name="info_commcare_title">"Utilisation de CommCare pour saisir des données"</string>
+    <string name="info_commcare_description">"Commencer par télécharger CommCare sur Google Play,"
+        "Ouvrir et installer l’application « Ebola Patient Management ». Si vous l’avez déjà fait, veuillez continuer"
+        "Sinon, revenir en arrière, puis consulter la section « Disponibilité du code source, des données et de l’application » "
+        "dans la pré-impression ci-dessous pour plus d’instructions:"</string>
+
+    <string name="continue_to_commcare_button">"Continuer à CommCare"</string>
+
+    <!--DATA ENTRY SELECTOR-->
+
+    <string name="pick_dataentry">"Utiliser CommCare pour:"</string>
+    <string name="commcare_new_case">"Entrer un nouveau cas"</string>
+    <string name="commcare_lookup_case">"Rechercher un cas existant"</string>
+
+    <string name="case_selector_title">"Sélectionner un cas"</string>
+
+
+    <!--REFERENCES SCREEN-->
+
+    <string name="references_intro">"Les directives cliniques dans cette application ont été compilées à partir des ressources suivantes:"</string>
+
+    <!--GUIDELINES LIST SCREEN-->
+
+    <string name="severity_score">SCORE DE GRAVITÉ:</string>
+    <string name="severity_score_high">HAUT</string>
+    <string name="severity_score_no_data"> SCORE DE GRAVITÉ:\nPAS DE DONNÉES</string>
+    <string name="enter_patient_data">ENTRER\nDONNÉES DU PATIENT</string>
+
+    <string name="guidelines_help_message">"Taper sur les recommandations ci-dessous pour plus d’informations.\n"
+        "Les recommandations soulignées sont adaptées aux signes / symptômes qui augmentent le score de gravité du patient."</string>
+
+    <string name="recommendation_oral_rehydration">"Réhydratation orale"</string>
+    <string name="recommendation_parenteral_fluids">"Réhydratation par voie parentérale"</string>
+    <string name="recommendation_monitoring_vitals">"Surveillance des signes vitaux et d’état d’hydratation"</string>
+    <string name="recommendation_serum_biochemistry">"Biochimie sérique"</string>
+    <string name="recommendation_staffing_ratio">"Ratio clinicien : patient"</string>
+    <string name="recommendation_communication">"Communication avec la famille et les amis"</string>
+    <string name="recommendation_medicines">"Médicaments contre la fièvre / douleur / diarrhée / vomissements"</string>
+    <string name="recommendation_antimalarials_antibiotics">" Antipaludéens et antibiotiques "</string>
+    <string name="recommendation_blood_transfusion">"Transfusion sanguine et traitement à la vitamine K"</string>
+    <string name="recommendation_parenteral_nutrition">"Soutien nutritionnel parentéral"</string>
+    <string name="recommendation_renal_replacement">"Thérapie de remplacement rénale"</string>
+    <string name="recommendation_respiratory_support">"Soutien respiratoire"</string>
+    <string name="recommendation_pregnancy_care">"Soins spécifiques pour les femmes enceintes"</string>
+
+    <!--RECOMMENDATION DESCRIPTIONS-->
+
+    <string name="bookmarks_help_message">
+        "Parmi les options ci-dessous, sélectionner les guides d’intervention spécifiques liés à cette recommandation."
+    </string>
+
+    <string name="oral_rehydration_description">
+        "La thérapie de réhydratation orale vise à garantir l’apport hydrique réel plutôt que "
+        "l’administrations simple d’une solution de réhydratation orale. Les patients trop jeunes ou trop malades pour préparer "
+        "et boire de manière autonome une solution de réhydratation orale ont besoin d’une assistance active. "
+        "L’adéquation de l’apport liquidien oral se réfère au volume qui "
+        "empêchera ou corrigera les signes d’hypovolémie et devra être personnalisé en fonction des besoins du patient."
+        "Il est peu probable que cette recommandation augmente la transmission du virus Ebola aux soignants."
+    </string>
+
+    <string name="parenteral_fluids_description">
+        "L’administration parentérale de liquides est recommandée aux patients qui ne peuvent pas boire ou "
+        "qui ont un apport oral insuffisant pour remplacer ses pertes. Les options pour "
+        "la réhydratation parentérale comprend les voies intraveineuses périphériques ou centrales ainsi que les perfusions intra-osseuses. "
+        "L’administration entérale par sonde nasogastrique peut être acceptable chez certains "
+        "patients (par exemple, les enfants ayant un accès intraveineux difficile avec une motilité gastro-intestinale intacte, "
+        "l’hypovolémie léger à modéré et qui tolère la sonde nasogastrique)."
+    </string>
+
+    <string name="monitoring_vitals_description">
+        "Surveillance et documentation des signes vitaux pour détecter l’hypovolémie et les drapeaux rouges "
+        "qui pouvant guider les interventions visant à réduire la mortalité sans augmenter la transmission nosocomiale d’Ebola."
+        "Les signes vitaux sont des composants de l’examen physique qui peuvent "
+        "vérifier l’état du volémie (c-à-d. fréquence cardiaque, tension artérielle, perte de liquide gastro-intestinal, débit urinaire "
+        "et, chez les enfants, remplissage capillaire, plie cutané et débit de larmes), ainsi que de l’état mental, "
+        "fréquence respiratoire, saturation et température."
+    </string>
+
+    <string name="serum_biochemistry_description">
+        "La mesure et documentation de la biochimie sérique avec une correction cliniquement pertinente des anomalies "
+        "pourraient réduire la mortalité. Cette intervention pourrait entraîner une légère augmentation du risque de "
+        "transmission nosocomiale aux soignants. Quand possible, les investigations biochimiques doivent être "
+        "regroupés avec les tests de dépistage du virus Ebola et le prélèvement de sang via une ligne intraveineuse existante. "
+        "Les aiguilles avec des dispositifs de sécurité doivent être utilisées pour réduire le risque de blessures par piqûre d’aiguille. "
+        "En plus des avantages prévus sur la survie, l’identification des anomalies biochimiques graves "
+        "pourrait réduire les décès iatrogènes causés par une administration inappropriée d’électrolytes (par exemple, "
+        "le potassium dans l’insuffisance rénale aiguë ou l’oedème cérébral associé à une "
+        "correction rapide de l’hypernatrémie avec des solutions hypotoniques)."
+    </string>
+
+    <string name="staffing_ratio_description">
+        "L’augmentation des ratios clinicien-patient réduit probablement la mortalité. L’effet sur le risque de "
+        "la transmission du virus Ebola est inconnue. Le terme clinicien englobe les infirmières, les responsables cliniques ",
+        "et les médecins. En pratique, les cliniciens travaillent avec un partenaire ou une équipe dans la zone d’isolement "
+        "pour assurer le respect des pratiques PCI appropriées. Le rapport minimum recommandé pour clinicien : patient "
+        "est une moyenne (c-a-d. pourrait varier dans les unités de traitement Ebola sur la base de la sévérité clinique). "
+        "Le temps de contact clinique aura probablement une plus grande influence sur la qualité des soins que le ratio clinicien : patient. "
+        "La conception et la technologie des unités de traitement Ebola peuvent faciliter la surveillance des patients. "
+        "Les agents de santé non cliniciens peuvent aider le personnel clinique (par exemple, pour aider à la préparation et administration du "
+        "solution de réhydratation orale, qui n’a besoin que d’une formation minimale)."
+    </string>
+
+    <string name="communication_description">
+        "Faciliter la communication des patients isolés avec leur famille et leurs amis. "
+        "L’utilisation des téléphones cellulaires ou d’Internet pourrait réduire la détresse psychologique sans augmenter le risque de transmission d’Ebola. "
+        "Des contacts plus étroits, y compris les enterrements, peuvent être sécurisés si des pratiques PCI appropriées sont utilisées, telles que des barrières physiques."
+     </string>
+
+
+    <string name="medicines_description">
+        "La thérapie analgésique réduit la douleur. Avec les preuves disponibles, il permettent pas de déterminer "
+        "si les antalgiques anti-inflammatoires non stéroïdiens ou AINS (en particulier les inhibiteurs de Cox-1) "
+        "doivent être évité en raison d’effets anti-plaquettaires ou de risques d’atteinte rénale aiguë "
+        "Des médicaments supplémentaires peuvent être nécessaires en fonction du tableau clinique du patient, notamment:\n "
+        "* Antipyrétiques (par exemple, acétaminophène, paracétamol) pour diminuer la fièvre "
+        "Une réduction de la dose de ces agents peut être nécessaire chez les patients présentant un dysfonctionnement hépatique progressif. "
+        "Comme déjà mentionné, les AINS sont généralement évités au but de réduire le risque d’insuffisance rénale.\n"
+        "* Médicaments antiémétiques pour contrôler les nausées et les vomissements.\n"
+        "* Agents antimotilité (par exemple, le lopéramide) pour contrôler la diarrhée, réduire les pertes liquidiennes et minimiser les déséquilibres électrolytiques.\n"
+        "* Médicaments antiépileptiques en réponse aux crises convulsives."
+    </string>
+
+    <string name="antimalarials_antibiotics_description">
+        "Les patients atteints de la maladie à virus Ebola peuvent nécessiter une évaluation et / ou un traitement "
+        "pour d’autres infections concomitantes possibles (par exemple, le paludisme). De plus, un traitement antimicrobien empirique "
+        "doit être administré aux patients présentant des signes cliniques de sepsis bactérien (une complication tardive de la maladie à virus Ebola). "
+        "Le choix de l’antibiotherapie devrait fournir une couverture adéquate pour les agents pathogènes gram-négatifs. "
+        "Une antibiotherapie gram-positive empirique doit être ajoutée chez certains patients, tels que ceux avec une "
+        "pneumonie nosocomial ou cathéters veineux centraux à demeure.\n "
+        "L’utilisation d’antibiotiques peut augmenter la résistance aux antibiotiques. Cependant, le degré d’utilisation des antibiotiques "
+        "que nous recommandons pour la gestion des patients lors d’une épidémie d’Ebola représente probablement une augmentation négligeable "
+        "de l’utilisation globale d’antibiotiques et il est donc peu probable qu’il ait un effet significatif sur la résistance aux antibiotiques."
+     </string>
+
+    <string name="blood_transfusion_description">
+        "Des produits sanguins (par exemple, des globules rouges concentrés, des plaquettes et du plasma frais congelé) peuvent être nécessaires "
+        "pour les patients présentant une coagulopathie et des saignements."
+     </string>
+
+     <string name="parenteral_nutrition_description">
+         "Un soutien nutritionnel total par voie parentérale peut être envisagé pour les personnes à faible apport oral "
+         "qui sont incapables de tolérer un régime alimentaire calorique."
+     </string>
+
+     <string name = "renal_replacement_description">
+         "Une thérapie de remplacement rénal peut être nécessaire pour gérer une insuffisance rénale aiguë grave. "
+         "Si la dialyse est nécessaire, les cliniciens doivent consulter le document fourni par les Centers for Disease Control and Prevention "
+         "qui contient un protocole d’hémodialyse aiguë chez les patients atteints de la maladie à virus Ebola."
+     </string>
+
+    <string name="respiratory_support_description">
+        "La ventilation mécanique invasive (intubation) peut être la meilleure option pour les patients "
+        "présentant une insuffisance respiratoire progressive. "
+        "Pour ces patients, les cliniciens doivent reconnaître que certains types d’assistance respiratoire présentent "
+        "un risque de génération d’aérosols infectieux. L’utilisation d’une ventilation mécanique non invasive (VNI) "
+        "ou d’une oxygénothérapie à débit élevé (par exemple, Vapotherm) n’est généralement pas recommandée en raison "
+        "du potentiel de production continue d’aérosols."
+     </string>
+
+    <string name="pregnancy_care_description">
+        "La maladie à virus Ebola est associée à un risque élevé de mort foetale et d’hémorragie maternelle. "
+        "Le CDC et l’American College of Obstetrics and Gynecology ont formulé des recommandations pour le traitement "
+        "des femmes enceintes atteintes de la maladie à virus Ebola. Cependant, aucune donnée ne permet de savoir "
+        "si l’accouchement par césarienne ou par voie vaginale est préféré ou à quel moment le bébé devrait être extraire. "
+        "Ainsi, les décisions concernant les soins obstétricaux doivent être prises au cas par cas."
+    </string>
+
+    <!--LABELS FOR INTERVENTION GUIDES-->
+
+    <string name="dehydration_classification">"Tableau d’évaluation de la déshydratation"</string>
+    <string name="oral_dehydration_solution">"Solution de réhydratation orale (SRO)"</string>
+    <string name="plan_a_rehydration">"Plan A: traitement à domicile"</string>
+    <string name="plan_b_rehydration">"Plan B: réhydratation à l’aide de SRO"</string>
+
+    <string name="iv_ors_decision_tree">"Décider entre des fluides IV vs SRO "</string>
+    <string name="fluid_resuscitation">"Réanimation liquidienne avec pertes digestives importantes"</string>
+    <string name="severe_dehydration">"Plan C: traitement de déshydratation sévère"</string>
+
+    <string name="monitoring_ill_patients">"Surveillance des patients gravement malades"</string>
+
+    <string name="laboratory_tests">"Tests de laboratoire"</string>
+
+    <string name="ecu_layout">"Conception et organisation d’un ECU / CCC"</string>
+
+    <string name="psychological_support">"Soutien psychologique pour le patient et à sa famille "</string>
+
+    <string name="dosage_table">"Tableau de dosage des médicaments standards"</string>
+    <string name="diarrhoea_vomiting_management">"Prise en charge de la diarrhée et des vomissements"</string>
+    <string name="morphine_tramadol_paracetamol">"Dosage de la morphine, du tramadol et du paracétamol"</string>
+
+
+    <string name="antimalarials">"Antipaludéens"</string>
+    <string name="antibiotics">"Antibiotiques"</string>
+
+    <string name="bleeding_pallor">"Gestion des saignements aigus importants / pâleur sévère"</string>
+
+    <string name="pregnancy_newborn">"Considérations pour les femmes enceintes et les nouveau-nés"</string>
+
+    <!--SEVERITY SCORE VISUALIZATION-->
+
+    <string name="no_data_err1">"Pas suffisamment d’informations!"</string>
+    <string name="no_data_err2">"Il faut fournir au moins l’âge du patient et la valeur seuil de cycle RT-PCR (CT)"</string>
+
+    <string name="predictor_contrib">
+        "Les graphiques ci-dessous montrent la contribution de chaque caractéristique clinique au score de gravité. "
+        "Les lignes noires indiquent l’éventail des contributions de chaque caractéristique, comme indiqué dans "
+        "l’ensemble de données utilisé pour calculé ce modèle pronostique."</string>
+
+    <string name="death_risk">Risque de mortalité:</string>
+    <string name="death_risk_high">Haut</string>
+
+    <!--CATEGORICAL RESPONSES-->
+
+    <string name="response_yes">"Oui"</string>
+    <string name="response_no">"Non"</string>
+
+    <string name="response_female">"Femelle"</string>
+    <string name="response_male">"Mâle"</string>
+
+    <string name="response_positive">"Positif"</string>
+    <string name="response_negative">"Négatif"</string>
+
+    <string name="response_na">"Inconnu"</string>
+
+    <!-- ********************************** DATA INPUT ***************************************** -->
+
+    <!--PATIENT SCREEN-->
+
+    <string name="patient_intro">"Entrer ci-dessous les informations concernant le/la patient/e."</string>
+
+    <string name="patient_age">"Age (années):"</string>
+    <string name="patient_sex">"Sexe:"</string>
+    <string name="patient_pregnant">"Enceinte:"</string>
+    <string name="patient_weight">"Poids (kg):"</string>
+    <string name="patient_height">"Hauteur (cm):"</string>
+
+    <!--TRIAGE SCREEN-->
+
+    <string name="triage_intro">"Entrer ci-dessous les signes/symptômes observés et rapportés au triage."</string>
+
+    <string name="triage_fever">"Fièvre:"</string>
+    <string name="triage_fever_temperature">"Temperature (°C):"</string>
+
+    <string name="triage_fever_no_days">"Nombre de jours depuis l’apparition de la fièvre:"</string>
+    <string name="triage_days_since_symptom_onset">"Nombre de jours depuis l’apparition des premiers symptômes:"</string>
+
+    <string name="triage_bone_muscle_joint_pain">"Douleur osseuse / musculaire / articulaire : "</string>
+    <string name="triage_headache">"Mal de tête:"</string>
+    <string name="triage_joint">"Douleur articulaire:"</string>
+    <string name="triage_abdominal_pain">"Douleur abdominale:"</string>
+    <string name="triage_chest_pain">"Douleur de poitrine:"</string>
+
+    <string name="triage_nausea">"Nausée:"</string>
+    <string name="triage_vomit">"Vomissements:"</string>
+    <string name="triage_diarrhoea">"Diarrhée:"</string>
+
+    <string name="triage_anorexia">"Anorexie:"</string>
+    <string name="triage_asthenia_weakness">"Asthènie/Faiblesse:"</string>
+    <string name="triage_loss_appetite">"Perte d’appétit:"</string>
+
+    <string name="triage_bleeding">"Saignement:"</string>
+    <string name="triage_haemorrhagic_eyes">"Yeux hémorragiques:"</string>
+    <string name="triage_other_haemorrhage">"Autres hémorragies:"</string>
+    <string name="triage_rash">"Eruptions cutanées:"</string>
+    <string name="triage_bloody_vomit">"Hématémèse:"</string>
+    <string name="triage_bloody_diarrhoea">"Hématochèzie:"</string>
+
+    <string name="triage_photophobia">"Photophobie:"</string>
+    <string name="triage_confusion">"Confusion:"</string>
+    <string name="triage_coma">"Coma:"</string>
+
+    <string name="triage_breathlessness">"Dyspnée:"</string>
+    <string name="triage_jaundice">"Ictère:"</string>
+    <string name="triage_throat">"Maux de gorge:"</string>
+    <string name="triage_swallow">"Dysphagie:"</string>
+    <string name="triage_hiccups">"Hoquet:"</string>
+    <string name="triage_cough">"Toux:"</string>
+
+    <!--LAB SCREEN-->
+
+    <string name="lab_intro">"Entrer ci-dessous tous les résultats disponibles des tests de laboratoire."</string>
+    <string name="lab_cycletime">"Seuil du cycle de RT-PCR (CT):"</string>
+    <string name="lab_malaria">"Test du paludisme:"</string>
+    <string name="lab_cycletime_mean">"Moyenne du Seuil de cycle:"</string>
+    <string name="lab_cycletime_std">"Écart type du seuil de cycle:"</string>
+
+    <!--WELLNESS SCALE-->
+
+    <string name="wellness_intro">"Complèter l’évaluation du bien-être au triage ci-dessous."</string>
+
+    <string name="wellness_scale_0">"Complètement guéri"</string>
+    <string name="wellness_scale_1">"Aucun symptôme: boit et mange bien"</string>
+    <string name="wellness_scale_2">"Quelques symptômes: boit et mange bien"</string>
+    <string name="wellness_scale_3">"Symptômes modérés: peut marcher, s’asseoir et se nourrir soi-même"</string>
+    <string name="wellness_scale_4">"Malade: a besoin d’aide pour se nourrir, boire et prendre des médicaments"</string>
+    <string name="wellness_scale_5">"Très malade: a besoin de liquides et de médicaments intraveineux, beaucoup d’aide"</string>
+    <string name="wellness_scale_na">"Inconnue: Impossible d’évaluer l’échelle de bien-être"</string>
+
+    <!--MODEL VARIABLES AND VALUES-->
+
+    <string name="bin_label_no">"non"</string>
+    <string name="bin_label_yes">"oui"</string>
+    <string name="bin_label_female">"femelle"</string>
+    <string name="bin_label_male">"mâle"</string>
+    <string name="bin_label_neg">"nég"</string>
+    <string name="bin_label_pos">"pos"</string>
+
+    <string name="PatientAge">"Age"</string>
+    <string name="PatientSex">"Sexe"</string>
+    <string name="PatientPregnant">"Enceinte"</string>
+    <string name="PatientWeight">"Poids"</string>
+    <string name="PatientHeight">"Taille"</string>
+    <string name="Fever">"Fièvre"</string>
+    <string name="FeverTemperature">"Temp"</string>
+    <string name="reftime">"Jours depuis l’apparition des symptômes"</string>
+    <string name="BoneMuscleJointPain">"Douleur osseuse / musculaire / articulaire"</string>
+    <string name="Headache">"Mal de tête"</string>
+    <string name="AbdominalPain">"Douleur abdominale"</string>
+    <string name="ChestPain">"Douleur de poitrine"</string>
+    <string name="Nausea">"Nausée"</string>
+    <string name="Vomit">"Vomissements"</string>
+    <string name="Diarrhoea">"Diarrhée"</string>
+    <string name="AstheniaWeakness">"Faiblesse"</string>
+    <string name="LossAppetite">"Perte d’appétit"</string>
+    <string name="Bleeding">"Saignement"</string>
+    <string name="HaemorrhagicEyes">"Yeux hémorrhagiques"</string>
+    <string name="Rash">"Eruption cutanée"</string>
+    <string name="BloodyVomit">"Hématémèse"</string>
+    <string name="BloodyDiarrhoea">"Hématochèzie"</string>
+    <string name="Photophobia">"Photophobie"</string>
+    <string name="Confusion">"Confusion"</string>
+    <string name="Coma">"Coma"</string>
+    <string name="Breathlessness">"Dyspnée"</string>
+    <string name="Jaundice">"Ictère"</string>
+    <string name="Throat">"Maux de gorge"</string>
+    <string name="SwallowingProblems">"Dysphagie"</string>
+    <string name="Hiccups">"Hoquets"</string>
+    <string name="Cough">"Toux"</string>
+    <string name="cycletime">"Seuil du cycle"</string>
+    <string name="CycletimeMean">"CT moyenne"</string>
+    <string name="CycletimeSTD">"CT l'Écart type"</string>
+    <string name="malaria1">"Palludisme"</string>
+    <string name="WellnessScale">"Échelle de Bien-être"</string>
+</resources>
+
+

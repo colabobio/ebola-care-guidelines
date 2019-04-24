@@ -1,62 +1,62 @@
 label=recommendation_oral_rehydration	
 icon=rehydration 
 description=oral_rehydration_description 
-guides={"dehydration_classification":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":84}},"oral_dehydration_solution":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":18}},"plan_a_rehydration":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":160}},"plan_b_rehydration":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":161}}}
-presentation={Nausea:1,Diarrhoea:1,Anorexia:1,HaemorrhagicEyes:1,BloodyDiarrhoea:1,Confusion:1,WellnessScale:4+}
+guides={"dehydration_classification":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":84},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":97}},"oral_dehydration_solution":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":18},"fr":{"file":"WHO_EVD_Manual_ECU_15.1_fr.pdf","page":18}},"plan_a_rehydration":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":160},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":180}},"plan_b_rehydration":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":161},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":181}}}
+presentation={Nausea:1,Diarrhoea:1,LossAppetite:1,HaemorrhagicEyes:1,BloodyDiarrhoea:1,Confusion:1,WellnessScale:4+}
 
 label=recommendation_parenteral_fluids
 icon=iv
 description=parenteral_fluids_description
-guides={"iv_ors_decision_tree":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":55}},"fluid_resuscitation":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":85}},"severe_dehydration":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":162}}}
-presentation={SeverityScore:HIGH+,Vomit:1,Diarrhoea:1,Anorexia:1,HaemorrhagicEyes:1,BloodyVomit:1,BloodyDiarrhoea:1,Confusion:1,WellnessScale:5+}
+guides={"iv_ors_decision_tree":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":55},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":65}},"fluid_resuscitation":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":85},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":98}},"severe_dehydration":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":162},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":182}}}
+presentation={SeverityScore:HIGH+,Vomit:1,Diarrhoea:1,LossAppetite:1,HaemorrhagicEyes:1,BloodyVomit:1,BloodyDiarrhoea:1,Confusion:1,WellnessScale:5+}
 
 label=recommendation_monitoring_vitals
 icon=monitoring
 description=monitoring_vitals_description
-guides={"monitoring_ill_patients":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":80}}}
+guides={"monitoring_ill_patients":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":80},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":93}}}
 presentation={SeverityScore:HIGH+,Vomit:1,Diarrhoea:1,HaemorrhagicEyes:1,BloodyVomit:1,BloodyDiarrhoea:1,Confusion:1,Breathlessness:1,Jaundice:1,malaria1:1,WellnessScale:4+}
 
 label=recommendation_serum_biochemistry
 icon=labs
 description=serum_biochemistry_description
-guides={"laboratory_tests":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":42}}}
+guides={"laboratory_tests":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":42},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":48}}}
 presentation={SeverityScore:HIGH+,Vomit:1,Diarrhoea:1,HaemorrhagicEyes:1,BloodyVomit:1,BloodyDiarrhoea:1,Confusion:1,Breathlessness:1,Jaundice:1,malaria1:1,WellnessScale:4+}
  
 label=recommendation_staffing_ratio
 icon=nurse
 description=staffing_ratio_description
-guides={"ecu_layout":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":9}}}
+guides={"ecu_layout":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":9},"fr":{"file":"WHO_EVD_Manual_ECU_15.1_fr.pdf","page":9}}}
 presentation={}
 
 label=recommendation_communication
 icon=comm
 description=communication_description
-guides={"psychological_support":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":114}}}
+guides={"psychological_support":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":114},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":131}}}
 presentation={}
 
 label=recommendation_medicines
 icon=meds
 description=medicines_description
-guides={"dosage_table":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":21}},"diarrhoea_vomiting_management":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":51}},"morphine_tramadol_paracetamol":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":163}}}
+guides={"dosage_table":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":21},"fr":{"file":"WHO_EVD_Manual_ECU_15.1_fr.pdf","page":21}},"diarrhoea_vomiting_management":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":51},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":60}},"morphine_tramadol_paracetamol":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":163},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":184}}}
 presentation={Fever:1,FeverTemperature:38+,BoneMuscleJointPain:1,Headache:1,AbdominalPain:1,ChestPain:1,Nausea:1,Vomit:1,Diarrhoea:1,BloodyVomit:1,BloodyDiarrhoea:1,malaria1:1}
 
 label=recommendation_antimalarials_antibiotics
 icon=antibiotics
 description=antimalarials_antibiotics_description
-guides={"antimalarials":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":20}},"antibiotics":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":21}}}
+guides={"antimalarials":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":20},"fr":{"file":"WHO_EVD_Manual_ECU_15.1_fr.pdf","page":20}},"antibiotics":{"en":{"file":"WHO_EVD_Manual_ECU_15.1_en.pdf","page":21},"fr":{"file":"WHO_EVD_Manual_ECU_15.1_fr.pdf","page":21}}}
 presentation={SeverityScore:HIGH+,Fever:1,FeverTemperature:38+,Confusion:1,malaria1:1,WellnessScale:4+}
 
 label=recommendation_blood_transfusion
 icon=transfusion
 description=blood_transfusion_description
-guides={"bleeding_pallor":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":50}}}
+guides={"bleeding_pallor":{"en":{"file":"WHO_VHF_POCKET_16.02_en.pdf","page":50},"fr":{"file":"WHO_VHF_POCKET_16.02_fr.pdf","page":58}}}
 presentation={SeverityScore:HIGH+,BloodyVomit:1,BloodyDiarrhoea:1,HaemorrhagicEyes:1,Bleeding:1,WellnessScale:5+}
 
 label=recommendation_parenteral_nutrition
 icon=parenteral
 description=parenteral_nutrition_description
 guides={}
-presentation={SeverityScore:HIGH+,Vomit:1,Diarrhoea:1,Anorexia:1,HaemorrhagicEyes:1,BloodyVomit:1,BloodyDiarrhoea:1,Confusion:1,WellnessScale:5+}
+presentation={SeverityScore:HIGH+,Vomit:1,Diarrhoea:1,LossAppetite:1,HaemorrhagicEyes:1,BloodyVomit:1,BloodyDiarrhoea:1,Confusion:1,WellnessScale:5+}
 
 label=recommendation_renal_replacement
 icon=kidneys

@@ -58,6 +58,50 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lab_cycletime_mean"
+                android:id="@+id/CycletimeMeanLabel"/>
+
+            <EditText
+                android:id="@+id/CycletimeMeanEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:onClick="onEditTextClicked"
+                android:tag="CycletimeMean"
+                android:text="25" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lab_cycletime_std"
+                android:id="@+id/CycletimeSTDLabel"/>
+
+            <EditText
+                android:id="@+id/CycletimeSTDEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:onClick="onEditTextClicked"
+                android:tag="CycletimeSTD"
+                android:text="5" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/lab_malaria"
                 android:id="@+id/MalariaLabel"/>
 
@@ -94,6 +138,7 @@
                     android:tag="malaria1:na"
                     android:id="@+id/MalariaNABtn"/>
             </RadioGroup>
+
 
         </LinearLayout>
     </ScrollView>

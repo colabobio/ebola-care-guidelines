@@ -15,10 +15,13 @@
 						<body_temperature_in_c />
 						<enter_signssymptoms />
 						<signs_and_symptoms_at_triage />
-						<number_of_days_of_fever_before_triage />
 						<number_of_days_since_symptoms_first_occurred />
 						<enter_laboratory_results />
-						<rt-pcr_cycle_threshold />
+						<question1>
+							<rt-pcr_cycle_threshold />
+							<cycle_threshold_mean />
+							<cycle_threshold_standard_deviation />
+						</question1>
 						<malaria_test />
 						<wellness_scale />
 					</patient_information>
@@ -34,12 +37,16 @@
 			<bind vellum:nodeset="#form/patient_information/body_temperature_in_c" nodeset="/data/patient_information/body_temperature_in_c" type="xsd:double" constraint=". &gt; 35 and . &lt; 42" />
 			<bind vellum:nodeset="#form/patient_information/enter_signssymptoms" nodeset="/data/patient_information/enter_signssymptoms" required="true()" />
 			<bind vellum:nodeset="#form/patient_information/signs_and_symptoms_at_triage" nodeset="/data/patient_information/signs_and_symptoms_at_triage" vellum:relevant="#form/patient_information/enter_signssymptoms = '1'" relevant="/data/patient_information/enter_signssymptoms = '1'" />
-			<bind vellum:nodeset="#form/patient_information/number_of_days_of_fever_before_triage" nodeset="/data/patient_information/number_of_days_of_fever_before_triage" type="xsd:int" />
 			<bind vellum:nodeset="#form/patient_information/number_of_days_since_symptoms_first_occurred" nodeset="/data/patient_information/number_of_days_since_symptoms_first_occurred" type="xsd:int" vellum:relevant="#form/patient_information/enter_signssymptoms = '1'" relevant="/data/patient_information/enter_signssymptoms = '1'" />
 			<bind vellum:nodeset="#form/patient_information/enter_laboratory_results" nodeset="/data/patient_information/enter_laboratory_results" required="true()" />
-			<bind vellum:nodeset="#form/patient_information/rt-pcr_cycle_threshold" nodeset="/data/patient_information/rt-pcr_cycle_threshold" type="xsd:int" vellum:relevant="#form/patient_information/enter_laboratory_results = '1'" relevant="/data/patient_information/enter_laboratory_results = '1'" />
+			<bind vellum:nodeset="#form/patient_information/question1" nodeset="/data/patient_information/question1" vellum:relevant="#form/patient_information/enter_laboratory_results = '1'" relevant="/data/patient_information/enter_laboratory_results = '1'" />
+			<bind vellum:nodeset="#form/patient_information/question1/rt-pcr_cycle_threshold" nodeset="/data/patient_information/question1/rt-pcr_cycle_threshold" type="xsd:int" />
+			<bind vellum:nodeset="#form/patient_information/question1/cycle_threshold_mean" nodeset="/data/patient_information/question1/cycle_threshold_mean" type="xsd:double" />
+			<bind vellum:nodeset="#form/patient_information/question1/cycle_threshold_standard_deviation" nodeset="/data/patient_information/question1/cycle_threshold_standard_deviation" type="xsd:double" />
 			<bind vellum:nodeset="#form/patient_information/malaria_test" nodeset="/data/patient_information/malaria_test" vellum:relevant="#form/patient_information/enter_laboratory_results = '1'" relevant="/data/patient_information/enter_laboratory_results = '1'" />
 			<bind vellum:nodeset="#form/patient_information/wellness_scale" nodeset="/data/patient_information/wellness_scale" />
+			<setvalue event="xforms-ready" vellum:ref="#form/patient_information/question1/cycle_threshold_mean" ref="/data/patient_information/question1/cycle_threshold_mean" value="25" />
+			<setvalue event="xforms-ready" vellum:ref="#form/patient_information/question1/cycle_threshold_standard_deviation" ref="/data/patient_information/question1/cycle_threshold_standard_deviation" value="5" />
 			<itext>
 				<translation lang="en" default="">
 					<text id="patient_information-label">
@@ -120,9 +127,6 @@
 					<text id="patient_information/signs_and_symptoms_at_triage-Diarrhoea-label">
 						<value>Diarrhoea</value>
 					</text>
-					<text id="patient_information/signs_and_symptoms_at_triage-Anorexia-label">
-						<value>Anorexia</value>
-					</text>
 					<text id="patient_information/signs_and_symptoms_at_triage-AstheniaWeakness-label">
 						<value>Asthenia/weakness</value>
 					</text>
@@ -131,12 +135,6 @@
 					</text>
 					<text id="patient_information/signs_and_symptoms_at_triage-Bleeding-label">
 						<value>Bleeding</value>
-					</text>
-					<text id="patient_information/signs_and_symptoms_at_triage-HaemorrhagicEyes-label">
-						<value>Haemorrhagic eyes</value>
-					</text>
-					<text id="patient_information/signs_and_symptoms_at_triage-OtherHaemorrhage-label">
-						<value>Other haemorrhage</value>
 					</text>
 					<text id="patient_information/signs_and_symptoms_at_triage-Rash-label">
 						<value>Skin rash</value>
@@ -174,9 +172,6 @@
 					<text id="patient_information/signs_and_symptoms_at_triage-Cough-label">
 						<value>Cough</value>
 					</text>
-					<text id="patient_information/number_of_days_of_fever_before_triage-label">
-						<value>Number of days of fever before triage</value>
-					</text>
 					<text id="patient_information/number_of_days_since_symptoms_first_occurred-label">
 						<value>Number of days since symptoms first occurred</value>
 					</text>
@@ -189,8 +184,17 @@
 					<text id="patient_information/enter_laboratory_results-0-label">
 						<value>No</value>
 					</text>
-					<text id="patient_information/rt-pcr_cycle_threshold-label">
-						<value>RT-PCR Cycle Threshold</value>
+					<text id="patient_information/question1-label">
+						<value>RT-PCR</value>
+					</text>
+					<text id="patient_information/question1/rt-pcr_cycle_threshold-label">
+						<value>Cycle threshold result</value>
+					</text>
+					<text id="patient_information/question1/cycle_threshold_mean-label">
+						<value>Mean cycle threshold at this site</value>
+					</text>
+					<text id="patient_information/question1/cycle_threshold_standard_deviation-label">
+						<value>Cycle threshold standard deviation at this site</value>
 					</text>
 					<text id="patient_information/malaria_test-label">
 						<value>Malaria test</value>
@@ -326,10 +330,6 @@
 					<value>Diarrhoea</value>
 				</item>
 				<item>
-					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Anorexia-label')" />
-					<value>Anorexia</value>
-				</item>
-				<item>
 					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-AstheniaWeakness-label')" />
 					<value>AstheniaWeakness</value>
 				</item>
@@ -340,14 +340,6 @@
 				<item>
 					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Bleeding-label')" />
 					<value>Bleeding</value>
-				</item>
-				<item>
-					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-HaemorrhagicEyes-label')" />
-					<value>HaemorrhagicEyes</value>
-				</item>
-				<item>
-					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-OtherHaemorrhage-label')" />
-					<value>OtherHaemorrhage</value>
 				</item>
 				<item>
 					<label ref="jr:itext('patient_information/signs_and_symptoms_at_triage-Rash-label')" />
@@ -398,9 +390,6 @@
 					<value>Cough</value>
 				</item>
 			</select>
-			<input vellum:ref="#form/patient_information/number_of_days_of_fever_before_triage" ref="/data/patient_information/number_of_days_of_fever_before_triage">
-				<label ref="jr:itext('patient_information/number_of_days_of_fever_before_triage-label')" />
-			</input>
 			<input vellum:ref="#form/patient_information/number_of_days_since_symptoms_first_occurred" ref="/data/patient_information/number_of_days_since_symptoms_first_occurred">
 				<label ref="jr:itext('patient_information/number_of_days_since_symptoms_first_occurred-label')" />
 			</input>
@@ -415,9 +404,18 @@
 					<value>0</value>
 				</item>
 			</select1>
-			<input vellum:ref="#form/patient_information/rt-pcr_cycle_threshold" ref="/data/patient_information/rt-pcr_cycle_threshold">
-				<label ref="jr:itext('patient_information/rt-pcr_cycle_threshold-label')" />
-			</input>
+			<group vellum:ref="#form/patient_information/question1" ref="/data/patient_information/question1">
+				<label ref="jr:itext('patient_information/question1-label')" />
+				<input vellum:ref="#form/patient_information/question1/rt-pcr_cycle_threshold" ref="/data/patient_information/question1/rt-pcr_cycle_threshold">
+					<label ref="jr:itext('patient_information/question1/rt-pcr_cycle_threshold-label')" />
+				</input>
+				<input vellum:ref="#form/patient_information/question1/cycle_threshold_mean" ref="/data/patient_information/question1/cycle_threshold_mean">
+					<label ref="jr:itext('patient_information/question1/cycle_threshold_mean-label')" />
+				</input>
+				<input vellum:ref="#form/patient_information/question1/cycle_threshold_standard_deviation" ref="/data/patient_information/question1/cycle_threshold_standard_deviation">
+					<label ref="jr:itext('patient_information/question1/cycle_threshold_standard_deviation-label')" />
+				</input>
+			</group>
 			<select1 vellum:ref="#form/patient_information/malaria_test" ref="/data/patient_information/malaria_test">
 				<label ref="jr:itext('patient_information/malaria_test-label')" />
 				<item>
