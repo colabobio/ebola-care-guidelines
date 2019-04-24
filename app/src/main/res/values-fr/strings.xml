@@ -321,8 +321,8 @@
     <string name="lab_intro">"Entrer ci-dessous tous les résultats disponibles des tests de laboratoire."</string>
     <string name="lab_cycletime">"Seuil du cycle de RT-PCR (CT):"</string>
     <string name="lab_malaria">"Test du paludisme:"</string>
-    <string name="lab_cycletime_mean">"Moyenne du Seuil de cycle:"</string>
-    <string name="lab_cycletime_std">"Écart type du seuil de cycle:"</string>
+    <string name="lab_cycletime_mean">"Moyenne du seuil de cycle sur ce site:"</string>
+    <string name="lab_cycletime_std">"Écart type du seuil de cycle sur ce site:"</string>
 
     <!--WELLNESS SCALE-->
 

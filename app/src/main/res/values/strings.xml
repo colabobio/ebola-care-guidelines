@@ -322,10 +322,10 @@
     <!--LAB SCREEN-->
 
     <string name="lab_intro">"Enter below all available results from laboratory tests."</string>
-    <string name="lab_cycletime">"RT-PCR Cycle Threshold:"</string>
+    <string name="lab_cycletime">"RT-PCR cycle threshold:"</string>
     <string name="lab_malaria">"Malaria test:"</string>
-    <string name="lab_cycletime_mean">"Cycle Threshold Mean:"</string>
-    <string name="lab_cycletime_std">"Cycle Threshold Standard Deviation:"</string>
+    <string name="lab_cycletime_mean">"Mean cycle threshold at this site:"</string>
+    <string name="lab_cycletime_std">"Cycle threshold standard deviation at this site:"</string>
 
     <!--WELLNESS SCALE-->
 
