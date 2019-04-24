@@ -8,7 +8,7 @@ The sections below provide an overview of the app's functionality, and the [wiki
 
 Upon launching the Ebola Care Guidelines app you will see a list of recommendations for the care of management of EVD patients across across different categories:
 
-<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/homescreen.png" width="200"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/homescreen.png" width="400"/>
 
 ## Entering patient information
 
