@@ -28,20 +28,19 @@ The default data-entry form is accessed by clicking on the "Enter Patient Data" 
 
 1. Patient (basic information including demographics and physical measures) 
 
-<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/patient_tab.png" width="400"/>
 
 2. Triage (clinical signs and symptoms recorded at triage) 
 
-<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/triage_tab.png" width="400"/>
 
 3. Lab (laboratory results, PCR and malaria test)
 
-<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/lab_tab.png" width="400"/>
 
 4. Wellness (an observational wellness assessment)
 
-<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
-
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/wellness_tab.png" width="400"/>
 
 
 ### Using the CommCare data-entry app
