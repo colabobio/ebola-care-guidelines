@@ -50,7 +50,6 @@ Certain recommendations are be highlighted depending on which signs/symptoms are
 
 ### Using the CommCare data-entry app
 
-
-
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_settings.png" width="900"/>
 
 
