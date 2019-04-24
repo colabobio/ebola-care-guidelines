@@ -1,7 +1,0 @@
-                Wald Statistics          Response: Disposition 
-
- Factor     Chi-Square d.f. P     
- PatientAge 23.67      2    <.0001
-  Nonlinear 19.17      1    <.0001
- cycletime  37.03      1    <.0001
- TOTAL      46.94      3    <.0001

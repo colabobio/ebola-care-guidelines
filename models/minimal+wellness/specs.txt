@@ -1,7 +1,0 @@
-fit.mult.impute(formula = as.formula(mwell_lgr_formula), fitter = lrm, 
-    xtrans = mwell_impute, data = src_data)
-
-              Assumption Parameters d.f.
-PatientAge    rcspline    5 30 58   2   
-cycletime     asis                  1   
-WellnessScale asis                  1   
