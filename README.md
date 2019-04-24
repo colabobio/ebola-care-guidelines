@@ -46,7 +46,7 @@ The PCR results include not only the CT value, but the overall mean and standard
 
 There is no need to enter all the information, depending on what's available, the app will use a prognostic model to calculate a severity score for the patient. The numerical value of the score will be displayed at the top of the home screen:
 
-<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/score.png" width="300"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/severity_medium.png" width="300"/>
 
 Certain recommendations are be highlighted depending on which signs/symptoms are present, e.g.: oral dehydration is highlighted if the patient presents with nausea, diarrhoea , loss of appetite, haemorrhagic eyes, bloody diarrhoea, or confusion, or wellness scale is equal or higher than 4.
 
@@ -77,6 +77,12 @@ Finally, the CommCare data can be imported into the guidelines app by selecting 
 
 A CommCare case is no longer available on the device once the final disposition is entered into the CommCare app.
 
+## Severity Score
 
+Irrespective of whether the patient data is entered using the default form or CommCare's app, the Ebola Care Guidelines app will calculate the severity score for the patient after selecting a prognostic model that's suitable to the available information (check the [wiki](https://github.com/broadinstitute/ebola-care-guidelines/wiki) on how to add new models to the app). The care recommendations will be highlighed in the home screen based on the present signs/symptoms, and their contribution to the total score:
 
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/severity_high.png" width="300"/>
 
+Clicking on the "Severity Score" button, the app will show a visualization of the score broken down into the individual contributors from each predictor, based on the logistic regression charts from [Van Belle and Van Calster](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0132614):
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/severity_chart.png" width="300"/>
