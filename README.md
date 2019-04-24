@@ -38,6 +38,8 @@ The default data-entry form is accessed by clicking on the "Enter Patient Data" 
 
 <img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/lab_tab.png" width="300"/>
 
+The PCR results include not only the CT value, but the overall mean and standard deviation of the CT from the cases seen at the site, depending on the PCR assay in use. This is needed to perform "feature scaling" and normalize the CT values so they can entered into the prognostic models, which are not-site specific.
+
 4. Wellness (an observational wellness assessment)
 
 <img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/wellness_tab.png" width="300"/>
