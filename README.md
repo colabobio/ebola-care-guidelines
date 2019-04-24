@@ -63,9 +63,17 @@ To open the CommCare app from the Ebola Care Guidelines app, the same "Enter Pat
 
 <img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_intro.png" width="900"/>
 
-The "Use CommCare to" menu allows to enter a brand new case or to lookup an existing case, which is convenient since it allows to run the severity score calculation on existing data wihout having to enter it again (which is what happens with the default built-in form). Creating a new case opens the CommCare app where the same variables shown before are entered in succesive screens:
+The "Use CommCare to" menu allows to enter a brand new case or to lookup an existing case, which is convenient since it allows to run the severity score calculation on existing data wihout having to enter it again (which is what happens with the default built-in form). Creating a new case opens the CommCare app where the same variables shown before are entered in succesive screens, some of which are shown below:
 
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_data_entry1.png" width="300"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_data_entry2.png" width="300"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_data_entry3.png" width="300"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_data_entry4.png" width="300"/>
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_data_entry5.png" width="300"/>
 
+Finally, the CommCare data can be imported into the guidelines app by selecting the corresponding case from the case selection list:
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_data_entry6_case_selection.png" width="300"/>
 
 A CommCare case is no longer available on the device once the final disposition is entered into the CommCare app.
 
