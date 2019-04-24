@@ -20,9 +20,27 @@ Clicking on an intervention guide will direct the user to the corresponding page
 
 ## Entering patient information
 
-The app can be used simply to access WHO's recommendations and intervention guides from a smartphone, but it offers the possibility of calculating a severity score of a patient at triage based on the available information (demographics, clinical features, laboratory data). This inforamtion can be entered into the app using two different methods: a default data-entry form or with a separate CommCare app: 
+The app can be used simply to access WHO's recommendations and intervention guides from a smartphone, but it offers the possibility of calculating a severity score of a patient at triage based on the available information (demographics, clinical features, laboratory data). This inforamtion can be entered into the app using two different methods: a default data-entry form or with a complementary CommCare app.
 
 ### Using the default data-entry form
+
+The default data-entry form is accessed by clicking on the "Enter Patient Data" button. This form comprises four tabs: 
+
+1. Patient (basic information including demographics and physical measures) 
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
+
+2. Triage (clinical signs and symptoms recorded at triage) 
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
+
+3. Lab (laboratory results, PCR and malaria test)
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
+
+4. Wellness (an observational wellness assessment)
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
 
 
 
