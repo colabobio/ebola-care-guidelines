@@ -6,12 +6,19 @@ The sections below provide an overview of the app's functionality, and the [wiki
 
 ## Using the app
 
-Upon launching the Ebola Care Guidelines app you will see a list of recommendations for the care of management of EVD patients across across different categories:
+Upon launching the Ebola Care Guidelines app, it will present a scrollable list of recommendations for the care of management of EVD patients across across different categories:
 
 <img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/homescreen.png" width="400"/>
 
-## Entering patient information
+After selecting any category, another screen will open up providing more in-depth information about the selected recommendation, and specific intervention guides related to the recommendation:
 
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/parenteral_fluids.png" width="400"/>
+
+Clicking on an intervention guide will direct the user to the corresponding page in either the [Clinical management of patients with viral haemorrhagic fever](https://www.who.int/csr/resources/publications/clinical-management-patients/en/) or the [Manual for the care and management of patients in Ebola Care Units/Community Care Centres](http://www.who.int/csr/resources/publications/ebola/patient-care-CCUs/en) describing that intervention in detail:
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/iv_vs_ors_chart.png" width="400"/>
+
+## Entering patient information
 
 
 ### Using the default data-entry form
@@ -19,5 +26,8 @@ Upon launching the Ebola Care Guidelines app you will see a list of recommendati
 
 
 ### Using the CommCare data-entry app
+
+
+## Severity score of a patient
 
 
