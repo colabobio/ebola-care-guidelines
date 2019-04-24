@@ -20,6 +20,7 @@ Clicking on an intervention guide will direct the user to the corresponding page
 
 ## Entering patient information
 
+The app can be used simply to access WHO's recommendations and intervention guides from a smartphone, but it offers the possibility of calculating a severity score of a patient at triage based on the available information (demographics, clinical features, laboratory data). This inforamtion can be entered into the app using two different methods: a default data-entry form or with a separate CommCare app: 
 
 ### Using the default data-entry form
 
