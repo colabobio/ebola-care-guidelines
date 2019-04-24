@@ -59,4 +59,16 @@ Ebola Care Guidelines can retrieve data from a CommCare app collecting the varia
 
 <img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_settings.png" width="900"/>
 
+To open the CommCare app from the Ebola Care Guidelines app, the same "Enter Patient Data" button is to be clicked. The first time this is done, the following sequence of screens will show up, with the middle one asking for permission to read the data from the CommCare app:
+
+<img src="https://github.com/broadinstitute/ebola-care-guidelines/blob/master/images/commcare_intro.png" width="900"/>
+
+The "Use CommCare to" menu allows to enter a brand new case or to lookup an existing case, which is convenient since it allows to run the severity score calculation on existing data wihout having to enter it again (which is what happens with the default built-in form). Creating a new case opens the CommCare app where the same variables shown before are entered in succesive screens:
+
+
+
+A CommCare case is no longer available on the device once the final disposition is entered into the CommCare app.
+
+
+
 
