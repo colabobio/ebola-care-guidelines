@@ -23,7 +23,8 @@
     <string name="info_preprint">
         "Get a preprint of the article describing the app and models from:"</string>
 
-    <string name="info_preprint_url">"http://biorxiv.org/cgi/content/short/294587"</string>
+    <string name="info_preprint_url">"https://www.biorxiv.org/content/10.1101/294587v5"</string>
+    <string name="app_repo_url">"https://github.com/broadinstitute/ebola-care-guidelines"</string>
 
     <!--PREFERENCES-->
 
@@ -41,8 +42,8 @@
     <string name="info_commcare_title">"Using CommCare to enter data"</string>
     <string name="info_commcare_description">"You first need to download CommCare from Google Play, "
         "open it and install the Ebola Patient Management app. If you already did this, please continue. "
-        "If not, go back and then check the section 'Availability of source code, data and app' "
-        "in the preprint below for further instructions:"</string>
+        "If not, go back and then check the section 'Using the CommCare data-entry app' "
+        "in the website below for further instructions:"</string>
 
     <string name="continue_to_commcare_button">"Continue to CommCare"</string>
 

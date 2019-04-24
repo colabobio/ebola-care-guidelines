@@ -23,7 +23,8 @@
     <string name="info_preprint">
         "Obtenir une pré-impression de l’article décrivant l’application et ses modèles pronostics ici:"</string>
 
-    <string name="info_preprint_url">"http://biorxiv.org/cgi/content/short/294587"</string>
+    <string name="info_preprint_url">"https://www.biorxiv.org/content/10.1101/294587v5"</string>
+    <string name="app_repo_url">"https://github.com/broadinstitute/ebola-care-guidelines"</string>
 
     <!--PREFERENCES-->
 
@@ -41,7 +42,7 @@
     <string name="info_commcare_title">"Utilisation de CommCare pour saisir des données"</string>
     <string name="info_commcare_description">"Commencer par télécharger CommCare sur Google Play,"
         "Ouvrir et installer l’application « Ebola Patient Management ». Si vous l’avez déjà fait, veuillez continuer"
-        "Sinon, revenir en arrière, puis consulter la section « Disponibilité du code source, des données et de l’application » "
+        "Sinon, revenir en arrière, puis consulter la section « Using the CommCare data-entry app » "
         "dans la pré-impression ci-dessous pour plus d’instructions:"</string>
 
     <string name="continue_to_commcare_button">"Continuer à CommCare"</string>

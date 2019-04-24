@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:keepScreenOn="true"
-                android:text="@string/info_preprint_url"
+                android:text="@string/app_repo_url"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 android:padding="5dp"

@@ -10,8 +10,5 @@ url=http://www.who.int/csr/resources/publications/clinical-management-patients/e
 description=WHO. Manual for the care and management of patients in Ebola Care Units/ Community Care Centres. Interim emergency guidance
 url=http://www.who.int/csr/resources/publications/ebola/patient-care-CCUs/en/
 
-description=UpToDate. Treatment and prevention of Ebola virus disease
-url=https://www.uptodate.com/contents/treatment-and-prevention-of-ebola-virus-disease
-
 description=MSF Medical Guidelines. Viral haemorrhagic fevers
 url=https://medicalguidelines.msf.org/viewport/CG/english/viral-haemorrhagic-fevers-16690024.html
