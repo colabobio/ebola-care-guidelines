@@ -1,7 +1,6 @@
-## Public repository for the Ebola IMC prognostic models and care guidelines mobile app
+## Ebola Care Guidelines app
 
-This repository contains the model-derivation scripts and the source code of the Ebola Care Guidelines app, described in the manuscript "Machine learning and mHealth techniques to improve prognostication and clinical management of patients with Ebola virus disease" by Colubri et al. 
+This app offers evidence-based guidelines for the care and management for Ebola Virus Disease (EVD) patients. It also uses machine learning prognostic models to the calculate severity risk of a patient at triage based on the demographics information, clinical signs and symptoms, and laboratory results.
 
-The manuscript is available as a [pre-print on bioRxiv](http://biorxiv.org/cgi/content/short/294587), and the app can be freely installed on any Android device from [Google Play Store](https://play.google.com/store/apps/details?id=org.broadinstitute.ebola_care_guidelines).
+The manuscript describing the prognostic models in the app is available as a [pre-print on bioRxiv](http://biorxiv.org/cgi/content/short/294587), and the app itself can be freely installed on any Android device from [Google Play Store](https://play.google.com/store/apps/details?id=org.broadinstitute.ebola_care_guidelines).
 
-Check the readme file under the models folder for directions on how to run the model-generation Jupyter scripts, and the wiki for an in-depth guide on how to adapt the source code of the Ebola Care Guidelines app to update the models, guidelines, and even adapt it to a different disease.
